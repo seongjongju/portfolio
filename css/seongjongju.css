@@ -1,0 +1,594 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* 부드러운 스크롤 */
+html {
+    scroll-behavior: smooth;
+}
+/* 부드러운 스크롤 */
+/* 섹션 공통 */
+section {
+    position: relative;
+    padding: 3% 3% 0;
+}
+
+section>h2 {
+    color: #bb1212;
+    font-size: 60px;
+}
+/* 섹션 공통 */
+
+/* header */
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    color: #111111;
+    z-index: 1000;
+    transition: color 0.3s;
+}
+
+header>h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+header nav {
+    position: absolute;
+    top: 12%;
+    right: 8%;
+    width: 30%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header nav>a {
+    display: inline-block;
+    width: calc(100%/4);
+    text-align: center;
+    line-height: 40px;
+    /* border-radius: 30px;
+    transition: all 0.3s; */
+    color: #ab5f2e;
+    transition: all 0.3s;
+}
+
+header nav>a:hover {
+    color: #1c3d5a;
+}
+
+/* //header */
+
+/* section1 */
+#section1 {
+    /* background-color: #fff1d4; */
+    background: url(../img/bg_main3.png) no-repeat center/cover;
+    height: 100vh;
+}
+
+#section1>h2 {
+    text-align: center;
+    font-size: 6.5rem;
+
+    /* 텍스트 색상을 투명하게 설정 */
+    color: transparent;
+
+    /* 테두리 효과를 위한 텍스트 그림자 */
+    text-shadow:
+        -2px -2px 0 #ffffff,
+        /* 상단 왼쪽 테두리 */
+        2px -2px 0 #0f8956,
+        /* 상단 오른쪽 테두리 */
+        -2px 2px 0 #78ffd6,
+        /* 하단 왼쪽 테두리 */
+        2px 2px 0 #044431;
+    /* 하단 오른쪽 테두리 */
+    padding-top: 12%;
+}
+
+.intro {
+    width: 60vw;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+#section1>h2>span {
+    display: block;
+    font-size: 7rem;
+    letter-spacing: 5px;
+}
+
+/* //section1 */
+
+/* section2 */
+#section2 {
+    background: #fff;
+    height: 100vh;
+}
+
+/* 섹션 타이틀 */
+#section2 .title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#section2 .text {
+    padding-bottom: 15px;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.4);
+    font-size: 18px;
+}
+
+#section2 .profile {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 70px auto 0;
+}
+
+#section2 .profile .profile_card {
+    width: 40%;
+    height: 600px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* transform: rotate(5deg); */
+    position: relative;
+}
+
+#section2 .profile .profile_card:before {
+    position: absolute;
+    content: '';
+    background: #bb1212;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    top: -23px;
+    left: 47%;
+    opacity: 0.7;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#section2 .profile .profile_card>figure {
+    background: url(../img/myphoto.jpg) no-repeat center / cover;
+    width: 80%;
+    height: 70%;
+    margin: 10% auto 0;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#section2 .profile .profile_text {
+    width: 50%;
+}
+
+#section2 .profile .profile_text>p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#section2 .profile .profile_text>p:first-child {
+    font-size: 25px;
+    color: #111111;
+    font-weight: 600;
+}
+
+#section2 .profile .profile_text>p:nth-child(3) {
+    color: #111111;
+    font-weight: 500;
+}
+
+#section2 strong {
+    color: #bb1212;
+}
+
+#section2 .education {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#section2 .education>p {
+    font-size: 14px;
+    line-height: 25px;
+    position: relative;
+}
+
+#section2 .education>p:before {
+    position: absolute;
+    content: '';
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #bb1212;
+    border-radius: 100%;
+    width: 3px;
+    height: 3px;
+}
+
+#section2 .Certificates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#section2 .Certificates>div {
+    width: 77.5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section2 .Certificates>div>p {
+    font-size: 14px;
+    line-height: 25px;
+    margin-right: 15px;
+    position: relative;
+}
+
+#section2 .Certificates>div>p:before {
+    position: absolute;
+    content: '';
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #bb1212;
+    border-radius: 100%;
+    width: 3px;
+    height: 3px;
+}
+
+#section2 .skill {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+#section2 .skill>figure {
+    background: no-repeat center/ cover;
+    width: 45px;
+    height: 45px;
+    margin-right: 25px;
+}
+
+#section2 .skill>figure:first-child {
+    margin-left: 0;
+}
+
+#section2 .skill .html {
+    background-image: url(../img/html.png);
+}
+
+#section2 .skill .css {
+    background-image: url(../img/css.png);
+}
+
+#section2 .skill .js {
+    background-image: url(../img/javascript.png);
+}
+
+#section2 .skill .jq {
+    background-image: url(../img/jquery.gif);
+}
+
+#section2 .skill .figma {
+    background-image: url(../img/figma.png);
+}
+
+#section2 .skill .photo {
+    background-image: url(../img/photoshop.png);
+}
+
+#section2 .skill .git {
+    background-image: url(../img/git_hub.png);
+}
+
+/* //section2 */
+
+/* section3 */
+#section3 {
+    height: 100vh;
+    background: #fafafa url(../img/antenna_logo.png) no-repeat 120% -30%/800px;
+}
+
+#section3 h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#section3 h3>span {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#section3>span {
+    display: inline-block;
+    margin-right: 15px;
+    text-align: center;
+    color: #1c3d5a;
+    font-weight: 300;
+}
+
+#section3 .mokup_area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 80px;
+}
+
+#section3 .mokup_area .mokup {
+    width: 50%;
+    height: 60%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+    margin: 0 5% 0 9.5%;
+}
+
+#section3 .mokup_area .mokup>figure>img {
+    width: 100%;
+}
+
+#section3 .mokup_area .mokup .mokups {
+    width: 100%;
+    height: 100%;
+}
+
+#section3 .mokup_area .text_area {
+    width: 25%;
+}
+
+#section3 .mokup_area .text_area>p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+#section3 .mokup_area .text_area>h4 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+#section3 .mokup_area .text_area>span {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 40px;
+    color: rgba(0, 0, 0, 0.7);
+}
+#section3 .mokup_area .text_area>span:nth-of-type(5) {
+    display: block;
+}
+#section3 .mokup_area .text_area>a {
+    display: inline-block;
+    font-size: 16px;
+    width: 45%;
+    height: 40px;
+    margin-right: 15px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #FDE700;
+    border-radius: 40px;
+    transition: all 0.5s;
+}
+
+#section3 .mokup_area .text_area>a:hover {
+    background-color: #FDE700;
+}
+
+/* //section3 */
+
+/* section4 */
+#section4 {
+    height: 80vh;
+    background: #fff url(../img/bonjourparis_logo.png) no-repeat 130% -55%/900px;
+}
+#section4 h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#section4 h3>span {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#section4>span {
+    display: inline-block;
+    margin-right: 15px;
+    text-align: center;
+    color: #1c3d5a;
+    font-weight: 300;
+}
+
+#section4 .mokup_area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 80px;
+}
+
+#section4 .mokup_area .mokup {
+    width: 50%;
+    height: 75%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+    margin: 0 5% 0 9.5%;
+}
+
+#section4 .mokup_area .mokup>figure>img {
+    width: 100%;
+}
+
+#section4 .mokup_area .mokup .mokups {
+    width: 100%;
+    height: 100%;
+}
+
+#section4 .mokup_area .text_area {
+    width: 25%;
+}
+
+#section4 .mokup_area .text_area>p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+#section4 .mokup_area .text_area>h4 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+#section4 .mokup_area .text_area>span {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 40px;
+    color: rgba(0, 0, 0, 0.7);
+}
+#section4 .mokup_area .text_area>span:nth-of-type(5) {
+    display: block;
+}
+#section4 .mokup_area .text_area>a {
+    display: inline-block;
+    font-size: 16px;
+    width: 45%;
+    margin-right: 15px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #FFA400;
+    border-radius: 40px;
+    transition: all 0.5s;
+}
+
+#section4 .mokup_area .text_area>a:hover {
+    background-color: #FFA400;
+    color: #fcfcfc;
+}
+/* //section4 */
+
+/* section5 */
+#section5 {
+    height: 80vh;
+    background: #ececec;
+    position: relative;
+    overflow: hidden;
+}
+/* 루프 이미지 */
+#section5 .loop {
+    position: absolute;
+    top: 22%;
+    display: flex;
+    animation: slide 80s infinite linear;
+}
+#section5 .loop .slide_logo {
+    margin-right: 200px;
+}
+@keyframes slide {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -500%;
+    }
+}
+/* 루프 이미지 */
+
+#section5 h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#section5 h3>span {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#section5>span {
+    display: inline-block;
+    margin-right: 15px;
+    text-align: center;
+    color: #1c3d5a;
+    font-weight: 300;
+}
+
+#section5 .mokup_area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 80px;
+}
+
+#section5 .mokup_area .mokup {
+    width: 50%;
+    height: 57%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+    margin: 0 5% 0 9.5%;
+}
+
+#section5 .mokup_area .mokup>figure>img {
+    width: 100%;
+}
+
+#section5 .mokup_area .mokup .mokups {
+    width: 100%;
+    height: 100%;
+}
+
+#section5 .mokup_area .text_area {
+    width: 25%;
+}
+
+#section5 .mokup_area .text_area>p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+#section5 .mokup_area .text_area>h4 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+#section5 .mokup_area .text_area>span {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 40px;
+    color: rgba(0, 0, 0, 0.7);
+}
+#section5 .mokup_area .text_area>span:nth-of-type(5) {
+    display: block;
+}
+#section5 .mokup_area .text_area>a {
+    display: inline-block;
+    font-size: 16px;
+    width: 45%;
+    height: 40px;
+    margin-right: 15px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #585858;
+    border-radius: 40px;
+    transition: all 0.5s;
+}
+
+#section5 .mokup_area .text_area>a:hover {
+    background-color: #585858;
+    color: #fcfcfc;
+}
+
+/* //section5 */
