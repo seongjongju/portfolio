@@ -1,0 +1,345 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* 공통 */
+/* 폰트사이즈 */
+html {
+    font-size: 16px;
+}
+body {
+    font-size: 1rem;
+}
+
+.fs14 {
+    font-size: 0.875rem;
+}
+.fs16 {
+    font-size: 1rem;
+}
+.fs18 {
+    font-size: 1.125rem;
+}
+.fs21 {
+    font-size: 1.313rem;
+}
+.fs25 {
+    font-size: 1.563rem;
+}
+.fs30 {
+    font-size: 1.875rem;
+}
+.fs60 {
+    font-size: 3.75rem;
+    color: #BB1212;
+}
+/* 폰트사이즈 */
+.inner {
+    max-width: 1280px;
+}
+section {
+    position: relative;
+    padding: 3% 3% 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+/* 공통 */
+
+/* header */
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    color: #fff;
+    z-index: 1000;
+    transition: color 0.3s;
+}
+header nav {
+    position: absolute;
+    top: 12%;
+    right: 0;
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+header nav>a {
+    display: inline-block;
+    width: calc(100%/5);
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s;
+}
+header nav>a:hover {
+    color: #cdcdcd;
+}
+/* //header */
+
+/* home */
+#home {
+    background: url(../img/stars-13910.gif) no-repeat center/cover;
+}
+#home > h2 {
+    text-align: center;
+    font-size: 6.5rem;
+    color: transparent;
+    text-shadow:
+        -2px -2px 0 #ffffff,
+        /* 상단 왼쪽 테두리 */
+        2px -2px 0 #31351e,
+        /* 상단 오른쪽 테두리 */
+        -2px 2px 0 #c2c2c2,
+        /* 하단 왼쪽 테두리 */
+        2px 2px 0 #31351e;
+    /* 하단 오른쪽 테두리 */
+    padding-top: 12%;
+}
+#home > h2 > span {
+    display: block;
+    font-size: 7rem;
+    letter-spacing: 5px;
+}
+#home .intro {
+    width: 60vw;
+    margin: auto;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+/* //home */
+
+/* about */
+#about .profile {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px auto 0;
+}
+/* 이미지 */
+#about .profile >figure {
+    max-width: 400px;
+    max-height: 550px;
+    border-radius: 50px;
+}
+#about .profile >figure>img {
+    border-radius: 50px;
+    width: 100%;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
+}
+/* 이미지 */
+
+/* 텍스트 */
+#about .profile .profile_text {
+    width: 60%;
+}
+#about .profile .profile_text>p {
+    margin-bottom: 30px;
+    color: rgba(0, 0, 0, 0.7);
+}
+#about .profile .profile_text>p:first-child {
+    color: #111111;
+    font-weight: 600;
+}
+#about .profile .profile_text>p:nth-of-type(3) {
+    color: #111111;
+    font-weight: 500;
+}
+#about strong {
+    color: #bb1212;
+}
+#about .education {
+    display: flex;
+    margin-bottom: 20px;
+}
+#about .education > p {
+    padding-left: 20px;
+    line-height: 25px;
+    position: relative;
+}
+#about .education > p:before {
+    position: absolute;
+    content: '';
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #bb1212;
+    border-radius: 100%;
+    width: 3px;
+    height: 3px;    
+}
+#about .Certificates {
+    display: flex;
+    margin-bottom: 20px;
+}
+#about .Certificates>div {
+    width: 77.5%;
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#about .Certificates>div>p {
+    line-height: 25px;
+    margin-right: 15px;
+    position: relative;
+}
+#about .Certificates>div>p:before {
+    position: absolute;
+    content: '';
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #bb1212;
+    border-radius: 100%;
+    width: 3px;
+    height: 3px;
+}
+/* 텍스트 */
+
+/* skill 이미지 */
+#about .skill {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+#about .skill > figure {
+    max-width: 80px;
+    max-height: 80px;
+    margin-right: 25px;
+}
+#about .skill > figure > img {
+    width: 100%;
+    height: auto;
+}
+/* skill 이미지 */
+/* //about */
+
+/* design */
+#design {
+    position: relative;
+    background: url(../img/Gyeongbokgung_mobielMokup.png) no-repeat center / cover;
+}
+#design:before {
+    position: absolute;
+    content: '';
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to right,rgba(255,255,255,0),rgba(0,0,0,0.8));
+}
+#design>h2 {
+    position: relative;
+    z-index: 1;
+}
+#design .design_project {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+/* 스와이퍼 */
+#design .design_Swiper {
+    width: 200%;
+}
+#design .design_Swiper .swiper-slide {
+    width: 100%;
+}
+#design .design_Swiper .swiper-slide > img {
+    width: 100%;
+}
+/* 스와이퍼 */
+
+/* 텍스트 */
+#design .design_text {
+    position: relative;
+    padding-top: 80px;
+    z-index: 1;
+}
+#design .design_text > p {
+   margin-bottom: 40px;
+}
+#design .design_text > p:first-child {
+    font-weight: 600;
+    color: #ffffff;
+}
+#design .design_text > p:nth-of-type(2),
+#design .design_text > p:nth-of-type(3), 
+#design .design_text > p:nth-of-type(4) {
+    line-height: 28px;
+    font-weight: 500;
+    color: #fff;
+}
+/* 텍스트 */
+
+/* 드래그 이미지 */
+#design .drag {
+    position: absolute;
+    top: 20%; left: 31.5%;
+    width: 45px; height: 45px;
+    transform: rotate(180deg);
+    animation: move 1s ease infinite;
+}
+@keyframes move {
+     0% {
+        left: 31.5%;
+    }
+     100% {
+        left: 32%;
+     }
+}
+
+/* design */
+
+/* design2 */
+#design2 {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+#design2 .design2Area {
+    position: relative;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+}
+/* 이미지 */
+#design2 .design2Area .design2_img1 {
+    width: 23%;
+    height: 100%;
+    margin-right: 100px;
+}
+#design2 .design2Area .design2_img2 {
+    width: 10%;
+    height: 100%;
+}
+#design2 .design2Area .mokup1 {
+    margin-top: 22%;
+    width: 60%;
+    height: 65%;
+}
+#design2 .design2Area .mokup2 {
+    position: absolute;
+    margin-top: 38%;
+    width: 40%;
+    height: 40%;
+    left: 70%;
+}
+/* 이미지 */
+
+/* 텍스트 */
+#design2 .design2Area .design2_text {
+    position: absolute;
+    width: 40%;
+    top: 5%; right: 5%;
+}
+#design2 .design2Area .design2_text > p {
+    margin-bottom: 20px;
+}
+#design2 .design2Area .design2_text > p:first-child {
+    font-weight: 600;
+    color: #BB1212;
+}
+#design2 .design2Area .design2_text > p + p{
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+}
+/* 텍스트 */
+/* design2 */
+
+

@@ -9,4 +9,5 @@ window.addEventListener('scroll', function() {
     } else {
         header.style.color = "#fff"
     }
-})
+});
+var swiper = new Swiper(".design_Swiper", {});
