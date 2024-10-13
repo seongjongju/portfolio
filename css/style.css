@@ -36,6 +36,9 @@ body {
 .inner {
     max-width: 1280px;
 }
+.inner2 {
+    max-width: 1600px;
+}
 section {
     position: relative;
     padding: 3% 3% 0;
@@ -232,7 +235,7 @@ header nav>a:hover {
 #design .design_project {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: -20px auto;
 }
 /* 스와이퍼 */
 #design .design_Swiper {
@@ -264,24 +267,24 @@ header nav>a:hover {
 #design .design_text > p:nth-of-type(4) {
     line-height: 28px;
     font-weight: 500;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
 }
 /* 텍스트 */
 
 /* 드래그 이미지 */
 #design .drag {
     position: absolute;
-    top: 20%; left: 31.5%;
+    top: 15%; left: 33%;
     width: 45px; height: 45px;
     transform: rotate(180deg);
     animation: move 1s ease infinite;
 }
 @keyframes move {
      0% {
-        left: 31.5%;
+        left: 33%;
     }
      100% {
-        left: 32%;
+        left: 33.5%;
      }
 }
 
@@ -289,8 +292,15 @@ header nav>a:hover {
 
 /* design2 */
 #design2 {
-    background-color: #ffffff;
-    overflow: hidden;
+    background: url(../img/Gyeongbokgung_design2.jpg) no-repeat center / cover;
+    position: relative;
+}
+#design2:before {
+    position: absolute;
+    content: '';
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to right,rgba(255,255,255,0),rgba(0,0,0,0.8));
 }
 #design2 .design2Area {
     position: relative;
@@ -316,7 +326,7 @@ header nav>a:hover {
 #design2 .design2Area .mokup2 {
     position: absolute;
     margin-top: 38%;
-    width: 40%;
+    width: 34%;
     height: 40%;
     left: 70%;
 }
@@ -333,13 +343,99 @@ header nav>a:hover {
 }
 #design2 .design2Area .design2_text > p:first-child {
     font-weight: 600;
-    color: #BB1212;
+    color: #fff;
 }
 #design2 .design2Area .design2_text > p + p{
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.8);
 }
 /* 텍스트 */
 /* design2 */
 
+/* publishing */
+#publishing {
+    background: #fafafa url(../img/antenna_logo.png) no-repeat 120% -30%/800px;
+}
+#publishing2 {
+    background: #fff url(../img/bonjourparis_logo.png) no-repeat 130% -55%/1000px;
+}
+.publishing_area {
+    margin: 70px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+#publishing2 .publishing_area {
+    margin-top: 140px;
+}
+/* 이미지 */
+.publishing_area .mokups {
+    width: 50%;
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+}
+.publishing_area .mokups > img {
+    width: 100%;
+    height: auto;
+}
+/* 이미지 */
 
+/* 텍스트 */
+.publishing_area .publishing_text {
+    width: 47%;
+}
+.publishing_area .publishing_text > h3 {
+    margin-bottom: 40px;
+}
+.publishing_area .publishing_text > p {
+    margin-bottom: 20px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+}
+.publishing_area .publishing_text > h4 {
+    margin-bottom: 5px;
+}
+.publishing_area .publishing_text > span {
+    display: inline-block;
+    margin: 0 15px 20px 0;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 300;
+}
+/* 텍스트 */
+
+/* 깃허브 */
+.publishing_area .publishing_text .code {
+    margin-top: 60px;
+}
+#publishing .publishing_area .publishing_text .code > a {
+    display: inline-block;
+    width: 30%;
+    margin-right: 15px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #FDE700;
+    border-radius: 40px;
+    transition: all 0.5s;
+}
+#publishing .publishing_area .publishing_text .code > a:hover {
+    background-color: #FDE700;
+}
+#publishing2 .publishing_area .publishing_text .code > a {
+    display: inline-block;
+    width: 30%;
+    margin-right: 15px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #FFA400;
+    border-radius: 40px;
+    transition: all 0.5s;
+}
+#publishing2 .publishing_area .publishing_text .code > a:hover {
+    background-color: #FFA400;
+}
+/* 깃허브 */
+/* //publishing */
