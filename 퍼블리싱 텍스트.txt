@@ -1,0 +1,32 @@
+<div class="publishing_text" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <h3 class="fs30">Antenna Music <span class="fs16">(PC, TABLET, MOBILE)</span></h3>
+                    <p class="fs16">
+                        이 프로젝트에서는 직접 디자인부터 퍼블리싱까지 진행한 프로젝트입니다.  <br>
+                        디자인 과정에서 자바스크립트와 CSS를 활용하여 소속사의 로고가 회전하는 로딩 화면, 탭 메뉴, 그리고 회전하는 LP판 애니메이션을 구현했습니다. 이러한 기능적 요소들은
+                        사용자가 지루함을 느끼지 않도록 하여, 웹사이트 방문 시 더욱 흥미롭고 즐거운 경험을 제공하기 위해 설계되었습니다. <br>
+                        또한, 상단 헤더를 고정하여 사용자 편의성을 높였고, #SHORTS 페이지는 반응형 디자인을 적용하여 실제 유튜브 숏츠 영상을 보는 듯한 몰입감을 느낄 수 있도록
+                        구현하였습니다.
+                    </p>
+                    <h4 class="fs21">기술 스택</h4>
+                    <span>#HTML</span>
+                    <span>#CSS</span>
+                    <span>#JavaScript</span>
+                    <span>#jQuery</span>
+                    <span>renewal Design</span>
+                    <span>Responsive Design</span>
+                    <h4 class="fs21">작업범위</h4>
+                    <span>#HOME</span>
+                    <span>#ABOUT</span>
+                    <span>#ARTIST</span>
+                    <span>#ARTIST 개별 페이지</span>
+                    <span>#CONTACT</span>
+                    <span>#SHORTS</span>
+                    <h4 class="fs21">주요기능</h4>
+                    <span>#Figma</span>
+                    <span>#로딩화면</span>
+                    <span>#Swiper</span>
+                    <span>#탭메뉴</span>
+                    <div class="code">
+                        <a href="https://seongjongju.github.io/antenna/" target="_blank">VIEW</a>
+                        <a href="https://github.com/seongjongju/antenna.git" target="_blank">CODE</a>
+                    </div>

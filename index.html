@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/seongjongju.css">
+    <title>SEONG JONG JU</title>
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
-    <title>SEONG JONG JU</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
@@ -20,60 +25,54 @@
     <div id="wrap">
         <!-- header -->
         <header>
-            <!-- <h1>Seong Jong Ju</h1> -->
             <nav>
-                <a href="#section1">HOME</a>
-                <a href="#section2">ABOUT ME</a>
-                <a href="#section3">PROJECT</a>
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT ME</a>
+                <a href="#design">Design PROJECT</a>
+                <a href="#">Publishing PROJECT</a>
                 <a href="#">CONTACT</a>
             </nav>
         </header>
         <!-- header -->
 
-        <!-- section1 -->
-        <section id="section1">
+        <!-- home -->
+        <section id="home">
             <h2 data-aos="fade-up" data-aos-duration="1000">
                 JONGJU's <span>WEB PORTFOLIO</span>
             </h2>
-            <p class="intro" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <p class="intro fs21" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 저는 계속 배우고 성장하면서, 직관적인 웹사이트를 만들어가고 있어요. 새로운 도전과 기술에 열정을 쏟으며, 창의적이고 효율적인 퍼블리싱을 목표로 하고 있죠. 앞으로도 제 작업이 더 나은
                 웹 환경에 기여할 수 있길 기대하고 있습니다.
             </p>
         </section>
-        <!-- //section1 -->
+        <!-- home -->
 
-        <!-- section2 -->
-        <section id="section2">
-            <h2>ABOUT ME</h2>
-            <!--  <p class="title">
-                끊임없는 열정과 새로운 배움을 수용하며, 변화에 빠르게 적응하는 신입 웹 퍼블리셔입니다.
-            </p>
-            <p class="text">
-                새로운 기술을 배우고 적용하는 데 항상 열정을 가지고 있으며, 웹 퍼블리셔로서 성장할 기회를 찾고 있습니다. 제 기술과 열정을 바탕으로 웹 프로젝트에 기여하고 함께 성장하고 싶습니다.
-            </p> -->
-            <div class="profile">
-                <div class="profile_card" data-aos="fade-down" data-aos-duration="1000">
-                    <figure></figure>
-                </div>
+        <!-- about -->
+        <section id="about">
+            <h2 class="fs60">ABOUT ME</h2>
+            <div class="profile inner">
+                <figure data-aos="fade-down" data-aos-duration="1000">
+                    <img src="img/myphoto.jpg" alt="">
+                </figure>
                 <div class="profile_text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <p>
+                    <p class="fs25">
                         안녕하세요 신입 웹 퍼블리셔 <br>성종주입니다!
                     </p>
-                    <p>
+                    <p class="fs18">
                         엠비씨컴퓨터아카데미에서 웹 퍼블리셔로서 기초를 다지고 실무 기술을 익힌 성종주입니다. 처음에는 디자인 직무를 목표로 학원에 다녔지만, HTML, CSS,
                         JavaScript를
                         활용하여 웹사이트를 구축하고 다양한 디자인 툴을 사용하면서 퍼블리싱에 대한 애정과 열정을 갖게 되었습니다.
                     </p>
-                    <p>
+                    <p class="fs18">
                         "엠비씨컴퓨터아카데미에서 배운 실무 지식과 퍼블리싱에 대한 열정을 바탕으로, 끊임없이 성장하며 새로운 도전을 즐기는 신입 웹 퍼블리셔가 되겠습니다."
                     </p>
                     <div class="education">
                         <strong>EDUCATION</strong>
-                        <p>엠비씨컴퓨터아카데미 (디지털디자인) 웹디자인&웹퍼블리셔(React) B 과정 수료</p>
+                        <p class="fs14">엠비씨컴퓨터아카데미 (디지털디자인) 웹디자인&웹퍼블리셔(React) B 과정 수료</p>
                     </div>
                     <div class="Certificates">
                         <strong>CERTIFICATES</strong>
-                        <div>
+                        <div class="fs14">
                             <p>사회복지사2급</p>
                             <p>자동차운전면허증 2종보통</p>
                             <p>ERP인사정보관리사1급</p>
@@ -87,41 +86,233 @@
                     </div>
                     <strong>SKILL</strong>
                     <div class="skill">
-                        <figure class="html"></figure>
-                        <figure class="css"></figure>
-                        <figure class="js"></figure>
-                        <figure class="jq"></figure>
-                        <figure class="figma"></figure>
-                        <figure class="photo"></figure>
-                        <figure class="git"></figure>
+                        <figure class="html">
+                            <img src="img/html.png" alt="">
+                        </figure>
+                        <figure class="css">
+                            <img src="img/css.png" alt="">
+                        </figure>
+                        <figure class="js">
+                            <img src="img/javascript.png" alt="">
+                        </figure>
+                        <figure class="jq">
+                            <img src="img/jquery.gif" alt="">
+                        </figure>
+                        <figure class="figma">
+                            <img src="img/figma.png" alt="">
+                        </figure>
+                        <figure class="photo">
+                            <img src="img/photoshop.png" alt="">
+                        </figure>
+                        <figure class="git">
+                            <img src="img/git_hub.png" alt="">
+                        </figure>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- //section2 -->
+        <!-- //about -->
 
-        <!-- section3 -->
-        <!-- antenna -->
-        <section id="section3">
-            <h2>PROJECT</h2>
-            <span data-aos="fade-up" data-aos-duration="1000">#HTML</span>
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">#CSS</span>
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">#JavaScript</span>
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">#jQuery</span>
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">#웹 표준</span>
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">#웹 접근성</span>
-            <div class="mokup_area" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                <div class="mokup">
-                    <figure class="mokups">
-                        <img src="img/antenna.png" alt="안테나 pc">
-                    </figure>
+        <!-- design -->
+        <section id="design">
+            <h2 class="fs60">DESIGN</h2>
+            <div class="design_project inner">
+                <!-- Swiper -->
+                <div class="swiper design_Swiper" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/1_메인페이지.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/2_gnb_로그인x.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/3_gnb_로그인.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/4_로그인.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/5_회원가입.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/6_검색창.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/7_경복궁 소개.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/8_관람안내.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/9_예약하기step1.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/10_예약하기step2.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/11_예약하기step3.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/12_마이페이지_예약o.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/13_마이페이지_예약x.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/14_예약취소.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/15_경복궁체험과행사.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/16_경복궁 행사.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/17_경복궁 체험.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/18_환경설정.png" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="text_area">
-                    <h3>Antenna Music <span>(PC, TABLET, MOBILE)</span></h3>
-                    <p>
+                <!-- Swiper -->
+
+                <!-- 텍스트 -->
+                <div class="design_text" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <p class="fs25">
+                        경복궁 모바일 디자인 조별 프로젝트
+                    </p>
+                    <p class="fs18">
+                        조별과제로 3명이 함께 경복궁 모바일 디자인을 작업했습니다. 경복궁의 역사적 의미를 살리면서도, 사용자들이 정보를 쉽게 찾아볼 수 있도록 직관적인 인터페이스를 만들고자
+                        했습니다.
+                    </p>
+                    <p class="fs18">
+                        기획 및 설계, 피그마 디자인 작업을 주로 맡았고, 전체적인 레이아웃과 사용자 흐름을 설계했습니다. 주요 화면들을 디자인하면서, 사용자들이 편리하게 이용할 수 있도록 신경
+                        썼습니다.
+                    </p>
+                    <p class="fs18">
+                        조별과제 진행 중 팀원 간의 소통이 원활하지 않아 작업이 겹치거나 추가된 내용을 전달받지 못하는 상황이 발생했습니다. 그러나 작업 중간에 정리하는 시간을 마련함으로써 이러한
+                        문제를 극복해 나갈 수 있었습니다. 이 과정에서 협업의 중요성과 팀워크를 통해 한 프로젝트를 완성해 나가는 경험을 배울 수 있었습니다.
+                    </p>
+                </div>
+                <!-- 텍스트 -->
+            </div>
+            <img src="img/drag.png" alt="" class="drag">
+        </section>
+        <!-- design -->
+
+        <!-- design2 -->
+        <section id="design2">
+            <div class="design2Area inner">
+                <img src="img/Gyeongbokgung_pc.png" alt="" class="design2_img1" data-aos="fade-up"
+                    data-aos-duration="1000">
+                <img src="img/Gyeongbokgung_Tblit.png" alt="" class="design2_img2" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="200">
+                <img src="img/Gyeongbokgung_pc_mokup .png" alt="" class="mokup1" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="400">
+                <img src="img/Gyeongbokgung_tablit_mokup.png" alt="" class="mokup2" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="600">
+                <div class="design2_text" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800">
+                    <p class="fs25">경복궁 메인페이지 디자인</p>
+                    <p class="fs16">
+                        경복궁 모바일 디자인 이후, 개별 과제로 PC와 태블릿 버전의 메인 페이지를 디자인하면서, 다양한 해상도에 맞춘 시각적 일관성을 유지하는 데 중점을 두었습니다.
+                    </p>
+                    <p class="fs16">
+                        포토샵을 활용해 각 디바이스에 최적화된 디자인을 제작했으며, 사용자 인터페이스(UI)의 디테일과 편리한 사용자 경험(UX)을 고려한 배치를 통해 디자인 완성도를 높였습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- design2 -->
+
+        <!-- publishing 안테나 -->
+        <section id="publishing">
+            <h2 class="fs60">PUBLISHING</h2>
+            <div class="publishing_area inner2">
+                <figure class="mokups" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="img/antenna.png" alt="안테나 pc">
+                </figure>
+                <div class="publishing_text" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <h3 class="fs30">Antenna Music <span class="fs16">(PC, TABLET, MOBILE)</span></h3>
+                    <p class="fs16">
+                        이 프로젝트에서는 직접 디자인부터 퍼블리싱까지 진행한 프로젝트입니다.  <br>
+                        디자인 과정에서 자바스크립트와 CSS를 활용하여 소속사의 로고가 회전하는 로딩 화면, 탭 메뉴, 그리고 회전하는 LP판 애니메이션을 구현했습니다. 이러한 기능적 요소들은
+                        사용자가 지루함을 느끼지 않도록 하여, 웹사이트 방문 시 더욱 흥미롭고 즐거운 경험을 제공하기 위해 설계되었습니다. <br>
+                        또한, 상단 헤더를 고정하여 사용자 편의성을 높였고, #SHORTS 페이지는 반응형 디자인을 적용하여 실제 유튜브 숏츠 영상을 보는 듯한 몰입감을 느낄 수 있도록
+                        구현하였습니다.
+                    </p>
+                    <h4 class="fs21">기술 스택</h4>
+                    <span>#HTML</span>
+                    <span>#CSS</span>
+                    <span>#JavaScript</span>
+                    <span>#jQuery</span>
+                    <span>renewal Design</span>
+                    <span>Responsive Design</span>
+                    <h4 class="fs21">작업범위</h4>
+                    <span>#HOME</span>
+                    <span>#ABOUT</span>
+                    <span>#ARTIST</span>
+                    <span>#ARTIST 개별 페이지</span>
+                    <span>#CONTACT</span>
+                    <span>#SHORTS</span>
+                    <h4 class="fs21">주요기능</h4>
+                    <span>#Figma</span>
+                    <span>#로딩화면</span>
+                    <span>#Swiper</span>
+                    <span>#탭메뉴</span>
+                    <div class="code">
+                        <a href="https://seongjongju.github.io/antenna/" target="_blank">VIEW</a>
+                        <a href="https://github.com/seongjongju/antenna.git" target="_blank">CODE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- publishing -->
+
+        <!-- publishing4 국립현대미술관 -->
+        <section id="publishing4">
+            <div class="publishing_area inner2">
+                <figure class="mokups" data-aos="fade-down" data-aos-duration="1000">
+                    <img src="img/art_galley_pc.png" alt="국립현대미술관 pc">
+                </figure>
+                <div class="publishing_text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <h3 class="fs30">국립현대미술관 <span class="fs16">(PC, TABLET, MOBILE)</span></h3>
+                    <p class="fs16">
+                        국립현대미술관의 웹사이트를 클론 코딩하여, 실제 사이트의 구조와 디자인을 분석하고 구현했습니다. 이 프로젝트를 통해 웹 개발의 기본 원리와 디자인 요소에 대한 이해를 심화할 수 있었습니다.
+                    </p>
+                    <h4 class="fs21">기술 스택</h4>
+                    <span>#HTML</span>
+                    <span>#CSS</span>
+                    <span>#JavaScript</span>
+                    <span>#jQuery</span>
+                    <span>Responsive</span>
+                    <h4 class="fs21">작업범위</h4>
+                    <span>#HOME</span>
+                    <span>#관람·참여 > 서울</span>
+                    <span>#관람·참여 > 과천</span>
+                    <span>#소장품 > 소장품검색</span>
+                    <div class="code">
+                        <a href="https://seongjongju.github.io/Museum-of-Modern-Art/" target="_blank">VIEW</a>
+                        <a href="https://github.com/seongjongju/Museum-of-Modern-Art.git" target="_blank">CODE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- publishing4 -->
+
+        <!-- publishing2 봉주르 -->
+        <section id="publishing2">
+            <div class="publishing_area inner2">
+                <figure class="mokups" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="img/bonjour_pc.png" alt="봉주르파리 pc">
+                </figure>
+                <div class="publishing_text" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <h3 class="fs30">Bonjour.Paris Eshop <span class="fs16">(PC)</span></h3>
+                    <p class="fs16">
                         이 프로젝트에서는 ANTENNA 소속 아티스트의 음악과 이미지를 중심으로 웹사이트 디자인을 구성했습니다.
                     </p>
-                    <p>
+                    <p class="fs16">
                         디자인 과정에서는 자바스크립트와 CSS를 활용하여,
                         소속사의 로고가
                         회전하는 로딩 화면과 탭메뉴, 회전하는 LP판 애니메이션을 구현했습니다. 이러한 기능적 요소들은 사용자에게 지루함을 덜어주고, 웹사이트 방문 시 더 흥미롭고
@@ -129,61 +320,24 @@
                         경험을 제공하기
                         위해 추가되었습니다.
                     </p>
-                    <h4>기술 스택</h4>
+                    <h4 class="fs21">기술 스택</h4>
                     <span>#HTML</span>
                     <span>#CSS</span>
                     <span>#JavaScript</span>
                     <span>#jQuery</span>
-                    <h4>기여도</h4>
+                    <h4 class="fs21">기여도</h4>
                     <span>#퍼블리싱 100%</span>
-                    <a href="https://seongjongju.github.io/antenna/" target="_blank">VIEW</a>
-                    <a href="https://github.com/seongjongju/antenna.git" target="_blank">CODE</a>
+                    <div class="code">
+                        <a href="https://seongjongju.github.io/bonjour.paris/" target="_blank">VIEW</a>
+                        <a href="https://github.com/seongjongju/bonjour.paris.git" target="_blank">CODE</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- antenna -->
-        <!-- //section3 -->
+        <!-- publishing2 -->
 
-        <!-- section4 -->
-        <!-- bonjour.paris -->
-        <section id="section4">
-            <div class="mokup_area" data-aos="fade-up" data-aos-duration="1000">
-                <div class="mokup">
-                    <figure class="mokups">
-                        <img src="img/bonjour_pc.png" alt="봉주르 pc">
-                    </figure>
-                </div>
-                <div class="text_area">
-                    <h3>Bonjour.Paris Eshop <span>(PC)</span></h3>
-                    <p>
-                        이 프로젝트에서는 ANTENNA 소속 아티스트의 음악과 이미지를 중심으로 웹사이트 디자인을 구성했습니다.
-                    </p>
-                    <p>
-                        디자인 과정에서는 자바스크립트와 CSS를 활용하여,
-                        소속사의 로고가
-                        회전하는 로딩 화면과 탭메뉴, 회전하는 LP판 애니메이션을 구현했습니다. 이러한 기능적 요소들은 사용자에게 지루함을 덜어주고, 웹사이트 방문 시 더 흥미롭고
-                        즐거운
-                        경험을 제공하기
-                        위해 추가되었습니다.
-                    </p>
-                    <h4>기술 스택</h4>
-                    <span>#HTML</span>
-                    <span>#CSS</span>
-                    <span>#JavaScript</span>
-                    <span>#jQuery</span>
-                    <h4>기여도</h4>
-                    <span>#퍼블리싱 100%</span>
-                    <a href="https://seongjongju.github.io/bonjour.paris/" target="_blank">VIEW</a>
-                    <a href="https://github.com/seongjongju/bonjour.paris.git" target="_blank">CODE</a>
-                </div>
-            </div>
-        </section>
-        <!-- bonjour.paris -->
-        <!-- //section4 -->
-
-        <!-- section5 -->
-        <!-- 프롬헤라스 -->
-        <section id="section5">
+        <!-- publishing3 프롬헤라스 -->
+        <section id="publishing3">
             <div class="loop">
                 <img src="img/slide_logo.png" class="slide_logo" alt="프롬헤라스 로고 루프 이미지">
                 <img src="img/slide_logo.png" class="slide_logo" alt="프롬헤라스 로고 루프 이미지">
@@ -191,18 +345,16 @@
                 <img src="img/slide_logo.png" class="slide_logo" alt="프롬헤라스 로고 루프 이미지">
                 <img src="img/slide_logo.png" class="slide_logo" alt="프롬헤라스 로고 루프 이미지">
             </div>
-            <div class="mokup_area" data-aos="fade-up" data-aos-duration="1000">
-                <div class="mokup">
-                    <figure class="mokups">
-                        <img src="img/fromheras_pc.png" alt="프롬헤라스 pc">
-                    </figure>
-                </div>
-                <div class="text_area">
-                    <h3>프롬헤라스 <span>(PC)</span></h3>
-                    <p>
+            <div class="publishing_area inner2">
+                <figure class="mokups" data-aos="fade-down" data-aos-duration="1000">
+                    <img src="img/fromheras_pc.png" alt="프롬헤라스 pc">
+                </figure>
+                <div class="publishing_text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <h3 class="fs30">프롬헤라스 <span class="fs16">(PC)</span></h3>
+                    <p class="fs16">
                         이 프로젝트에서는 ANTENNA 소속 아티스트의 음악과 이미지를 중심으로 웹사이트 디자인을 구성했습니다.
                     </p>
-                    <p>
+                    <p class="fs16">
                         디자인 과정에서는 자바스크립트와 CSS를 활용하여,
                         소속사의 로고가
                         회전하는 로딩 화면과 탭메뉴, 회전하는 LP판 애니메이션을 구현했습니다. 이러한 기능적 요소들은 사용자에게 지루함을 덜어주고, 웹사이트 방문 시 더 흥미롭고
@@ -210,65 +362,60 @@
                         경험을 제공하기
                         위해 추가되었습니다.
                     </p>
-                    <h4>기술 스택</h4>
+                    <h4 class="fs21">기술 스택</h4>
                     <span>#HTML</span>
                     <span>#CSS</span>
                     <span>#JavaScript</span>
                     <span>#jQuery</span>
-                    <h4>기여도</h4>
-                    <span>#퍼블리싱 100%</span>
-                    <a href="https://seongjongju.github.io/fromheras/" target="_blank">VIEW</a>
-                    <a href="https://github.com/seongjongju/fromheras.git" target="_blank">CODE</a>
+                    <h4 class="fs21">작업범위</h4>
+                    <span>#HOME</span>
+                    <span>#ABOUT</span>
+                    <span>#ARTIST</span>
+                    <span>#ARTIST 개별 페이지</span>
+                    <span>#CONTACT</span>
+                    <span>#SHORTS</span>
+                    <div class="code">
+                        <a href="https://seongjongju.github.io/fromheras/" target="_blank">VIEW</a>
+                        <a href="https://github.com/seongjongju/fromheras.git" target="_blank">CODE</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- 프롬헤라스 -->
-        <!-- //section5 -->
+        <!-- publishing3 -->
 
-        <!-- section6 -->
-        <!-- 국립현대미술관 -->
-        <section id="section6">
-            <div class="mokup_area" data-aos="fade-up" data-aos-duration="1000">
-                <div class="mokup">
-                    <figure class="mokups">
-                        <img src="img/art_galley_pc.png" alt="봉주르 pc">
-                    </figure>
-                </div>
-                <div class="text_area">
-                    <h3>국립현대미술관 <span>(PC)</span></h3>
-                    <p>
-                        이 프로젝트에서는 ANTENNA 소속 아티스트의 음악과 이미지를 중심으로 웹사이트 디자인을 구성했습니다.
+        <!-- contact -->
+        <section id="contact">
+            <div class="contact_inner">
+                <figure data-aos="fade-up" data-aos-duration="1000">
+                    <img src="img/myphoto.jpg" alt="">
+                </figure>
+                <div class="contact_text" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <p class="fs60">CONTACT</p>
+                    <p class="fs30">
+                        저의 이야기를 더 듣고싶으신가요? <br>
+                        아래 연락처로 언제든 연락주세요!
                     </p>
-                    <p>
-                        디자인 과정에서는 자바스크립트와 CSS를 활용하여,
-                        소속사의 로고가
-                        회전하는 로딩 화면과 탭메뉴, 회전하는 LP판 애니메이션을 구현했습니다. 이러한 기능적 요소들은 사용자에게 지루함을 덜어주고, 웹사이트 방문 시 더 흥미롭고
-                        즐거운
-                        경험을 제공하기
-                        위해 추가되었습니다.
-                    </p>
-                    <h4>기술 스택</h4>
-                    <span>#HTML</span>
-                    <span>#CSS</span>
-                    <span>#JavaScript</span>
-                    <span>#jQuery</span>
-                    <h4>기여도</h4>
-                    <span>#퍼블리싱 100%</span>
-                    <a href="https://seongjongju.github.io/bonjour.paris/" target="_blank">VIEW</a>
-                    <a href="https://github.com/seongjongju/bonjour.paris.git" target="_blank">CODE</a>
+                    <p class="fs18">sjj990480@naver.com</p>
+                    <p class="fs18">010-8690-3363</p>
+                    <p class="fs25">Thank you for viewing</p>
                 </div>
             </div>
+            <p class="copy fs16">
+                Created with passion by SeongJongJu. © 2023 All rights reserved
+            </p>
         </section>
-        <!-- 국립현대미술관 -->
-        <!-- //section6 -->
+        <!-- contact -->
     </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="js/seongjongju.js"></script>
 
     <script>
         /* aos애니메이션 */
         AOS.init();
-         /* aos애니메이션 */
+        /* aos애니메이션 */
 
 
         /* 부드러운 스크롤 */
