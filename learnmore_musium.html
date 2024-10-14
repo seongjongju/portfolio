@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성종주 웹 포트폴리오</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="container inner3">
+            <img src="https://lh3.googleusercontent.com/pTVB6QivE2ujByqz6IS_Bd-gknG3XsP3UWsQjQZWFYYTZm9hjOqsdbyxwUiXQgH8ukt-1Z0dj_Up1U6brx-dQx8nh9BxW-as01WyILWvAVVPha5nIhrx=w1920-h960-n"
+                alt="">
+            <!-- 제목 및 개요 -->
+            <h1 class="fs60">국립현대미술관 반응형 웹 사이트</h1>
+            <h2 class="fs30">
+                프로젝트 개요
+            </h2>
+            <p class="fs21">
+                국립현대미술관의 웹사이트를 클론 코딩하여, 실제 사이트의 구조와 디자인을 분석하고 구현한 작업입니다.
+            </p>
+            <p class="fs21">
+                데스크탑부터 모바일까지 다양한 디바이스 환경에서 원활하게 실행될 수 있도록 반응형 웹 작업을 포함하여, 사용자 경험을 고려한 최적화된 설계를 반영하였습니다.
+            </p>
+            <!-- 제목 및 개요 -->
+
+            <!-- 작업 기간 -->
+            <h2 class="fs30">
+                작업 기간
+            </h2>
+            <p class="fs21">
+                · 퍼블리싱 2주
+            </p>
+            <!-- 작업 기간 -->
+
+            <!-- 작업 범위 -->
+            <h2 class="fs30">
+                작업 범위
+            </h2>
+            <p class="fs21">
+                · 메인페이지
+            </p>
+            <p class="fs21">
+                · 관람참여 > 서울
+            </p>
+            <p class="fs21">
+                · 관람참여 > 과천
+            </p>
+            <p class="fs21">
+                · 소장품 > 소장품 검색
+            </p>
+            <!-- 작업 범위 -->
+
+            <!-- 기술 스택 -->
+            <h2 class="fs30">
+                기술 스택
+            </h2>
+            <p class="fs21">
+                · HTML
+            </p>
+            <p class="fs21">
+                · CSS
+            </p>
+            <p class="fs21">
+                · JavaScript
+            </p>
+            <p class="fs21">
+                · jquery
+            </p>
+            <p class="fs21">
+                · Responsive Design
+            </p>
+            <!-- 기술 스택 -->
+
+            <!-- 기여도 -->
+            <h2 class="fs30">
+                기여도
+            </h2>
+            <p class="fs21">
+                · 퍼블리싱 100%
+            </p>
+            <!-- 기여도 -->
+
+            <!-- 주요 기능 -->
+            <h2 class="fs30">
+                주요기능
+            </h2>
+            <p class="fs21 title">
+                메인페이지 <br><span class="fs18">· 실제 사이트와 유사한 레이아웃 구현, 주요 전시 및 소식 배너 표시하였습니다.</span>
+            </p>
+            <p class="fs21 title">
+                관람참여 <br><span class="fs18">· 층별안내, 오신는 길은 탭메뉴, 편의시설과 문화시설은 스와이퍼를 이용하여  콘텐츠를 적절히 배치하였습니다.</span>
+            </p>
+            <p class="fs21 title">
+                소장품 <br> <span class="fs18">
+                    · 필터링 및 정렬 기능 추가하였습니다.
+                </span>
+            </p>
+            <p class="fs21 title">
+                반응형 디자인 <br> <span class="fs18">· 다양한 기기에서 최적화된 사용자 경험 제공합니다.</span>
+            </p>
+            <p class="fs21 title">
+                반응형 GNB <br> <span class="fs18">· 모바일 환경에서 사용자가 편리하게 이용할 수 있도록 오른쪽에서 슬라이드 되는 기능을 구현하였으며, 하위 메뉴는 아코디언 메뉴로 구성하였습니다.</span>
+            </p>
+            <!-- 주요 기능 -->
+
+            <!-- 개선 및 배운점 -->
+            <h2 class="fs30">
+                개선 및 배운점
+            </h2>
+            <p class="fs21">
+                클론 코딩 과정에서 HTML과 CSS 구조의 중요성, 그리고 자바스크립트를 통한 동적 요소 구현의 필요성을 깊게 깨달았습니다.
+            </p>
+            <p class="fs21">
+                중복 클래스를 활용하여 효율적인 퍼블리싱 방법을 익혔습니다.
+            </p>
+            <p class="fs21">
+                모바일 환경을 고려한 데스크탑 환경 구현의 중요성을 체감하게 되었습니다.
+            </p>
+            <!-- 개선 및 배운점 -->
+        </div>
+    </div>
+
+    <script>
+        /* 부드러운 스크롤 */
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+        /* 부드러운 스크롤 */
+    </script>
+</body>
+
+</html>

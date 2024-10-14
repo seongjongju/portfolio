@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성종주 웹 포트폴리오</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="container inner3">
+            <img src="https://images.prismic.io/bonjour-eshop/ccdb8b17-373b-41c4-82cd-3df7c1ffd021_bonjour_eshop_cover.jpg?auto=compress,format" alt="">
+            <!-- 제목 및 개요 -->
+            <h1 class="fs60">Bonjour.Paris Eshop 웹 사이트</h1>
+            <h2 class="fs30">
+                프로젝트 개요
+            </h2>
+            <p class="fs21">
+                Bonjour.Paris Eshop 웹 사이트를 클론 코딩하며 독특하고 도전적인 디자인 요소를 분석하고 구현하였습니다.
+            </p>
+            <p class="fs21">
+                쇼핑몰의 핵심 기능을 구현하면서, 직관적이면서도 시각적으로 매력적인 UI/UX를 재현하는 데 주력하였습니다.
+            </p>
+            <!-- 제목 및 개요 -->
+
+            <!-- 작업 기간 -->
+            <h2 class="fs30">
+                작업 기간
+            </h2>
+            <p class="fs21">
+                · 퍼블리싱 2주
+            </p>
+            <!-- 작업 기간 -->
+
+            <!-- 작업 범위 -->
+            <h2 class="fs30">
+                작업 범위
+            </h2>
+            <p class="fs21">
+                · 메인페이지
+            </p>
+            <p class="fs21">
+                · ÉDITIONS LIMITÉES
+            </p>
+            <p class="fs21">
+                · ÉDITIONS LIMITÉES 개별 페이지
+            </p>
+            <p class="fs21">
+                · Sweatshirts
+            </p>
+            <!-- 작업 범위 -->
+
+            <!-- 기술 스택 -->
+            <h2 class="fs30">
+                기술 스택
+            </h2>
+            <p class="fs21">
+                · HTML
+            </p>
+            <p class="fs21">
+                · CSS
+            </p>
+            <p class="fs21">
+                · JavaScript
+            </p>
+            <p class="fs21">
+                · jquery
+            </p>
+            <!-- 기술 스택 -->
+
+            <!-- 기여도 -->
+            <h2 class="fs30">
+                기여도
+            </h2>
+            <p class="fs21">
+                · 퍼블리싱 100%
+            </p>
+            <!-- 기여도 -->
+
+            <!-- 주요 기능 -->
+            <h2 class="fs30">
+                주요기능
+            </h2>
+            <p class="fs21 title">
+                메인페이지 <br><span class="fs18">· 실제 사이트와 유사한 레이아웃 구현하였습니다.</span>
+            </p>
+            <p class="fs21 title">
+                GNB <br><span class="fs18">· 독특한 레이아웃을 구현하였으며, 마우스를 올리면 해당 이미지가 등장하는 효과를 추가하였습니다.</span>
+            </p>
+            <p class="fs21 title">
+                ÉDITIONS LIMITÉES <br> <span class="fs18">
+                    · 가격별로 정렬되는 기능을 구현하였습니다.
+                </span>
+            </p>
+            <p class="fs21 title">
+                ÉDITIONS LIMITÉES 개별 페이지 <br> <span class="fs18">· 쇼핑몰의 주요 기능인 색상 및 사이즈 선택과 수량 선택에 따른 총 가격 계산 기능을 구현하였습니다.</span>
+            </p>
+            <!-- 주요 기능 -->
+
+            <!-- 개선 및 배운점 -->
+            <h2 class="fs30">
+                개선 및 배운점
+            </h2>
+            <p class="fs21">
+                GNB에서 마우스 오버 효과를 사용함으로써 사용자와의 상호작용을 통해 디자인의 매력을 높일 수 있다는 것을 깨달았습니다.
+            </p>
+            <p class="fs21">
+                쇼핑몰에서 사용자 편의성을 높이는 다양한 기능(가격별 정렬, 선택 및 계산 기능)의 중요성을 배웠습니다.
+            </p>
+            <!-- 개선 및 배운점 -->
+        </div>
+    </div>
+
+    <script>
+        /* 부드러운 스크롤 */
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+        /* 부드러운 스크롤 */
+    </script>
+</body>
+
+</html>
