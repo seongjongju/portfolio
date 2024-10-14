@@ -59,6 +59,7 @@ section {
 
 /* header */
 header {
+    display: block;
     width: 100%;
     height: 70px;
     position: fixed;
@@ -83,7 +84,15 @@ header nav>a {
 header nav>a:hover {
     color: #cdcdcd;
 }
+.closeBtn {
+    display: none;
+}
 /* //header */
+
+/* open */ 
+.openBtn {
+    display: none;
+}
 
 /* home */
 #home {
@@ -295,6 +304,7 @@ header nav>a:hover {
         left: 33.5%;
      }
 }
+/* 드래그 이미지 */
 
 /* design */
 
@@ -406,31 +416,16 @@ header nav>a:hover {
     margin-top: 140px;
 }
 #publishing3 .publishing_area {
-    position: absolute;
+    position: relative;
     z-index: 1;
     width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
     margin-top: 140px;
 }
-/* #publishing3 이미지 */
-#publishing3 .publishing_area .mokups {
-    width: 65%;
-    max-height: 485px;
-    overflow: hidden;
-    border-radius: 30px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
-}
-#publishing3 .publishing_area .mokups > img {
-    width: 100%;
-    height: auto;
-}
-/* #publishing3 이미지 */
 
 /* 이미지 */
 .publishing_area .mokups {
     width: 65%;
-    max-height: 498px;
+    max-height: 485px;
     overflow: hidden;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;

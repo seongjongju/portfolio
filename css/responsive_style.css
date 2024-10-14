@@ -1,0 +1,643 @@
+@charset "utf-8";
+
+/* 1600px */
+/* 드래그 이미지 */
+#design .drag {
+    top: 15%; left: 30%;
+}
+@keyframes move {
+     0% {
+        left: 30%;
+    }
+     100% {
+        left: 30.5%;
+     }
+}
+/* 드래그 이미지 */
+
+/* 이미지 */
+.publishing_area .mokups {
+    max-height: 450px;
+}
+/* 이미지 */
+/* 1600px */
+
+/* 1400px */
+@media screen and (max-width: 1400px) {
+/* 공통 */
+.fs40 {
+    font-size: 1.875rem;
+}
+/* 공통 */
+
+/* home */
+#home .intro {
+    width: 90vw;
+}
+/* //home */
+
+/* design */
+/* 드래그 이미지 */
+#design .drag {
+    top: 15%; left: 27%;
+}
+@keyframes move {
+     0% {
+        left: 27%;
+    }
+     100% {
+        left: 27.5%;
+     }
+}
+/* 드래그 이미지 */
+/* design */
+
+/* publishing */
+/* 이미지 */
+.publishing_area .mokups {
+    max-height: 395px;
+}
+/* 이미지 */
+/* publishing */
+}
+/* 1400px */
+
+/* 1200px */
+@media screen and (max-width: 1200px) {
+/* 공통 */
+#wrap {
+    overflow-x: hidden;
+}
+/* 폰트사이즈 */
+.fs40 {
+    font-size: 1.25rem;
+}
+/* 폰트사이즈 */
+
+/* 공통 */
+
+/* design */
+/* 드래그 이미지 */
+#design .drag {
+    top: 13%; left: 25%;
+}
+@keyframes move {
+     0% {
+        left: 25%;
+    }
+     100% {
+        left: 25.5%;
+     }
+}
+/* 드래그 이미지 */
+/* design */
+
+/* design2 */
+/* 이미지 */
+#design2 .design2Area .design2_img1 {
+    width: 23%;
+    height: 100%;
+    margin-right: 100px;
+}
+#design2 .design2Area .design2_img2 {
+    width: 10%;
+    height: 100%;
+}
+#design2 .design2Area .mokup1 {
+    margin-top: 22%;
+    width: 65%;
+    height: 65%;
+}
+#design2 .design2Area .mokup2 {
+    position: absolute;
+    margin-top: 38%;
+    width: 40%;
+    height: 40%;
+    left: 70%;
+}
+/* 이미지 */
+/* design2 */
+
+/* publishing */
+/* 이미지 */
+.publishing_area .mokups {
+    max-height: 335px;
+}
+/* 이미지 */
+/* publishing */
+}
+/* 1200px */
+
+/* 1024px */
+@media screen and (max-width: 1024px) {
+    /* 공통 */
+    /* 폰트 사이즈 */
+    .fs18 {
+        font-size: 1rem;
+    }
+    /* 폰트사이즈 */
+    /* 공통 */
+    
+    /* home */
+    #home > h2 {
+        padding-top: 20%;
+    }
+    #home .intro {
+        width: 90vw;
+        font-size: 1.125rem;
+    }
+    /* //home */
+
+    /* about */
+  /* 텍스트 */
+#about .profile .profile_text {
+    width: 55%;
+}
+#about .profile .profile_text>p {
+    margin-bottom: 15px;
+}
+#about .education {
+    display: block;
+}
+#about .Certificates {
+    display: block;
+}
+  /* about */
+
+  /* design */
+/* 드래그 이미지 */
+#design .design_project {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto 0;
+}
+#design .drag {
+    top: 25%; left: 24%;
+}
+@keyframes move {
+     0% {
+        left: 24%;
+    }
+     100% {
+        left: 24.5%;
+     }
+}
+/* 드래그 이미지 */
+
+/* 텍스트 */
+#design .design_text {
+    position: relative;
+    padding-top: 55px;
+    z-index: 1;
+}
+#design .design_text > p {
+    margin-bottom: 15px;
+ }
+/* design */
+
+/* design2 */
+/* 이미지 */
+#design2 .design2Area .design2_img1 {
+    width: 28%;
+    height: 100%;
+    margin-right: 30px;
+}
+#design2 .design2Area .design2_img2 {
+    width: 15%;
+    height: 100%;
+}
+#design2 .design2Area .mokup1 {
+    margin-top: 45%;
+    width: 60%;
+    height: 50%;
+}
+#design2 .design2Area .mokup2 {
+    margin-top: 60%;
+    left: 72%;
+    width: 34%;
+    height: 32%;
+}
+/* 이미지 */
+/* design2 */
+
+/* publishing */
+.publishing_area {
+    display: block;
+}
+
+/* 이미지 */
+.publishing_area .mokups {
+    width: 100%;
+    max-height: 440px;
+    margin-bottom: 20px;
+}
+/* 이미지 */
+
+/* 텍스트 */
+.publishing_area .publishing_text {
+    width: 100%;
+}
+.publishing_area .publishing_text > h3 {
+    margin-bottom: 10px;
+}
+.publishing_area .publishing_text > p {
+    margin-bottom: 10px;
+}
+/* 텍스트 */
+
+/* 깃허브 */
+.publishing_area .publishing_text .code {
+    margin-top: 20px;
+}
+/* 깃허브 */
+}
+/* 1024px */
+
+/* 880px */
+@media screen and (max-width: 880px) {
+/* 공통 */
+/* 폰트사이즈 */
+.fs60 {
+    font-size: 3rem;
+}
+/* 폰트사이즈 */
+
+section {
+    height: auto;
+}
+/* 공통 */
+
+/* header */
+header {
+    width: 100%;
+    height: 50px;
+}
+header nav {
+    width: 100%;
+}
+header nav>a {
+    line-height: 50px;
+}
+/* //header */
+
+/* home */
+#home {
+    height: 100vh;
+}
+#home > h2 {
+    font-size: 5rem;
+    padding-top: 30%;
+}
+#home > h2 > span {
+    font-size: 5rem;
+}
+#home .intro {
+   font-size: 0.95rem;
+   width: 100%;
+}
+/* home */
+
+/* about */
+#about .profile {
+    display: block;
+}
+
+/* 이미지 */
+#about .profile >figure {
+    margin: 0 auto 20px;
+}
+/* 이미지 */
+
+/* 텍스트 */
+#about .profile .profile_text {
+    width: 80%;
+    margin: 0 auto 50px;
+}
+/* 텍스트 */
+
+/* design */
+#design:before {
+    background: rgba(0, 0, 0, 0.8);
+}
+#design .design_project {
+    display: block;
+    margin-top: -20px;
+}
+
+/* 스와이퍼 */
+#design .design_Swiper {
+    width: 100%;
+}
+/* 스와이퍼 */
+
+/* 텍스트 */
+#design .design_text {
+    padding-top: 0;
+    padding-bottom: 50px;
+}
+#design .design_text > p {
+   margin-bottom: 10px;
+}
+/* 텍스트 */
+
+/* 드래그 이미지 */
+#design .drag {
+    position: absolute;
+    top: 10%; left: 47%;
+    width: 45px; height: 45px;
+    transform: rotate(180deg);
+    animation: move 1s ease infinite;
+}
+@keyframes move {
+     0% {
+        left: 47%;
+    }
+     100% {
+        left: 47.5%;
+     }
+}
+/* 드래그 이미지 */
+/* design */
+
+/* design2 */
+/* 이미지 */
+#design2 .design2Area .design2_img1 {
+   display: none;
+}
+#design2 .design2Area .design2_img2 {
+   display: none;
+}
+#design2 .design2Area .mokup1 {
+    margin-top: 25%;
+    width: 100%;
+    height: 65%;
+}
+#design2 .design2Area .mokup2 {
+    margin-top: 51%;
+    width: 50%;
+    height: 40%;
+    left: 50%;
+}
+/* 이미지 */
+
+/* 텍스트 */
+#design2 .design2Area .design2_text {
+    position: absolute;
+    width: 100%;
+    top: 5%; right: 0;
+}
+/* 텍스트 */
+/* design2 */
+
+/* publishing */
+/* 깃허브 */
+.publishing_area .publishing_text .code {
+    padding-bottom: 50px;
+}
+/* 깃허브 */
+
+/* 이미지 */
+.publishing_area .mokups {
+    max-height: 370px;
+}
+/* 이미지 */
+/* publishing */
+
+/* contact */
+#contact {
+    height: 100vh;
+}
+#contact .contact_inner {
+    margin: 150px auto 0;
+}
+/* 이미지 */
+#contact .contact_inner > figure {
+    max-width: 350px;
+    max-height: 500px;
+    border-radius: 50%;
+}
+#contact .contact_inner > figure > img {
+    width: 100%;
+    height: auto;
+    border-radius:50%;
+}
+/* 이미지 */
+}
+/* 880px */
+
+/* 768px */
+@media screen and (max-width: 768px) {
+/* design2 */
+/* 이미지 */
+ #design2 .design2Area .mokup1 {
+     margin-top: 28%;
+     width: 100%;
+     height: 60%;
+ }
+ #design2 .design2Area .mokup2 {
+     margin-top: 55%;
+     width: 50%;
+     height: 35%;
+     left: 50%;
+ }
+ /* 이미지 */
+ /* design2 */
+
+ /* publishing */
+ /* 이미지 */
+.publishing_area .mokups {
+    max-height: 330px;
+}
+/* 이미지 */
+ /* publishing */
+
+ /* contact */
+#contact .contact_inner {
+    display: block;
+}
+/* 이미지 */
+#contact .contact_inner > figure {
+    display: none;
+}
+/* 이미지 */
+/* contact */
+}
+/* 768px */
+
+/* 568px */
+@media screen and (max-width: 568px) {
+    /* home */
+#home {
+    height: 100vh;
+}
+#home > h2 {
+    font-size: 3rem;
+    padding-top: 50%;
+}
+#home > h2 > span {
+    font-size: 3rem;
+}
+#home .intro {
+   font-size: 0.95rem;
+   width: 100%;
+}
+/* home */
+
+/* design */
+/* 드래그 이미지 */
+#design .drag {
+    position: absolute;
+    top: 8%; left: 46%;
+    width: 45px; height: 45px;
+    transform: rotate(180deg);
+    animation: move 1s ease infinite;
+}
+@keyframes move {
+     0% {
+        left: 46%;
+    }
+     100% {
+        left: 46.5%;
+     }
+}
+/* 드래그 이미지 */
+/* design */
+
+/* design2 */
+/* 이미지 */
+#design2 .design2Area .mokup1 {
+    margin-top: 50%;
+    width: 100%;
+    height: 45%;
+}
+#design2 .design2Area .mokup2 {
+    margin-top: 80%;
+    width: 50%;
+    height: 25%;
+    left: 50%;
+}
+/* 이미지 */
+/* design2 */
+
+ /* publishing */
+#publishing4 .publishing_area,
+#publishing3 .publishing_area,
+#publishing2 .publishing_area {
+    margin-top: 70px;
+}
+
+ /* 이미지 */
+ .publishing_area .mokups {
+    max-height: 240px;
+}
+/* 이미지 */
+ /* publishing */
+}
+/* 568px */
+
+/* 430px */
+@media screen and (max-width: 430px) {
+    /* header */
+    header {
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(10px);
+        display: none;
+    }
+    header nav {
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding-top: 50%;
+    }
+    header nav>a:nth-of-type(1) {
+        display: block;
+        width: 100%;
+        line-height: 70px;
+    }
+    header nav>a:nth-of-type(2) {
+        display: block;
+        width: 100%;
+        line-height: 70px;
+    }
+    header nav>a:nth-of-type(3) {
+        display: block;
+        width: 100%;
+        line-height: 70px;
+    }
+    header nav>a:nth-of-type(4) {
+        display: block;
+        width: 100%;
+        line-height: 70px;
+    }
+    header nav>a:nth-of-type(5) {
+        display: block;
+        width: 100%;
+        line-height: 70px;
+    }
+    .closeBtn {
+        display: inline-block;
+        position: absolute;
+        top: 0; left: 0;
+    }
+    /* header */
+
+    /* open */
+    .openBtn {
+        display: block;
+        position: fixed;
+        top: 10px; left: 10px;
+        color: #fff;
+        z-index: 999;
+        transition: all 0.3s;
+    }
+    /* open */
+
+    /* home */
+#home {
+    height: 100vh;
+}
+#home > h2 {
+    font-size: 3rem;
+    padding-top: 85%;
+}
+#home > h2 > span {
+    font-size: 2.5rem;
+}
+#home .intro {
+   display: none;
+}
+/* home */
+
+/* about */
+/* skill 이미지 */
+#about .skill > figure {
+    margin-right: 10px;
+}
+/* skill 이미지 */
+/* //about */
+
+/* design */
+#design .design_project {
+    margin: 0    auto;
+}
+/* 드래그 이미지 */
+#design .drag {
+    position: absolute;
+    top: 8%; left: 45%;
+    width: 45px; height: 45px;
+    transform: rotate(180deg);
+    animation: move 1s ease infinite;
+}
+@keyframes move {
+     0% {
+        left: 45%;
+    }
+     100% {
+        left: 45.5%;
+     }
+}
+/* 드래그 이미지 */
+/* design */
+}
