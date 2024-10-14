@@ -34,6 +34,7 @@ body {
 }
 .fs60 {
     font-size: 3.75rem;
+    color: #bb1212;
 }
 /* 폰트사이즈 */
 .inner {
@@ -592,6 +593,9 @@ header nav>a:hover {
 .container {
     padding: 100px;
     margin: 0 auto;
+}
+.container > h1 {
+    color: #000;
 }
 .container > img {
     width: 100%;
