@@ -566,6 +566,7 @@
 
     #home>h2 {
         font-size: 3rem;
+        padding-top: 50%;
     }
 
     #home>h2>span {
@@ -580,6 +581,10 @@
     /* home */
 
     /* design */
+    #design .design_text > p:nth-of-type(3),
+    #design .design_text > p:nth-of-type(4) {
+        display: none;
+    }
     /* 드래그 이미지 */
     #design .drag {
         position: absolute;
@@ -640,9 +645,11 @@
     #publishing3 .loop {
         height: 100px;
     }
-
     /* 루프 이미지 */
-
+    .publishing_area .publishing_text .code {
+        margin-top: 40px;
+        padding-left: 45px;
+    }
     /* publishing */
 }
 
