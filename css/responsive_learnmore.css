@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* 1000px */
+/* 공통 */
+.fs60 {
+    font-size: 2.5rem;
+}
+/* 공통 */
+/* 1000px */
+
+/* 768px */
+@media screen and (max-width: 768px) {
+    /* 공통 */
+    .fs21 {
+        font-size: 1.125rem;
+    }
+    .fs18 {
+        font-size: 1rem;
+    }
+    /* 공통 */
+}
+/* 768px */
+
+/* 568px */
+@media screen and (max-width: 568px) {
+    /* 공통 */
+    .fs60 {
+        font-size: 1.313rem;
+    }
+    .fs30 {
+        font-size: 1.125rem;
+    }
+    .fs21 {
+        font-size: 1rem;
+    }
+    .fs18 {
+        font-size: 0.938rem;
+    }
+    /* 공통 */
+
+    .container {
+        padding: 10px;
+    }
+}
+/* 568px */
