@@ -345,7 +345,6 @@
 
     #home>h2 {
         font-size: 5rem;
-        padding-top: 30%;
     }
 
     #home>h2>span {
@@ -567,7 +566,6 @@
 
     #home>h2 {
         font-size: 3rem;
-        padding-top: 50%;
     }
 
     #home>h2>span {
@@ -728,7 +726,6 @@
 
     #home>h2 {
         font-size: 3rem;
-        padding-top: 85%;
     }
 
     #home>h2>span {
@@ -842,10 +839,6 @@
     /* 공통 */
 
     /* home */
-    #home>h2 {
-        padding-top: 100%;
-    }
-
     #home>h2>span {
         font-size: 1.75rem;
     }
