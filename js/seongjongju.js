@@ -15,7 +15,16 @@ $(document).ready(function() {
 });
 
 const menus = document.querySelectorAll('nav > a');
+const header = document.querySelector('header');
 console.log()
+
+menus.forEach(function(menu) {
+    menu.addEventListener('click', function() {
+        if(window.innerWidth < 431) {
+            $(header).fadeOut();
+        }
+    });
+});
 
 window.addEventListener('scroll', function(e) {
     e.preventDefault();

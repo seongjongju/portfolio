@@ -581,6 +581,14 @@ header nav>a:hover {
     color: rgba(0, 0, 0, 0.7);
 }
 /* copy */
+
+/* topBtn */
+#contact .topBtn {
+    font-size: 20px;
+    position: absolute;
+    bottom: 100px; right: 11px;
+    color: rgba(0, 0, 0, 0.7);
+}
 /* index.html----------------------------------------------------------------------------- */
 
 /* leanmore.html ------------------------------------------------------------------*/

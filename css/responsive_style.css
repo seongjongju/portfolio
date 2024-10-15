@@ -777,7 +777,7 @@
     /* 드래그 이미지 */
     #design .drag {
         position: absolute;
-        top: 8%;
+        top: 11%;
         left: 45%;
         width: 45px;
         height: 45px;
@@ -862,6 +862,31 @@
     }
 
     /* home */
+
+     /* design */
+    /* 드래그 이미지 */
+    #design .drag {
+        position: absolute;
+        top: 11%;
+        left: 45%;
+        width: 45px;
+        height: 45px;
+        transform: rotate(180deg);
+        animation: move 1s ease infinite;
+    }
+
+    @keyframes move {
+        0% {
+            left: 45%;
+        }
+
+        100% {
+            left: 45.5%;
+        }
+    }
+
+    /* 드래그 이미지 */
+    /* design */
 
     /* design2 */
     /* 이미지 */
