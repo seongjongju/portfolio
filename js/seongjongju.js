@@ -23,9 +23,9 @@ window.addEventListener('scroll', function(e) {
     let windowY = window.scrollY;
 
     if(windowY > 832) {
-        openBtn.style.color = '#000'
+        openBtn.style.top = '-100%'
     } else {
-        openBtn.style.color = '#fff'
+        openBtn.style.top = '10px'
     }
 })
     

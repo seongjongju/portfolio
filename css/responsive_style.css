@@ -647,8 +647,19 @@
     }
     /* 루프 이미지 */
     .publishing_area .publishing_text .code {
-        margin-top: 40px;
-        padding-left: 45px;
+       text-align: center;
+    }
+    #publishing .publishing_area .publishing_text .code > a:last-child {
+       margin-right: 0;
+    }
+    #publishing2 .publishing_area .publishing_text .code > a:last-child {
+       margin-right: 0;
+    }
+    #publishing3 .publishing_area .publishing_text .code > a:last-child {
+       margin-right: 0;
+    }
+    #publishing4 .publishing_area .publishing_text .code > a:last-child {
+       margin-right: 0;
     }
     /* publishing */
 }
