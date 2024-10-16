@@ -1,3 +1,5 @@
+alert('본 페이지는 1920px 사이즈에 최적화 되어있습니다.')
+
 $(document).ready(function() {
     const header = $('header');
     const closeBtn = $('.closeBtn');
@@ -38,7 +40,8 @@ window.addEventListener('scroll', function(e) {
     }
 })
     
-var swiper = new Swiper(".design_Swiper", {});
+var swiper = new Swiper(".design_Swiper", {
+});
 
 
 

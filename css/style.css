@@ -286,6 +286,24 @@ header nav>a:hover {
     font-weight: 500;
     color: rgba(255, 255, 255, 0.8);
 }
+/* 피그마 디자인 보러가기 */
+.figmaView {
+    position: relative;
+    color: #fff;
+}
+.figmaView:before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    bottom: 0; left: 0;
+    background: #fff;
+    transition: all 0.5s;
+}
+.figmaView:hover:before {
+    width: 100%;
+}
+/* 피그마 디자인 보러가기 */
 /* 텍스트 */
 
 /* 드래그 이미지 */
@@ -619,5 +637,26 @@ header nav>a:hover {
 .container > p > span {
     font-weight: 500;
     color: rgba(0, 0, 0, 0.7);
+}
+.designView {
+    display: inline-block;
+    margin-right: 10px;
+}
+.learnView {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    font-weight: 500;
+}
+.learnView:before {
+    position: absolute;
+    content: '';
+    bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background: #000;
+    transition: all 0.5s;
+}
+.learnView:hover:before {
+    width: 100%;
 }
 /* leanmore.html ------------------------------------------------------------------*/
