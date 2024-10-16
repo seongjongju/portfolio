@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>성종주 웹 포트폴리오</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive_learnmore.css" media="screen and (max-width: 1000px)">
-
-    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 </head>
 
 <body>
@@ -128,23 +125,6 @@
             <!-- 개선 및 배운점 -->
         </div>
     </div>
-
-    <script>
-        /* 부드러운 스크롤 */
-        const lenis = new Lenis()
-
-        lenis.on('scroll', (e) => {
-            console.log(e)
-        })
-
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf)
-        /* 부드러운 스크롤 */
-    </script>
 </body>
 
 </html>
