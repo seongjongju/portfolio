@@ -118,13 +118,13 @@ header nav>a:hover {
     font-size: 7rem;
     letter-spacing: 5px;
 }
-#home .intro {
+/* #home .intro {
     width: 60vw;
     margin: auto;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
-}
+} */
 /* //home */
 
 /* about */
@@ -309,18 +309,20 @@ header nav>a:hover {
 /* 드래그 이미지 */
 #design .drag {
     position: absolute;
-    top: 15%; left: 33%;
-    width: 45px; height: 45px;
+    top: 15%; 
+    left: 31%;
+    width: 45px; 
+    height: 45px;
     transform: rotate(180deg);
-    animation: move 1s ease infinite;
+    animation: move 1s infinite alternate linear;
 }
 @keyframes move {
-     0% {
+    0% {
+        left: 31%;
+    }
+    100% {
         left: 33%;
     }
-     100% {
-        left: 33.5%;
-     }
 }
 /* 드래그 이미지 */
 /* design */
@@ -485,6 +487,7 @@ header nav>a:hover {
     display: inline-block;
     width: 25%;
     margin-right: 15px;
+    margin-bottom: 20px;
     height: 40px;
     line-height: 40px;
     text-align: center;
@@ -494,6 +497,10 @@ header nav>a:hover {
 }
 #publishing .publishing_area .publishing_text .code > a:hover {
     background-color: #FDE700;
+}
+#publishing .publishing_area .publishing_text .code .antennaFigma {
+    display: block;
+    width: 85%;
 }
 #publishing4 .publishing_area .publishing_text .code > a {
     display: inline-block;
@@ -637,26 +644,5 @@ header nav>a:hover {
 .container > p > span {
     font-weight: 500;
     color: rgba(0, 0, 0, 0.7);
-}
-.designView {
-    display: inline-block;
-    margin-right: 10px;
-}
-.learnView {
-    position: relative;
-    display: inline-block;
-    color: #000;
-    font-weight: 500;
-}
-.learnView:before {
-    position: absolute;
-    content: '';
-    bottom: 0; left: 0;
-    width: 0; height: 1px;
-    background: #000;
-    transition: all 0.5s;
-}
-.learnView:hover:before {
-    width: 100%;
 }
 /* leanmore.html ------------------------------------------------------------------*/
