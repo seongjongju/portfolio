@@ -1,30 +1,50 @@
 @charset "utf-8";
 
 /* 1600px */
+/* design */
 /* 드래그 이미지 */
 #design .drag {
     top: 15%;
-    left: 30%;
+    left: 28%;
 }
 
 @keyframes move {
     0% {
-        left: 30%;
+        left: 28%;
     }
 
     100% {
-        left: 30.5%;
+        left: 30%;
     }
 }
 
 /* 드래그 이미지 */
+/* design2 */
 
+/* design2 */
+/* 이미지 */
+#design2 .design2Area .mokup1 {
+    width: 55%;
+}
+
+#design2 .design2Area .mokup2 {
+    position: absolute;
+    width: 30%;
+    bottom: -6%;
+    right: 0;
+}
+
+/* 이미지 */
+/* design2 */
+
+/* publishing */
 /* 이미지 */
 .publishing_area .mokups {
     max-height: 450px;
 }
 
 /* 이미지 */
+/* publishing */
 /* 1600px */
 
 /* 1400px */
@@ -47,17 +67,16 @@
     /* design */
     /* 드래그 이미지 */
     #design .drag {
-        top: 15%;
-        left: 27%;
+        left: 25%;
     }
 
     @keyframes move {
         0% {
-            left: 27%;
+            left: 25%;
         }
 
         100% {
-            left: 27.5%;
+            left: 27%;
         }
     }
 
@@ -65,6 +84,11 @@
     /* design */
 
     /* publishing */
+    #publishing .publishing_area .publishing_text .code .antennaFigma {
+        display: inline-block;
+        width: 98%;
+    }
+
     /* 이미지 */
     .publishing_area .mokups {
         max-height: 395px;
@@ -94,19 +118,36 @@
     /* 공통 */
 
     /* design */
+    #design .design_project {
+        margin: 50px auto 0;
+    }
+
+    /* 텍스트 */
+    #design .design_text>p {
+        margin-bottom: 20px;
+    }
+
+    /* 텍스트 */
+    /* 스와이퍼 */
+    #design .design_Swiper {
+        width: 300%;
+    }
+
+    /* 스와이퍼 */
+
     /* 드래그 이미지 */
     #design .drag {
-        top: 13%;
-        left: 25%;
+        top: 22%;
+        left: 27%;
     }
 
     @keyframes move {
         0% {
-            left: 25%;
+            left: 27%;
         }
 
         100% {
-            left: 25.5%;
+            left: 29%;
         }
     }
 
@@ -116,34 +157,28 @@
     /* design2 */
     /* 이미지 */
     #design2 .design2Area .design2_img1 {
-        width: 23%;
-        height: 100%;
-        margin-right: 100px;
-    }
-
-    #design2 .design2Area .design2_img2 {
-        width: 10%;
-        height: 100%;
+        margin-right: 50px;
+        margin-left: 50px;
     }
 
     #design2 .design2Area .mokup1 {
-        margin-top: 22%;
-        width: 65%;
+        width: 60%;
         height: 65%;
     }
 
     #design2 .design2Area .mokup2 {
-        position: absolute;
-        margin-top: 38%;
-        width: 40%;
-        height: 40%;
-        left: 70%;
+        width: 34%;
     }
 
     /* 이미지 */
     /* design2 */
 
     /* publishing */
+    #publishing .publishing_area .publishing_text .code .antennaFigma {
+        display: inline-block;
+        width: 99%;
+    }
+
     /* 이미지 */
     .publishing_area .mokups {
         max-height: 335px;
@@ -168,10 +203,6 @@
     /* 공통 */
 
     /* home */
-    #home>h2 {
-        padding-top: 20%;
-    }
-
     #home .intro {
         width: 90vw;
         font-size: 1.125rem;
@@ -200,25 +231,23 @@
     /* about */
 
     /* design */
-    /* 드래그 이미지 */
     #design .design_project {
-        display: flex;
-        justify-content: space-between;
-        margin: 100px auto 0;
+        margin: 50px auto 0;
     }
 
+    /* 드래그 이미지 */
     #design .drag {
-        top: 25%;
-        left: 24%;
+        top: 20%;
+        left: 26%;
     }
 
     @keyframes move {
         0% {
-            left: 24%;
+            left: 26%;
         }
 
         100% {
-            left: 24.5%;
+            left: 28%;
         }
     }
 
@@ -240,26 +269,21 @@
     /* design2 */
     /* 이미지 */
     #design2 .design2Area .design2_img1 {
-        width: 28%;
-        height: 100%;
+        width: 24%;
         margin-right: 30px;
     }
 
     #design2 .design2Area .design2_img2 {
-        width: 15%;
-        height: 100%;
+        width: 12%;
     }
 
     #design2 .design2Area .mokup1 {
-        margin-top: 45%;
-        width: 60%;
+        width: 55%;
         height: 50%;
     }
 
     #design2 .design2Area .mokup2 {
-        margin-top: 60%;
-        left: 72%;
-        width: 34%;
+        width: 30%;
         height: 32%;
     }
 
@@ -409,13 +433,8 @@
 
     /* 드래그 이미지 */
     #design .drag {
-        position: absolute;
         top: 10%;
         left: 47%;
-        width: 45px;
-        height: 45px;
-        transform: rotate(180deg);
-        animation: move 1s ease infinite;
     }
 
     @keyframes move {
@@ -424,7 +443,7 @@
         }
 
         100% {
-            left: 47.5%;
+            left: 49%;
         }
     }
 
@@ -432,45 +451,78 @@
     /* design */
 
     /* design2 */
+    #design2 {
+        height: 70vh;
+    }
+
     /* 이미지 */
     #design2 .design2Area .design2_img1 {
-        display: none;
+        width: 20%;
     }
 
     #design2 .design2Area .design2_img2 {
-        display: none;
+        width: 10%;
     }
 
     #design2 .design2Area .mokup1 {
-        margin-top: 25%;
-        width: 100%;
-        height: 65%;
+        display: none;
     }
 
     #design2 .design2Area .mokup2 {
-        margin-top: 51%;
-        width: 50%;
-        height: 40%;
-        left: 50%;
+        display: none;
     }
 
     /* 이미지 */
-
-    /* 텍스트 */
-    #design2 .design2Area .design2_text {
-        position: absolute;
-        width: 100%;
-        top: 5%;
-        right: 0;
-    }
-
-    /* 텍스트 */
     /* design2 */
 
     /* publishing */
+    #publishing {
+        background: #fafafa url(../img/antenna_logo.png) no-repeat -100px 150%/600px;
+    }
+
+    #publishing4 {
+        background: #fff url(../img/musium_bg_logo.png) no-repeat 130% -60%/550px;
+    }
+
+    #publishing2 {
+        background: #fff url(../img/bonjourparis_logo.png) no-repeat -200px 180%/800px;
+    }
+
+    /* 루프 이미지 */
+    #publishing3 .loop {
+        top: 20%;
+        height: 200px;
+    }
+
+    #publishing3 .loop .loop .slide_logo {
+        margin-right: 200px;
+    }
+
+    @keyframes slide {
+        0% {
+            left: 0%;
+        }
+
+        100% {
+            left: -500%;
+        }
+    }
+
+    /* 루프 이미지 */
+
     /* 깃허브 */
     .publishing_area .publishing_text .code {
         padding-bottom: 50px;
+        text-align: center;
+    }
+
+    #publishing .publishing_area .publishing_text .code {
+        text-align: center;
+    }
+
+    #publishing .publishing_area .publishing_text .code .antennaFigma {
+        display: inline-block;
+        width: 92%;
     }
 
     /* 깃허브 */
@@ -513,6 +565,26 @@
 /* 768px */
 @media screen and (max-width: 768px) {
 
+    /* 드래그 이미지 */
+    #design .drag {
+        top: 8%;
+        left: 47%;
+    }
+
+    @keyframes move {
+        0% {
+            left: 47%;
+        }
+
+        100% {
+            left: 49%;
+        }
+    }
+
+    /* 드래그 이미지 */
+    /* design */
+
+
     /* design2 */
     /* 이미지 */
     #design2 .design2Area .mokup1 {
@@ -532,6 +604,10 @@
     /* design2 */
 
     /* publishing */
+    #publishing .publishing_area .publishing_text .code .antennaFigma {
+        width: 93%;
+    }
+
     /* 이미지 */
     .publishing_area .mokups {
         max-height: 330px;
@@ -566,7 +642,6 @@
 
     #home>h2 {
         font-size: 3rem;
-        padding-top: 50%;
     }
 
     #home>h2>span {
@@ -581,19 +656,15 @@
     /* home */
 
     /* design */
-    #design .design_text > p:nth-of-type(3),
-    #design .design_text > p:nth-of-type(4) {
+    #design .design_text>p:nth-of-type(3),
+    #design .design_text>p:nth-of-type(4) {
         display: none;
     }
+
     /* 드래그 이미지 */
     #design .drag {
-        position: absolute;
         top: 8%;
         left: 46%;
-        width: 45px;
-        height: 45px;
-        transform: rotate(180deg);
-        animation: move 1s ease infinite;
     }
 
     @keyframes move {
@@ -602,7 +673,7 @@
         }
 
         100% {
-            left: 46.5%;
+            left: 48%;
         }
     }
 
@@ -610,28 +681,74 @@
     /* design */
 
     /* design2 */
+    #design2 {
+        height: 80vh;
+    }
+
+    #design2 .design2Area {
+        display: block;
+    }
+
     /* 이미지 */
+    #design2 .design2Area .design2_img1 {
+        display: none;
+    }
+
+    #design2 .design2Area .design2_img2 {
+        display: none
+    }
+
     #design2 .design2Area .mokup1 {
-        margin-top: 50%;
+        display: block;
         width: 100%;
-        height: 50%;
+        height: 60%;
     }
 
     #design2 .design2Area .mokup2 {
-        margin-top: 80%;
+        display: block;
         width: 50%;
-        height: 28%;
-        left: 50%;
+        height: 35%;
     }
 
     /* 이미지 */
+
+    /* 텍스트 */
+    #design2 .design2Area .design2_text {
+        width: 100%;
+        position: static;
+    }
+
+    /* 텍스트 */
     /* design2 */
 
     /* publishing */
+    #publishing {
+        background: #fafafa url(../img/antenna_logo.png) no-repeat -100px 120%/400px;
+    }
+
+    #publishing4 {
+        background: #fff url(../img/musium_bg_logo.png) no-repeat 130% -30%/350px;
+    }
+
+    #publishing2 {
+        background: #fff url(../img/bonjourparis_logo.png) no-repeat -200px 180%/600px;
+    }
+
+    /* 루프 이미지 */
+#publishing3 .loop {
+    position: absolute;
+    top: 15%;
+}
+/* 루프 이미지 */
+
     #publishing4 .publishing_area,
     #publishing3 .publishing_area,
     #publishing2 .publishing_area {
         margin-top: 70px;
+    }
+
+    #publishing .publishing_area .publishing_text .code .antennaFigma {
+        width: 95%;
     }
 
     /* 이미지 */
@@ -645,22 +762,28 @@
     #publishing3 .loop {
         height: 100px;
     }
+
     /* 루프 이미지 */
     .publishing_area .publishing_text .code {
-       text-align: center;
+        text-align: center;
     }
-    #publishing .publishing_area .publishing_text .code > a:last-child {
-       margin-right: 0;
+
+    #publishing .publishing_area .publishing_text .code>a:last-child {
+        margin-right: 0;
     }
-    #publishing2 .publishing_area .publishing_text .code > a:last-child {
-       margin-right: 0;
+
+    #publishing2 .publishing_area .publishing_text .code>a:last-child {
+        margin-right: 0;
     }
-    #publishing3 .publishing_area .publishing_text .code > a:last-child {
-       margin-right: 0;
+
+    #publishing3 .publishing_area .publishing_text .code>a:last-child {
+        margin-right: 0;
     }
-    #publishing4 .publishing_area .publishing_text .code > a:last-child {
-       margin-right: 0;
+
+    #publishing4 .publishing_area .publishing_text .code>a:last-child {
+        margin-right: 0;
     }
+
     /* publishing */
 }
 
@@ -742,10 +865,6 @@
         height: 100vh;
     }
 
-    #home>h2 {
-        font-size: 3rem;
-    }
-
     #home>h2>span {
         font-size: 2.5rem;
     }
@@ -776,13 +895,8 @@
 
     /* 드래그 이미지 */
     #design .drag {
-        position: absolute;
         top: 11%;
         left: 45%;
-        width: 45px;
-        height: 45px;
-        transform: rotate(180deg);
-        animation: move 1s ease infinite;
     }
 
     @keyframes move {
@@ -791,7 +905,7 @@
         }
 
         100% {
-            left: 45.5%;
+            left: 47%;
         }
     }
 
@@ -799,28 +913,24 @@
     /* design */
 
     /* design2 */
-    #design2 {
-        height: 70vh;
-    }
-
     /* 이미지 */
     #design2 .design2Area .mokup1 {
-        margin-top: 70%;
-        width: 100%;
-        height: 35%;
+        width: 125%;
+        right: -10%;
     }
 
     #design2 .design2Area .mokup2 {
-        margin-top: 95%;
-        width: 47%;
-        height: 20%;
-        left: 55%;
+        width: 62%;
     }
 
     /* 이미지 */
     /* design2 */
 
     /* publishing */
+    #publishing .publishing_area .publishing_text .code .antennaFigma {
+        width: 97%;
+    }
+
     /* 이미지 */
     .publishing_area .mokups {
         max-height: 174px;
@@ -846,6 +956,25 @@
 
 /* 430px */
 
+/* 390px */
+@media screen and (max-width: 390px) {
+
+    /* design2 */
+    /* 이미지 */
+    #design2 .design2Area .mokup1 {
+        width: 140%;
+        right: -15%;
+    }
+
+    #design2 .design2Area .mokup2 {
+        width: 73%;
+        left: 47%;
+    }
+
+    /* 이미지 */
+    /* design2 */
+}
+
 /* 375px */
 @media screen and (max-width: 375px) {
 
@@ -858,21 +987,17 @@
 
     /* home */
     #home>h2>span {
-        font-size: 1.75rem;
+        font-size: 1.25rem;
     }
 
     /* home */
 
-     /* design */
+    /* design */
     /* 드래그 이미지 */
     #design .drag {
         position: absolute;
         top: 11%;
         left: 45%;
-        width: 45px;
-        height: 45px;
-        transform: rotate(180deg);
-        animation: move 1s ease infinite;
     }
 
     @keyframes move {
@@ -881,7 +1006,7 @@
         }
 
         100% {
-            left: 45.5%;
+            left: 47%;
         }
     }
 
@@ -889,24 +1014,24 @@
     /* design */
 
     /* design2 */
-    /* 이미지 */
     #design2 .design2Area .mokup1 {
-        margin-top: 85%;
-        width: 90%;
-        height: 28%;
+        bottom: -10%;
     }
 
     #design2 .design2Area .mokup2 {
-        margin-top: 110%;
-        width: 45%;
-        height: 15%;
-        left: 50%;
+        bottom: -10%;
     }
 
-    /* 이미지 */
     /* design2 */
 
     /* publishing */
+    #publishing4 {
+        background: #fff url(../img/musium_bg_logo.png) no-repeat 500% -30%/350px;
+    }
+    #publishing2 {
+        background: #fff url(../img/bonjourparis_logo.png) no-repeat -150px 190%/500px;
+    }
+
     /* 이미지 */
     .publishing_area .mokups {
         max-height: 155px;
@@ -924,5 +1049,4 @@
     /* copy */
     /* contact */
 }
-
 /* 375px */
