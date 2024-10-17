@@ -1014,12 +1014,17 @@
     /* design */
 
     /* design2 */
+    #design2 {
+        height: 90vh;
+    }
     #design2 .design2Area .mokup1 {
         bottom: -10%;
+        height: 55%;
     }
 
     #design2 .design2Area .mokup2 {
         bottom: -10%;
+        height: 30%;
     }
 
     /* design2 */
