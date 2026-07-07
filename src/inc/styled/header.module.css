@@ -1,0 +1,89 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gnb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.depth {
+    font-size: 18px;
+    color: #F8FAFC;
+    font-weight: 800;
+    letter-spacing: -.5px;
+}
+
+.util {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle button {
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.toggle button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.ham {
+    font-size: 16px;
+    color: #fff;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+.ham:hover {
+    opacity: .8;
+}
+
+@media screen and (max-width: 1600px) {
+    nav {
+        padding: 0 3%;
+    }
+
+    .util {
+        right: 3%;
+    }
+}
