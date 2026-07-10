@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../../assets/styled/home/projects.module.css';
 import { useActiveSection } from '../../../context/SectionContext';
-import useSectionRef from '../../../hooks/useSectionRef';
+import useSectionRef from '../../../hooks/home/useSectionRef';
 
 const Projects = () => {
     const id = "section_1";

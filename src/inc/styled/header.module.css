@@ -126,3 +126,13 @@ header {
         right: 3%;
     }
 }
+
+@media screen and (max-width: 968px) {
+    .nav {
+        height: 80px;
+    }
+
+    .gnb {
+        display: none;
+    }
+}

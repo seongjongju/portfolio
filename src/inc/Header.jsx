@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styled/header.module.css';
 import { useActiveSection } from '../context/SectionContext';
-
-const depths = [
-    { id: "section_0", order: 0, text: "ABOUT" },
-    { id: "section_1", order: 1, text: "PROJECTS" },
-    { id: "section_2", order: 2, text: "CONTACT" },
-];
+import FullGnb from './FullGnb';
+import { depths } from '../shared/common/data/staticData';
 
 const Header = () => {
-    const { activeSection } = useActiveSection();
-    const [x, setX] = useState(-200); 
-    const [isHovered, setIsHovered] = useState(false); 
+    const { activeSection } = useActiveSection(); //섹션 감지 컨택스트
+    const [x, setX] = useState(-200); //hoverUI 좌표값
+    const [isHovered, setIsHovered] = useState(false); //hover 여부 
+    const [isToggle, setIstoggle] = useState(false); //fullGnb 토글
 
+    //메뉴 너비
     const WIDTH = 200;
 
     //스크롤 할 때
@@ -45,44 +43,62 @@ const Header = () => {
         }
     };
 
-    return (
-        <header>
-            <nav className={styles.nav}>
-                <div className={styles.gnbwrap}>
-                    <div
-                        className={styles.hoverui}
-                        style={{
-                            left: `${x + 0.5}px`,
-                        }}
-                    ></div>
-                    
-                    <ul className={styles.gnb} onMouseLeave={handleMouseLeaveGnb}>
-                        {depths.map((depth) => {
-                            return (
-                                <li key={depth.id}>
-                                    <a
-                                        href={`#${depth.id}`}
-                                        className={styles.depth}
-                                        onMouseEnter={() => handleMouseEnter(depth.order)}
-                                    >
-                                        {depth.text}
-                                    </a>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </div>
+    //fullGnb 열기
+    const handleClickHam = (e) => {
+        e.preventDefault();
+        setIstoggle(true);
+    };
 
-                <div className={styles.util}>
-                    <div className={styles.toggle}>
-                        <button className={styles.light}>
-                            <img src="/icon/light-icon.png" alt="라이트모드" />
+    return (
+        <>
+            <header>
+                <nav className={styles.nav}>
+                    <div className={styles.gnbwrap}>
+                        <div
+                            className={styles.hoverui}
+                            style={{
+                                left: `${x + 0.5}px`,
+                            }}
+                        ></div>
+                        
+                        <ul className={styles.gnb} onMouseLeave={handleMouseLeaveGnb}>
+                            {depths.map((depth) => {
+                                return (
+                                    <li key={depth.id}>
+                                        <a
+                                            href={`#${depth.id}`}
+                                            className={styles.depth}
+                                            onMouseEnter={() => handleMouseEnter(depth.order)}
+                                        >
+                                            {depth.text}
+                                        </a>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+
+                    <div className={styles.util}>
+                        <div className={styles.toggle}>
+                            <button className={styles.light}>
+                                <img src="/icon/light-icon.png" alt="라이트모드" />
+                            </button>
+                        </div>
+                        <button 
+                            className={styles.ham}
+                            onClick={handleClickHam}
+                        >
+                            MENU
                         </button>
                     </div>
-                    <button className={styles.ham}>MENU</button>
-                </div>
-            </nav>
-        </header>
+                </nav>
+            </header>
+
+            <FullGnb 
+                isToggle={isToggle}
+                setIstoggle={setIstoggle}
+            />
+        </>
     );
 };
 
