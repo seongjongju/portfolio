@@ -1,4 +1,46 @@
 .hero {
     height: 960px;
-    background: #ddd;
+    max-height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav {
+    width: 500px;
+    aspect-ratio: 1/1;    
+    margin: 0 auto;
+}
+
+.rotate {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    animation: spin 15s linear infinite;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #F8FAFC;
+    font-size: 200px;
+    font-weight: 800;
+    padding-top: 100px;
+    transform: rotateX(90deg);
+}
+
+.char {
+    font-family: "GmarketSansMedium", sans-serif;
+    color: #F8FAFC;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    font-size: 100px;
+    font-weight: 800;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }

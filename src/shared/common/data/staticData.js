@@ -9,3 +9,16 @@ export const depths = [
 export const footerLinks = [
     {id: "link_0", link: "https://github.com/seongjongju", text: "GITHUB"},
 ];
+
+//hero
+export const chars = [
+    "P",
+    "O",
+    "R",
+    "T",
+    "F",
+    "O",
+    "L",
+    "I",
+    "O",
+];
