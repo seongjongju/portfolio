@@ -11,7 +11,7 @@ const useSectionRef = (id) => {
                     setActiveSection(id);
                 }
             },
-            { threshold: 0.5 } // 섹션이 화면에 50% 이상 보일 때 작동
+            { threshold: 0.4 } // 섹션이 화면에 50% 이상 보일 때 작동
         );
 
         if (sectionRef.current) observer.observe(sectionRef.current);

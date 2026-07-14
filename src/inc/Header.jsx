@@ -3,9 +3,11 @@ import styles from './styled/header.module.css';
 import { useActiveSection } from '../context/SectionContext';
 import FullGnb from './FullGnb';
 import { depths } from '../shared/common/data/staticData';
+import { useLenis } from '../context/LenisContext';
 
 const Header = () => {
     const { activeSection } = useActiveSection(); //섹션 감지 컨택스트
+    const {isLenis} = useLenis(); //lenis
     const [x, setX] = useState(-200); //hoverUI 좌표값
     const [isHovered, setIsHovered] = useState(false); //hover 여부 
     const [isToggle, setIstoggle] = useState(false); //fullGnb 토글
@@ -66,9 +68,16 @@ const Header = () => {
                                 return (
                                     <li key={depth.id}>
                                         <a
+                                            style={{color: depth.id === activeSection ? " #fff" : ""}}
                                             href={`#${depth.id}`}
                                             className={styles.depth}
                                             onMouseEnter={() => handleMouseEnter(depth.order)}
+                                            onClick={() => {
+                                                isLenis.scrollTo(`#${depth.id}`, {
+                                                    offset: 0,
+                                                    duration: 1,
+                                                });
+                                            }}
                                         >
                                             {depth.text}
                                         </a>

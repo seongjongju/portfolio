@@ -4,12 +4,15 @@ import './index.css'
 import App from './App.jsx'
 import { SectionContextProvider } from './context/SectionContext.jsx';
 import Header from './inc/Header.jsx'
+import { LenisContextProvider } from './context/LenisContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SectionContextProvider>
-      <Header />
-      <App />
-    </SectionContextProvider>
+      <SectionContextProvider>
+        <LenisContextProvider>
+          <Header />
+          <App />
+        </LenisContextProvider>
+      </SectionContextProvider>
   </StrictMode>,
 )

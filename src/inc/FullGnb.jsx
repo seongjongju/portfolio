@@ -2,8 +2,10 @@ import React, { memo, useEffect, useState } from 'react';
 import styles from './styled/fullgnb.module.css';
 import Footer from './Footer';
 import { depths } from '../shared/common/data/staticData';
+import { useLenis } from '../context/LenisContext';
 
 const FullGnb = memo(({isToggle, setIstoggle}) => {
+    const {isLenis} = useLenis(); //lenis
     const [block, setBlock] = useState("none");
     const [opacity, setOpacity] = useState("0");
 
@@ -60,7 +62,13 @@ const FullGnb = memo(({isToggle, setIstoggle}) => {
                             <a 
                                 className={styles.depth}
                                 href={`#${depth.id}`}
-                                onClick={handleClickClose}
+                                onClick={() => {
+                                    isLenis.scrollTo(`#${depth.id}`, {
+                                        offset: 0,
+                                        duration: 1,
+                                    });
+                                    handleClickClose();
+                                }}
                             >
                                 {depth.text}
                             </a>

@@ -31,7 +31,7 @@ header {
     transform: translateY(-50%);
     width: 200px;
     height: 100%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 100px;
@@ -48,8 +48,8 @@ header {
     height: 50px;
     border-radius: 100px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.25);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -65,8 +65,14 @@ header {
     width: 100%;
     height: 100%;
     font-size: 16px;
-    color: #F8FAFC;
+    font-weight: 600;
+    color: #0B0F19;
     letter-spacing: -.5px;
+    transition: color .3s ease;
+}
+
+.depth:hover {
+    color: #F8FAFC;
 }
 
 .util {
@@ -92,22 +98,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.25);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: background .3s ease;
 }
 
 .toggle button:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .ham {
     font-size: 16px;
-    color: #fff;
+    color: #0B0F19;
     background: none;
     font-weight: 600;
     cursor: pointer;

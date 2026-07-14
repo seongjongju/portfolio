@@ -1,6 +1,6 @@
 html,
 body {
-    background-color: #0F121D;
+    /* 라이트 모드 #F4F6FA  다크모드  #0B0F19 */
+    background-color: #F4F6FA;
     font-family: "Syne", sans-serif;
-    scroll-behavior: smooth;
 }
