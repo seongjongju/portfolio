@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styles from '../../../assets/styled/home/about.module.css';
 import { useActiveSection } from '../../../context/SectionContext';
-import useSectionRef from '../../../hooks/home/useSectionRef';
+import useSectionRef from '../../../hooks/useSectionRef';
 
 const About = () => {
     const id = "section_0";

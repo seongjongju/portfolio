@@ -1,11 +1,11 @@
 import React, { memo, useEffect, useState } from 'react';
 import styles from './styled/fullgnb.module.css';
 import Footer from './Footer';
-import { depths } from '../shared/common/data/staticData';
-import { useLenis } from '../context/LenisContext';
+import { depths } from '../shared/data/staticData';
+import { useGsap } from '../context/GsapContext';
 
 const FullGnb = memo(({isToggle, setIstoggle}) => {
-    const {isLenis} = useLenis(); //lenis
+    const {isLenis} = useGsap(); //gsap
     const [block, setBlock] = useState("none");
     const [opacity, setOpacity] = useState("0");
 

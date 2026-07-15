@@ -1,7 +1,106 @@
+/****************** 제목글 */
 .title {
     font-size: 50px;
     color: #0B0F19;
     font-weight: 800;
     letter-spacing: -2px;
     margin-bottom: .7em;
+}
+
+/****************** 캐릭터 UI */
+/* 기본 값 */
+.character {
+    width: fit-content;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.face {
+    width: 100px; 
+    aspect-ratio: 1/1;
+    position: relative;
+    left: 5px;
+}
+
+.face__image {
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
+.face__image.is-active {
+    display: block;
+}
+
+.body {
+    width: 120px;
+    margin-top: -22px;
+}
+
+/* 히어로 섹션일 경우 */
+.character.hero {
+    height: auto;
+}
+
+.character.hero .body  {
+    display: none;
+}
+
+.character.hero .face {
+    width: 300px;
+}
+
+@media screen and (max-width: 1280px) {
+    /* 히어로 섹션일 경우 */
+    .character.hero .face {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* 히어로 섹션일 경우 */
+    .character.hero .face {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .character {
+        height: 190px;
+    }
+
+    .body {
+        width: 80px;
+        margin-top: -15px;
+    }
+
+    .face {
+        width: 73px; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .character {
+        height: 145px;
+    }
+
+    .body {
+        width: 60px;
+        margin-top: -11px;
+    }
+
+    .face {
+        width: 55px; 
+        left: 2.5px;
+    }
+
+    /* 히어로 섹션일 경우 */
+    .character.hero .face {
+        width: 150px;
+    }
 }

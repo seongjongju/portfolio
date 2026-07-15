@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { useActiveSection } from '../../context/SectionContext';
+import React, { useEffect, useRef, useState } from 'react';
+import { useActiveSection } from '../context/SectionContext';
 
 const useSectionRef = (id) => {
-    const {setActiveSection} = useActiveSection();
+    const {setActiveSection } = useActiveSection();
     const sectionRef = useRef(null);
 
     useEffect(() => {
@@ -20,7 +20,6 @@ const useSectionRef = (id) => {
 
     return {
         setActiveSection,
-        sectionRef
     };
 };
 

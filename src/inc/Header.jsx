@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import styles from './styled/header.module.css';
 import { useActiveSection } from '../context/SectionContext';
 import FullGnb from './FullGnb';
-import { depths } from '../shared/common/data/staticData';
-import { useLenis } from '../context/LenisContext';
+import { depths } from '../shared/data/staticData';
+import { useGsap } from '../context/GsapContext';
 
 const Header = () => {
     const { activeSection } = useActiveSection(); //섹션 감지 컨택스트
-    const {isLenis} = useLenis(); //lenis
+    const {isLenis} = useGsap(); //gsap
     const [x, setX] = useState(-200); //hoverUI 좌표값
     const [isHovered, setIsHovered] = useState(false); //hover 여부 
     const [isToggle, setIstoggle] = useState(false); //fullGnb 토글

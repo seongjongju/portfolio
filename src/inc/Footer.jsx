@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styled/footer.module.css';
-import { footerLinks } from '../shared/common/data/staticData';
+import { footerLinks } from '../shared/data/staticData';
 
 const Footer = () => {
     return (

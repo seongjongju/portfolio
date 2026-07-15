@@ -5,7 +5,6 @@ import Projects from './components/home/projects/Projects'
 import Contact from './components/home/contact/Contact'
 
 function App() {
-
   return (
     <>
       <Hero />

@@ -1,11 +1,14 @@
 import React from 'react';
 import styles from '../../../assets/styled/home/hero.module.css';
 import { useActiveSection } from '../../../context/SectionContext';
-import useSectionRef from '../../../hooks/home/useSectionRef';
+import useSectionRef from '../../../hooks/useSectionRef';
+import Character from '../../../shared/components/UI/Character';
+import useGsapAnimation from '../../../hooks/useGsapAnimation';
 
 const Hero = () => {
     const id = "hero";
     const {setActiveSection, sectionRef} = useSectionRef(id);
+    const {heroTextRef} = useGsapAnimation();
 
     return (
         <section 
@@ -13,7 +16,7 @@ const Hero = () => {
             className={styles.hero}
             ref={sectionRef}
         >
-            <nav className={styles.nav}>
+            <nav className={styles.nav} ref={heroTextRef}>
                 <div className={styles.titles}>
                     <span className={styles.title}>D</span>
                     <span className={styles.title}>e</span>
@@ -49,6 +52,9 @@ const Hero = () => {
                     <span className={styles.text}>o</span>
                 </div>
             </nav>
+            <Character 
+                classname="hero"
+            />
         </section>
     );
 };

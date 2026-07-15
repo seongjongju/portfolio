@@ -1,10 +1,10 @@
-import { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext, useEffect } from 'react';
 
 const SectionContext = createContext();
 
 export const SectionContextProvider = ({children}) => {
     const [activeSection, setActiveSection] = useState('');
-    
+
     return (
         <SectionContext.Provider value={{ activeSection, setActiveSection }}>
             {children}
