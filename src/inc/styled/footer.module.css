@@ -46,7 +46,7 @@
     .nav {
         flex-direction: column-reverse;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-end;
         gap: 10px;
     }
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useActiveSection } from '../context/SectionContext';
+import { useActiveSection } from 'src/context/SectionContext';
 
 const useSectionRef = (id) => {
     const {setActiveSection } = useActiveSection();

@@ -1,9 +1,8 @@
 import React from 'react';
-import styles from '../../../assets/styled/home/hero.module.css';
-import { useActiveSection } from '../../../context/SectionContext';
-import useSectionRef from '../../../hooks/useSectionRef';
-import Character from '../../../shared/components/UI/Character';
-import useGsapAnimation from '../../../hooks/useGsapAnimation';
+import styles from 'src/assets/styled/home/hero.module.css';
+import useSectionRef from 'src/hooks/useSectionRef';
+import useGsapAnimation from 'src/hooks/useGsapAnimation';
+import Character from 'src/shared/components/UI/Character';
 
 const Hero = () => {
     const id = "hero";

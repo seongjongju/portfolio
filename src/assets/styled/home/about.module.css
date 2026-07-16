@@ -1,3 +1,13 @@
-.section {
-    padding-top: 100px;
+.main {
+    padding: 100px 0;
+}
+
+.nav {
+    padding: 0 3%;
+}
+
+@media screen and (max-width: 968px) {
+    .main {
+        padding-bottom: 10.5%;
+    }
 }
