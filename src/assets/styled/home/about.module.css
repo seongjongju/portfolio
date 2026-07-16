@@ -3,7 +3,87 @@
 }
 
 .nav {
-    padding: 0 3%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.info_img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.info_img::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;  
+  height: 120%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%; /* 둥근 모양 */
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 94, 0, 0.85) 0%,   
+    rgba(255, 140, 0, 0.5) 35%,  
+    rgba(255, 255, 255, 0.2) 65%,
+    transparent 100%             
+  );
+
+  filter: blur(40px);
+  z-index: -1; 
+  will-change: filter;
+}
+
+.info_detail {
+    width: 60%;
+    padding-left: 80px;
+    padding-top: 30px;
+}
+
+.info_slogan {
+    font-family: "pretendard";
+    font-size: 26px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -.2px;
+    margin-bottom: 2em;
+    word-break: keep-all;
+}
+
+.info_slogan strong {
+    font-size: 34px;
+    font-weight: 600;
+    color: #FF5E00;
+}
+
+.info_text {
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -.2px;
+    color: #333;
+    margin-bottom: 2em;
+    word-break: keep-all;
+}
+
+.info_text strong {
+    color: #FF5E00;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1600px) {
+    .nav {
+        padding: 0 3%;
+    }
 }
 
 @media screen and (max-width: 968px) {

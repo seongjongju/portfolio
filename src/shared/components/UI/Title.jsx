@@ -2,9 +2,9 @@ import React from 'react';
 
 const Title = ({title}) => {
     return (
-        <h5 className='title'>
+        <h2 className='title'>
             {title}
-        </h5>
+        </h2>
     );
 };
 

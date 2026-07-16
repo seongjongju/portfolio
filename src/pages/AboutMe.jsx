@@ -9,7 +9,7 @@ const AboutMe = () => {
             <section className={styles.section}>
                 <nav className={styles.nav}>
                     <Title 
-                        title={<>BEHIND THE <br /> CODE</>}
+                        title={<>ABOUT ME</>}
                     />
 
                     <MyInfo />

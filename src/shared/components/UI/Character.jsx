@@ -3,8 +3,12 @@ import faceOff from '/images/face_off.png';
 import faceOn from '/images/face_on.png';
 import body from '/images/body.png';
 import useGsapAnimation from '../../../hooks/useGsapAnimation';
+import { useLocation } from 'react-router-dom';
 
 const Character = ({ classname }) => {
+    const location = useLocation();
+    const pathname = location.pathname;
+
     const [isHover, setIsHover] = useState(false);
     //머리 회전용
     const faceRef = useRef(null);
@@ -23,6 +27,8 @@ const Character = ({ classname }) => {
 
     useEffect(() => {
         const handleMouseMove = (event) => {
+            if(pathname === "/about") return;
+
             if (!faceRef.current) return;
 
             //얼굴의 중심 좌표 구하기
