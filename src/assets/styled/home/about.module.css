@@ -29,7 +29,7 @@
   width: 120%;  
   height: 120%;
   transform: translate(-50%, -50%);
-  border-radius: 50%; /* 둥근 모양 */
+  border-radius: 50%; 
   background: radial-gradient(
     circle at center,
     rgba(255, 94, 0, 0.85) 0%,   
@@ -61,7 +61,7 @@
 }
 
 .info_slogan strong {
-    font-size: 34px;
+    font-size: 1.31em;
     font-weight: 600;
     color: #FF5E00;
 }
@@ -86,8 +86,76 @@
     }
 }
 
+@media screen and (max-width: 1440px) {
+    .info_text br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .info_slogan {
+        font-size: 22px;
+    }
+
+    .info_text {
+        font-size: 18px;
+    }
+}
+
 @media screen and (max-width: 968px) {
     .main {
         padding-bottom: 10.5%;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 30px;
+    } 
+
+    .info_img {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .info_detail {
+        padding: 0;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info_img {
+        max-width: 300px;
+    }
+
+    .info_slogan {
+        font-size: 20px;
+    }
+
+    .info_text {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .info_img {
+        max-width: 200px;
+    }
+
+    .info_slogan {
+        font-size: 18px;
+    }
+
+    .info_text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .info_slogan br {
+        display: none;
     }
 }

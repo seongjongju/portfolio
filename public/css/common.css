@@ -125,10 +125,33 @@
     }
 }
 
+@media screen and (max-width: 1280px) {
+    /* 어바웃 페이지일 경우 */
+    .character.about .body  {
+        width: 240px;
+        margin-top: -45px;
+    }
+
+    .character.about .face {
+        width: 220px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     /* 히어로 섹션일 경우 */
     .character.hero .face {
         width: 200px;
+    }
+
+    /* 어바웃 페이지일 경우 */
+    .character.about .body  {
+        width: 200px;
+        margin-top: -37px;
+    }
+
+    .character.about .face {
+        width: 180px;
+        left: 10px;
     }
 }
 
@@ -165,5 +188,16 @@
     /* 히어로 섹션일 경우 */
     .character.hero .face {
         width: 150px;
+    }
+
+    /* 어바웃 페이지일 경우 */
+    .character.about .body  {
+        width: 180px;
+        margin-top: -32px;
+    }
+
+    .character.about .face {
+        width: 160px;
+        left: 8px;
     }
 }

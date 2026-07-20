@@ -13,7 +13,7 @@ const MyInfo = () => {
             </figure>
             <div className={styles.info_detail}>
                 <p className={styles.info_slogan}>
-                    안녕하세요!! <br />
+                    안녕하세요!! <br style={{display: "block"}} />
                     <strong>체계적인 구조</strong>와 <strong>직관적인 UX</strong>를 고민하는 <br />
                     주니어 프론트엔드 개발자 <strong>성종주</strong>입니다!
                 </p>
