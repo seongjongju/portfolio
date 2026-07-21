@@ -1,5 +1,14 @@
+/************************ common */
 .main {
     padding: 100px 0;
+}
+
+.section {
+    margin-bottom: 100px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
 }
 
 .nav {
@@ -7,6 +16,23 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1600px) {
+    .nav {
+        padding: 0 3%;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .main {
+        padding-bottom: 10.5%;
+    }
+
+    .section {
+        margin-bottom: 10.5%;
+    }   
+}
+
+/************************ MyInfo */
 .info {
     display: flex;
     width: 100%;
@@ -32,11 +58,11 @@
   border-radius: 50%; 
   background: radial-gradient(
     circle at center,
-    rgba(255, 94, 0, 0.85) 0%,   
-    rgba(255, 140, 0, 0.5) 35%,  
-    rgba(255, 255, 255, 0.2) 65%,
-    transparent 100%             
-  );
+    rgba(59, 130, 246, 0.85) 0%,   
+    rgba(96, 165, 250, 0.5) 35%,   
+    rgba(255, 255, 255, 0.2) 65%, 
+    transparent 100%               
+);
 
   filter: blur(40px);
   z-index: -1; 
@@ -63,7 +89,7 @@
 .info_slogan strong {
     font-size: 1.31em;
     font-weight: 600;
-    color: #FF5E00;
+    color: #3B82F6;
 }
 
 .info_text {
@@ -76,14 +102,49 @@
 }
 
 .info_text strong {
-    color: #FF5E00;
+    color: #3B82F6;
     font-weight: 600;
 }
 
-@media screen and (max-width: 1600px) {
-    .nav {
-        padding: 0 3%;
-    }
+.info_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    width: 10em;
+    height: 3em;
+    border-radius: 1em;
+    text-align: center;
+    transition: background .3s ease, color .3s ease;
+}
+
+.info_btns li:first-child .link {
+    color: #0B0F19;
+    border: 1px solid #0B0F19;
+}
+
+.info_btns li:first-child .link:hover {
+    background: #0B0F19;
+    color: #fff;
+}
+
+.info_btns li:last-child .link {
+    width: 14em;
+    color: #3B82F6;
+    border: 1px solid #3B82F6;
+}
+
+.info_btns li:last-child .link:hover {
+    background: #3B82F6;
+    color: #fff;
 }
 
 @media screen and (max-width: 1440px) {
@@ -106,6 +167,10 @@
     .main {
         padding-bottom: 10.5%;
     }
+
+    .section {
+        margin-bottom: 10.5%;
+    }   
 
     .info {
         flex-direction: column;
@@ -138,6 +203,10 @@
     .info_text {
         font-size: 16px;
     }
+
+    .link {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -152,10 +221,89 @@
     .info_text {
         font-size: 14px;
     }
+
+    .info_btns {
+        gap: 8px;
+    }
+
+    .link {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 380px) {
     .info_slogan br {
         display: none;
     }
+
+    .info_btns {
+        gap: 6px;
+    }
+
+    .link {
+        font-size: 12px;
+    }
 }
+
+/************************ CoreStack */
+.stack {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stack_title {
+    font-size: 20px;
+    color: #3B82F6;
+    margin-bottom: 1em;
+}
+
+.stack canvas {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.stack_wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.stack_item {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    transition: background .3s ease;
+}
+
+.icon_box {
+    width: 40%;
+}
+
+.icon {
+    width: 100%;
+}
+
+.stack_text {
+    font-size: 16px;
+    color: #0B0F19;
+    letter-spacing: -.2px;
+    text-align: center;
+    word-break: keep-all;
+}
+
+/************************ Experience */
