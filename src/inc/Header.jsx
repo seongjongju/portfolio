@@ -5,6 +5,7 @@ import FullGnb from './FullGnb';
 import { depths } from '../shared/data/staticData';
 import { useGsap } from '../context/GsapContext';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const location = useLocation();
@@ -26,8 +27,8 @@ const Header = () => {
                         {depths.map((depth) => {
                             return (
                                 <li key={depth.id}>
-                                    <a
-                                        href={`${depth.page}`}
+                                    <Link
+                                        to={`${depth.page}`}
                                         className={`
                                             ${styles.depth} 
                                             ${pathName.includes(depth.text.toLocaleLowerCase()) ? 
@@ -35,7 +36,7 @@ const Header = () => {
                                         }`}
                                     >
                                         {depth.text}
-                                    </a>
+                                    </Link>
                                 </li>
                             );
                         })}
