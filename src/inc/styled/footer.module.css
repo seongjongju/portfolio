@@ -13,7 +13,7 @@
 
 .copy {
     font-size: 14px;
-    color: #fff;
+    color: #0B0F19;
     word-break: keep-all;
     line-height: 1.4;
     letter-spacing: -.5px;
@@ -22,18 +22,29 @@
 .link_list {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
+}
+
+.link_list li {
+    width: fit-content;
+    height: 30px;
 }
 
 .link {
+    position: relative;
     font-size: 16px;
-    color: #fff;
-    opacity: .7;
-    transition: opacity .3s ease;
+    display: block;
+    height: 100%;
+    color: #0B0F19;
+    font-weight: 700;
+    bottom: 0;
+    right: 0;
+    transition: all .5s ease;
 }
 
 .link:hover {
-    opacity: 1;
+    bottom: 5px;
+    right: 5px;
 }
 
 @media screen and (max-width: 1800px) {

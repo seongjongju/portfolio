@@ -1,23 +1,21 @@
 import React from 'react';
-import styles from 'src/assets/styled/home/about.module.css';
+import styles from 'src/assets/styled/about/about.module.css';
 import Character from 'src/shared/components/UI/Character';
-import Subject from 'src/shared/components/UI/Subject';
+import Title from 'src/shared/components/UI/Title';
 import { footerLinks } from 'src/shared/data/staticData';
 
 const MyInfo = () => {
     return (
-        <>
-            <div className={styles.info}>
-                <figure className={styles.info_img}>
-                    <Character 
-                        classname="about"
+        <section className={styles.section}>
+            <nav className={styles.nav}>
+                <div className={styles.info}>
+                    <Title 
+                        title="About"
                     />
-                </figure>
-                <div className={styles.info_detail}>
+
                     <p className={styles.info_slogan}>
-                        안녕하세요!! <br style={{display: "block"}} />
                         <strong>체계적인 구조</strong>와 <strong>직관적인 UX</strong>를 고민하는 <br />
-                        주니어 프론트엔드 개발자 <strong>성종주</strong>입니다!
+                        프론트엔드 개발자입니다.
                     </p>
                     <p className={styles.info_text}>
                         퍼블리싱 경험을 바탕으로 UI/UX의 디테일을 살리고,<br /> 
@@ -35,25 +33,25 @@ const MyInfo = () => {
                         AI를 단순한 코드 생성기가 아닌 원리 학습과 생산성 향상을 위한 파트너로 만듭니다.
                     </p>
                 </div>
-            </div>
-
-            <ul className={styles.info_btns}>
-                {
-                    footerLinks.map((link) => (
-                        <li key={link.id}>
-                            <a 
-                                className={styles.link}
-                                href={link.link}
-                                download={link.link}
-                                target='_blank'
-                            >
-                                {link.text}
-                            </a>
-                        </li>
-                    )) 
-                }
-            </ul>
-        </>
+            
+                <ul className={styles.info_btns}>
+                    {
+                        footerLinks.map((link) => (
+                            <li key={link.id}>
+                                <a 
+                                    className={styles.link}
+                                    href={link.link}
+                                    download={link.link}
+                                    target='_blank'
+                                >
+                                    {link.text}
+                                </a>
+                            </li>
+                        )) 
+                    }
+                </ul>
+            </nav>
+        </section>
     );
 };
 

@@ -1,7 +1,7 @@
 .hero {
-    height: 960px;
-    max-height: 100vh;
-    min-height: 100vh;
+    height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -10,101 +10,49 @@
     justify-content: center;
 }
 
-.nav {
-    padding: 0 10px;
-}
-
-.titles {
-    display: flex;
-    justify-content: flex-start;
+.splide {
+    position: relative;
+    z-index: 1;
     width: 100%;
-    overflow: hidden;
 }
 
-.title {
-    color: #0B0F19;
-    font-size: 150px;
-    font-weight: 800;
-    letter-spacing: -10px;
+.slide {
+    font-size: 200px;
+    line-height: 1;
+    font-weight: 700;
+    color: #e5e8e8;
 }
 
-.texts {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 100%;
-    overflow: hidden;
-}
-
-.texts:last-child {
-    justify-content: center;
-}
-
-.text {
-    font-size: 150px;
-    font-weight: 600;
-}
-
-
-@media screen and (max-width: 1500px) {
-    .title {
-        font-size: 100px;
-    }
-
-    .text {
-        font-size: 100px;
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .title {
-        font-size: 80px;
-    }
-
-    .text {
-        font-size: 80px;
-    }
+.character {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media screen and (max-width: 768px) {
-    .title {
-        font-size: 70px;
-    }
-
-    .text {
-        font-size: 70px;
+    .slide {
+        font-size: 150px;
     }
 }
 
 @media screen and (max-width: 640px) {
-    .title {
-        font-size: 60px;
-        letter-spacing: -5px;
-    }
-
-    .text {
-        font-size: 60px;
+    .slide {
+        font-size: 130px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .title {
-        font-size: 45px;
-        letter-spacing: -3px;
-    }
-
-    .text {
-        font-size: 45px;
+    .slide {
+        font-size: 100px;
     }
 }
 
 @media screen and (max-width: 380px) {
-    .title {
-        font-size: 38px;
-        letter-spacing: -2px;
-    }
-
-    .text {
-        font-size: 38px;
+    .slide {
+        font-size: 70px;
     }
 }
+
+
+

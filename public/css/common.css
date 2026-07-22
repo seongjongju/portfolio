@@ -1,13 +1,13 @@
 /****************** 제목글 */
 .title {
-    /* font-family: 'Suit'; */
+    font-family: "Montserrat", sans-serif;
     font-size: 100px;
-    color: #0B0F19;
-    font-weight: 900;
+    color: #e5e8e8;
+    font-weight: 700;
+    font-style: italic;
     letter-spacing: -2px;
     line-height: 1.2;
     width: fit-content;
-    margin-bottom: 1em;
 }
 
 .subject {
@@ -49,40 +49,24 @@
 }
 
 @media screen and (max-width: 768px) {
-    .title {
-        font-size: 50px;
-    }
-
     .subject {
         font-size: 30px;
     }
 }
 
 @media screen and (max-width: 640px) {
-    .title {
-        font-size: 40px;
-    }
-
     .subject {
         font-size: 25px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .title {
-        font-size: 35px;
-    }
-
     .subject {
         font-size: 22px;
     }
 }
 
 @media screen and (max-width: 380px) {
-    .title {
-        font-size: 30px;
-    }
-
     .subject {
         font-size: 20px;
     }
@@ -92,19 +76,18 @@
 /* 기본 값 */
 .character {
     width: fit-content;
-    height: 280px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 15px;
 }
 
 .face {
-    width: 100px; 
+    width: 300px; 
     aspect-ratio: 1/1;
     position: relative;
-    left: 5px;
+    left: 15px;
 }
 
 .face__image {
@@ -119,118 +102,29 @@
 }
 
 .body {
-    width: 120px;
-    margin-top: -22px;
-}
-
-/* 히어로 섹션일 경우 */
-.character.hero {
-    height: auto;
-}
-
-.character.hero .body  {
-    display: none;
-}
-
-.character.hero .face {
-    width: 300px;
-}
-
-/* 어바웃 페이지일 경우 */
-.character.about {
-    height: auto;
-}
-
-.character.about .body  {
-    width: 270px;
-    margin-top: -50px;
-}
-
-.character.about .face {
-    width: 250px;
-    left: 12px;
-}
-
-@media screen and (max-width: 1500px) {
-    /* 히어로 섹션일 경우 */
-    .character.hero .face {
-        width: 250px;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-    /* 어바웃 페이지일 경우 */
-    .character.about .body  {
-        width: 240px;
-        margin-top: -45px;
-    }
-
-    .character.about .face {
-        width: 220px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* 히어로 섹션일 경우 */
-    .character.hero .face {
-        width: 200px;
-    }
-
-    /* 어바웃 페이지일 경우 */
-    .character.about .body  {
-        width: 200px;
-        margin-top: -37px;
-    }
-
-    .character.about .face {
-        width: 180px;
-        left: 10px;
-    }
+    width: 320px;
+    margin-top: -60px;
 }
 
 @media screen and (max-width: 640px) {
-    .character {
-        height: 190px;
+    .face {
+        width: 250px; 
     }
 
     .body {
-        width: 80px;
-        margin-top: -15px;
-    }
-
-    .face {
-        width: 73px; 
+        width: 270px;
+        margin-top: -50px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .character {
-        height: 145px;
+    .face {
+        width: 200px; 
+        left: 10px;
     }
 
     .body {
-        width: 60px;
-        margin-top: -11px;
-    }
-
-    .face {
-        width: 55px; 
-        left: 2.5px;
-    }
-
-    /* 히어로 섹션일 경우 */
-    .character.hero .face {
-        width: 150px;
-    }
-
-    /* 어바웃 페이지일 경우 */
-    .character.about .body  {
-        width: 180px;
-        margin-top: -32px;
-    }
-
-    .character.about .face {
-        width: 160px;
-        left: 8px;
+        width: 220px;
+        margin-top: -40px;
     }
 }

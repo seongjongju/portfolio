@@ -1,9 +1,9 @@
 //gnb
 export const depths = [
-    { id: "0", page: "/", text: "HOME" },
+    { id: "0", page: "/home", text: "HOME" },
     { id: "1", page: "/about", text: "ABOUT" },
-    { id: "2", page: "", text: "PROJECTS" },
-    { id: "3", page: "", text: "CONTACT" },
+    { id: "2", page: "/projects", text: "PROJECTS" },
+    { id: "3", page: "/contact", text: "CONTACT" },
 ];
 
 //footer
