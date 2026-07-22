@@ -1,6 +1,5 @@
 header {
     width: 100%;
-    z-index: 99;
 }
 
 .nav {
@@ -66,7 +65,7 @@ header {
 .util {
     position: fixed;
     top: 20px;
-    right: 0;
+    right: 4%;
     display: flex;
     align-items: center;
     gap: 10px;
