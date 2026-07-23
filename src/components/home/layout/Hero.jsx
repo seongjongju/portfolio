@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'src/assets/styled/home/hero.module.css';
+import styles from 'src/assets/styled/home.module.css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import '@splidejs/react-splide/css';

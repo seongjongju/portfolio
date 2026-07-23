@@ -55,6 +55,15 @@ const FullGnb = memo(({isToggle, setIstoggle}) => {
                 <span></span>
             </button>
             <ul className={styles.gnb_list}>
+                <li>
+                    <Link 
+                        className={styles.depth}
+                        to={'/'}
+                        onClick={handleClickClose}
+                    >
+                        HOME
+                    </Link>
+                </li>
                 {
                     depths.map((depth) => (
                         <li key={depth.id}>

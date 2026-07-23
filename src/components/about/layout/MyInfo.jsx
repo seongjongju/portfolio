@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'src/assets/styled/about/about.module.css';
+import styles from 'src/assets/styled/about.module.css';
 import Character from 'src/shared/components/UI/Character';
 import Title from 'src/shared/components/UI/Title';
 import { footerLinks } from 'src/shared/data/staticData';

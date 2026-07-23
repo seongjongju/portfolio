@@ -4,3 +4,12 @@ body {
     background-color: #fff;
     font-family: "Syne", sans-serif;
 }
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 4px;
+}

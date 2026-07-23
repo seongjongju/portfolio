@@ -24,6 +24,18 @@ const Header = () => {
             <header>
                 <nav className={styles.nav}>                     
                     <ul className={styles.gnb}>
+                        <li>
+                            <Link 
+                                to={'/'}
+                                className={`
+                                    ${styles.depth} 
+                                    ${pathName === '/' ? 
+                                    styles.is_active : ""
+                                }`}
+                            >
+                                HOME
+                            </Link>
+                        </li>
                         {depths.map((depth) => {
                             return (
                                 <li key={depth.id}>
