@@ -4,6 +4,7 @@ import styles from 'src/assets/styled/about.module.css';
 import CoreStack from 'src/components/about/layout/CoreStack';
 import Experience from 'src/components/about/layout/Experience';
 import MyInfo from 'src/components/about/layout/MyInfo';
+import TakeClass from 'src/components/about/layout/TakeClass';
 
 const AboutPage = () => {
     return (
@@ -17,6 +18,7 @@ const AboutPage = () => {
                 <MyInfo />
                 <CoreStack />
                 <Experience />
+                <TakeClass />
             </main>
         </motion.div>
     );

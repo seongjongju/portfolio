@@ -9,8 +9,8 @@ const Experience = () => {
                 <Title 
                     title="Experience"
                 />
-                <div className={styles.experience}>
-                    <h5 className={styles.year}>2024 ~ Current</h5>
+                <div>
+                    <h5 className={styles.year}>2024.11 ~ Current</h5>
                     <div className={styles.detail}>
                         <h6 className={styles.company}>(주)신비웹</h6>
                         <p className={styles.work}>웹 퍼블리셔</p>

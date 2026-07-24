@@ -1,10 +1,14 @@
 import React from 'react';
 import styles from './styled/footer.module.css';
 import { footerLinks } from 'src/shared/data/staticData';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
+    const location = useLocation();
+    const pathname = location.pathname;
+
     return (
-        <footer className={`${styles.footer}`}>
+        <footer className={`${styles.footer} ${pathname === "/" ? styles.is_home : ""}`}>
             <nav className={styles.nav}>
                 <p className={styles.copy}>
                     © 2026 DEV-ARCHIVE

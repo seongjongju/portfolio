@@ -6,6 +6,7 @@ import { SectionContextProvider } from './context/SectionContext.jsx';
 import Header from './inc/Header.jsx'
 import { GsapContextProvider } from './context/GsapContext.jsx';
 import { BrowserRouter } from 'react-router-dom';
+import Footer from './inc/Footer';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
         <GsapContextProvider>
           <Header />
           <App />
+          <Footer />
         </GsapContextProvider>
       </SectionContextProvider>
     </BrowserRouter>

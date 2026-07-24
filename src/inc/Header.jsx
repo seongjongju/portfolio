@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     const location = useLocation();
-    const pathName = location.pathname;
+    const pathname = location.pathname;
     const {isLenis} = useGsap(); //gsap
     const [isToggle, setIstoggle] = useState(false); //fullGnb 토글
 
@@ -21,7 +21,7 @@ const Header = () => {
 
     return (
         <>
-            <header>
+            <header className={`${pathname === "/" ? styles.is_home : ""}`}>
                 <nav className={styles.nav}>                     
                     <ul className={styles.gnb}>
                         <li>
@@ -29,7 +29,7 @@ const Header = () => {
                                 to={'/'}
                                 className={`
                                     ${styles.depth} 
-                                    ${pathName === '/' ? 
+                                    ${pathname === '/' ? 
                                     styles.is_active : ""
                                 }`}
                             >
@@ -43,7 +43,7 @@ const Header = () => {
                                         to={`${depth.page}`}
                                         className={`
                                             ${styles.depth} 
-                                            ${pathName.includes(depth.text.toLocaleLowerCase()) ? 
+                                            ${pathname.includes(depth.text.toLocaleLowerCase()) ? 
                                             styles.is_active : ""
                                         }`}
                                     >
