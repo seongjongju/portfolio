@@ -41,3 +41,9 @@ export const stackIcons = [
     { id: "git", src: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/git.svg", text: "Git" },
     { id: "figma", src: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/figma.svg", text: "Figma" },
 ];
+
+//Certifications
+export const certifications = [
+    {id: "cer_0", date: "2021.01.29", text: "컴퓨터활용능력 1급"},
+    {id: "cer_1", date: "2022.01.14", text: "GTQ 그래픽기술자격 1급"},
+];

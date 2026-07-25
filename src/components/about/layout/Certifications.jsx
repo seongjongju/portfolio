@@ -1,0 +1,33 @@
+import React from 'react';
+import styles from 'src/assets/styled/about.module.css';
+import Title from 'src/shared/components/UI/Title';
+import { certifications } from 'src/shared/data/staticData';
+
+const Certifications = () => {
+    return (
+        <section className={styles.section}>
+            <nav className={styles.nav}>
+                <Title 
+                    title="Certifications"
+                />
+
+                <ul className={styles.certifications}>
+                    {
+                        certifications.map((cer) => (
+                            <li 
+                                key={cer.id}
+                                className={styles.certifications_li}
+                            >
+                                <p className={styles.certifications_text}>{cer.date}</p>
+                                <span className={styles.line}></span>
+                                <p className={styles.certifications_text}>{cer.text}</p>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </nav>
+        </section>
+    );
+};
+
+export default Certifications;

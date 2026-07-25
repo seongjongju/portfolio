@@ -5,6 +5,7 @@ import CoreStack from 'src/components/about/layout/CoreStack';
 import Experience from 'src/components/about/layout/Experience';
 import MyInfo from 'src/components/about/layout/MyInfo';
 import TakeClass from 'src/components/about/layout/TakeClass';
+import Certifications from 'src/components/about/layout/Certifications';
 
 const AboutPage = () => {
     return (
@@ -19,6 +20,7 @@ const AboutPage = () => {
                 <CoreStack />
                 <Experience />
                 <TakeClass />
+                <Certifications />
             </main>
         </motion.div>
     );

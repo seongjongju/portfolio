@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from 'src/assets/styled/about.module.css';
-import Subject from 'src/shared/components/UI/Subject';
 import  { siSimpleicons }  from  'simple-icons' ; 
 import { stackIcons } from 'src/shared/data/staticData';
 import Title from 'src/shared/components/UI/Title';
