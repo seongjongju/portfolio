@@ -31,11 +31,6 @@
 }
 
 /************************ MyInfo */
-.info {
-    width: fit-content;
-    margin: 0 auto;
-}
-
 .info_slogan {
     font-family: "pretendard";
     font-size: 26px;

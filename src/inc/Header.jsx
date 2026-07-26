@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     const location = useLocation();
     const pathname = location.pathname;
+    const {activeSection} = useActiveSection();
     const {isLenis} = useGsap(); //gsap
     const [isToggle, setIstoggle] = useState(false); //fullGnb 토글
 
@@ -19,45 +20,54 @@ const Header = () => {
         setIstoggle(true);
     };
 
+    //상단으로 이동
+    const handleClickTop = (e) => {
+        e.preventDefault();
+        isLenis.scrollTo(0, {
+            offset: 0,
+            duration: 1,
+        });
+    };
+
     return (
         <>
-            <header className={`${pathname === "/" ? styles.is_home : ""}`}>
+            <header className={styles.is_home}>
                 <nav className={styles.nav}>                     
                     <ul className={styles.gnb}>
-                        <li>
-                            <Link 
-                                to={'/'}
-                                className={`
-                                    ${styles.depth} 
-                                    ${pathname === '/' ? 
-                                    styles.is_active : ""
-                                }`}
-                            >
-                                HOME
-                            </Link>
-                        </li>
                         {depths.map((depth) => {
                             return (
                                 <li key={depth.id}>
-                                    <Link
-                                        to={`${depth.page}`}
+                                    <a
+                                        href={`#${depth.page}`}
                                         className={`
                                             ${styles.depth} 
-                                            ${pathname.includes(depth.text.toLocaleLowerCase()) ? 
+                                            ${activeSection === depth.page ? 
                                             styles.is_active : ""
                                         }`}
+                                        onClick={() => {
+                                            isLenis.scrollTo(`#${depth.page}`, {
+                                                offset: 0,
+                                                duration: 1,
+                                            });
+                                        }}
                                     >
                                         {depth.text}
-                                    </Link>
+                                    </a>
                                 </li>
                             );
                         })}
                     </ul>
                     
                     <div className={styles.util}>
+                        <button 
+                            className={styles.top}
+                            onClick={handleClickTop}
+                        >
+                            TOP
+                        </button>
                         <div className={styles.toggle}>
                             <button className={styles.light}>
-                                <img src="/icon/light-icon.png" alt="라이트모드" />
+                                <img src="/icon/sun.png" alt="라이트모드" />
                             </button>
                         </div>
                         <button 

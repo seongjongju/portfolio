@@ -47,8 +47,80 @@ const useGsapAnimation = () => {
         });
     }, []);
 
+    //-------------------------projects
+    const projectOneRef = useRef(null);
+    const projectTwoRef = useRef(null);
+    const projectThreeRef = useRef(null);
+    const projectfourRef = useRef(null);
+
+    useGSAP(() => {
+        if (
+            !projectOneRef.current ||
+            !projectTwoRef.current ||
+            !projectThreeRef.current ||
+            !projectfourRef.current
+        ) return;
+
+        const tl1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: projectOneRef.current,
+                start: 'top top',
+                end: '+=300%',
+                pin: true,
+                pinSpacing: false,
+                scrub: true,
+            }
+        });
+
+        tl1.to({}, { duration: 1 });
+
+        const tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: projectTwoRef.current,
+                start: 'top top',
+                end: '+=400%',
+                pin: true,
+                pinSpacing: false,
+                scrub: true,
+            }
+        });
+
+        tl2.to({}, {duration: 1});
+
+        const tl3 = gsap.timeline({
+            scrollTrigger: {
+                trigger: projectThreeRef.current,
+                start: 'top top',
+                end: '+=500%',
+                pin: true,
+                pinSpacing: false,
+                scrub: true,
+            }
+        });
+
+        tl3.to({}, {duration: 1});
+
+        const tl4 = gsap.timeline({
+            scrollTrigger: {
+                trigger: projectfourRef.current,
+                start: 'top top',
+                end: '+=600%',
+                pin: true,
+                pinSpacing: false,
+                scrub: true,
+            }
+        });
+
+        tl4.to({}, {duration: 1});
+    }, []);
+
     return {
-        heroTextRef
+        heroTextRef,
+
+        projectOneRef,
+        projectTwoRef,
+        projectThreeRef,
+        projectfourRef
     };
 };
 

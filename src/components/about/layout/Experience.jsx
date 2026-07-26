@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from 'src/assets/styled/about.module.css';
-import Title from 'src/shared/components/UI/Title';
+import Subject from 'src/shared/components/UI/Subject';
 
 const Experience = () => {
     return (
         <section className={styles.section}>
             <nav className={styles.nav}>
-                <Title 
-                    title="Experience"
+                <Subject 
+                    subject="Experience"
                 />
                 <div>
                     <h5 className={styles.year}>2024.11 ~ Current</h5>

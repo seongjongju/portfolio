@@ -3,8 +3,10 @@ import styles from './styled/fullgnb.module.css';
 import Footer from './Footer';
 import { depths } from 'src/shared/data/staticData';
 import { Link } from 'react-router-dom';
+import { useGsap } from 'src/context/GsapContext';
 
 const FullGnb = memo(({isToggle, setIstoggle}) => {
+    const {isLenis} = useGsap(); //gsap
     const [block, setBlock] = useState("none");
     const [opacity, setOpacity] = useState("0");
 
@@ -55,25 +57,22 @@ const FullGnb = memo(({isToggle, setIstoggle}) => {
                 <span></span>
             </button>
             <ul className={styles.gnb_list}>
-                <li>
-                    <Link 
-                        className={styles.depth}
-                        to={'/'}
-                        onClick={handleClickClose}
-                    >
-                        HOME
-                    </Link>
-                </li>
                 {
                     depths.map((depth) => (
                         <li key={depth.id}>
-                            <Link 
+                            <a 
                                 className={styles.depth}
-                                to={depth.page}
-                                onClick={handleClickClose}
+                                href={`#${depth.page}`}
+                                onClick={() => {
+                                    handleClickClose();
+                                    isLenis.scrollTo(`#${depth.page}`, {
+                                        offset: 0,
+                                        duration: 1,
+                                    });
+                                }}
                             >
                                 {depth.text}
-                            </Link>
+                            </a>
                         </li>
                     ))
                 }

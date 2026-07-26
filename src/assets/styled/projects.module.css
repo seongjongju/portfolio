@@ -1,14 +1,57 @@
 /************************ common */
-.main {
-    padding: 100px 0;
-}
-
 .nav {
     max-width: 1600px;
     margin: 0 auto;
 }
 
-/********************** projects */
-.projects {
-
+.section {
+    height: 960px;
+    padding: 100px 0;
+    position: relative;
+    background: #F8F7F4;
+    box-shadow: 0 -4px 50px rgba(0, 0, 0, .1);
 }
+
+.section h2 {
+    font-size: 70px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@media screen and (max-width: 1600px) {
+    .nav {
+        padding: 0 3%;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .main {
+        padding: 10.5% 0;
+    }
+
+    .section h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .section h2 {
+        font-size: 28px;
+    }
+}
+
+/********************** projects */
+.project_0 {
+    box-shadow: none;
+}
+
+.project_1 {
+    margin-top: 50vh;
+}
+

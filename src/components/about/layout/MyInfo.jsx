@@ -9,10 +9,6 @@ const MyInfo = () => {
         <section className={styles.section}>
             <nav className={styles.nav}>
                 <div className={styles.info}>
-                    <Title 
-                        title="About"
-                    />
-
                     <p className={styles.info_slogan}>
                         <strong>체계적인 구조</strong>와 <strong>직관적인 UX</strong>를 고민하는 <br />
                         프론트엔드 개발자입니다.

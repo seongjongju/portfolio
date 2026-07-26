@@ -6,20 +6,24 @@ const useSectionRef = (id) => {
     const sectionRef = useRef(null);
 
     useEffect(() => {
-            const observer = new IntersectionObserver(([entry]) => {
+        const observer = new IntersectionObserver(([entry]) => {
                 if (entry.isIntersecting) {
                     setActiveSection(id);
                 }
             },
-            { threshold: 0.4 } // 섹션이 화면에 50% 이상 보일 때 작동
+            { 
+                threshold: 0,
+                rootMargin: "-20% 0px -70% 0px" 
+            } 
         );
 
         if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
-    }, [setActiveSection]);
+    }, [id, setActiveSection]);
 
     return {
         setActiveSection,
+        sectionRef
     };
 };
 

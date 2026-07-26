@@ -70,13 +70,9 @@ header.is_home {
 }
 
 .util {
-    position: fixed;
-    top: 20px;
-    right: 4%;
     display: flex;
     align-items: center;
     gap: 10px;
-    z-index: 99;
 }
 
 .toggle {
@@ -92,37 +88,47 @@ header.is_home {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
-    transition: background .3s ease;
+    background: #0B0F19;
+    transition: all .3s ease;
 }
 
 .toggle button:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .ham {
     font-size: 16px;
-    color: #0B0F19;
+    color: #fff;
     font-weight: 600;
     width: 5em;
     height: 40px;
     border-radius: 100px;
+    background: #0B0F19;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
-    transition: background .3s ease;
+    transition: all .3s ease;
 }
 
 .ham:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.1);
+    color: #0047ff;
+}
+
+.top {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    width: 4em;
+    height: 40px;
+    border-radius: 100px;
+    background: #0B0F19;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.top:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #0047ff;
 }
 
 @media screen and (max-width: 1800px) {

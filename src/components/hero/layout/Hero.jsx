@@ -9,7 +9,7 @@ import Character from 'src/shared/components/UI/Character';
 
 const Hero = () => {
     const id = "hero";
-    const {setActiveSection, sectionRef} = useSectionRef(id);
+    const {sectionRef} = useSectionRef(id);
     const {heroTextRef} = useGsapAnimation();
 
     return (

@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from 'src/assets/styled/about.module.css';
-import Title from 'src/shared/components/UI/Title';
+import Subject from 'src/shared/components/UI/Subject';
 import { certifications } from 'src/shared/data/staticData';
 
 const Certifications = () => {
     return (
         <section className={styles.section}>
             <nav className={styles.nav}>
-                <Title 
-                    title="Certifications"
+                <Subject 
+                    subject="Certifications"
                 />
 
                 <ul className={styles.certifications}>
