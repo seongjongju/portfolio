@@ -1,6 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import 'src/assets/styled/reset.css';
+import 'src/assets/styled/common.css';
 import App from './App.jsx'
 import { SectionContextProvider } from './context/SectionContext.jsx';
 import Header from './inc/Header.jsx'

@@ -3,6 +3,8 @@ import useSectionRef from 'src/hooks/useSectionRef';
 import styles from 'src/assets/styled/projects.module.css';
 import Project from './Project';
 import useGsapAnimation from 'src/hooks/useGsapAnimation';
+import { projectDatas } from 'src/shared/data/staticData';
+
 
 const Projects = () => {
     const id = 'projects';
@@ -15,30 +17,30 @@ const Projects = () => {
             className={styles.main}
             ref={sectionRef}
         >
-            <Project 
-                projectId="coffee-order"
-                ref={projectOneRef}
-                title="커피 주문 웹앱"
-                classname={styles.project_0}
-            />
-            <Project
-                projectId="cine-ai"
-                ref={projectTwoRef}
-                title="CineAI"
-                classname={styles.project_1}
-            />
-            <Project
-                projectId="invitation"
-                ref={projectThreeRef}
-                title="모바일 청첩장"
-                classname={styles.project_1}
-            />
-            <Project
-                projectId="game"
-                ref={projectfourRef}
-                title="잔소리 피하기 게임"
-                classname={styles.project_1}
-            />
+            {
+                projectDatas.map((project) => {
+                    return(
+                        <Project 
+                            key={project.id}
+                            projectId={project.id}
+                            classname={project.id === "project_0" ? "project_0" : "project_1"}
+                            title={project.title}
+                            ref={
+                                project.id === "project_0" ? projectOneRef :
+                                project.id === "project_1" ? projectTwoRef : 
+                                project.id === "project_2" ? projectThreeRef :
+                                projectfourRef
+                            }
+                            img={project.img}
+                            ex={project.ex}
+                            list={project.list}
+                            badges={project.badges}
+                            texts={project.texts}
+                            link={project.link}
+                        />
+                    )
+                })
+            }
         </main>
     );
 };

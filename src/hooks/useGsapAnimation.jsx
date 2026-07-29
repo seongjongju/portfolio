@@ -61,6 +61,8 @@ const useGsapAnimation = () => {
             !projectfourRef.current
         ) return;
 
+        if(window.innerWidth <= 1280) return;
+
         const tl1 = gsap.timeline({
             scrollTrigger: {
                 trigger: projectOneRef.current,

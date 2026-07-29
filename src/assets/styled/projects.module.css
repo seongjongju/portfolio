@@ -1,15 +1,19 @@
 /************************ common */
+.main {
+    padding-top: 0;
+}
+
 .nav {
     max-width: 1600px;
     margin: 0 auto;
 }
 
 .section {
-    height: 960px;
     padding: 100px 0;
     position: relative;
     background: #F8F7F4;
     box-shadow: 0 -4px 50px rgba(0, 0, 0, .1);
+    overflow: auto;
 }
 
 .section h2 {
@@ -24,13 +28,20 @@
     }
 }
 
+@media screen and (max-width: 1280px) {
+    .section {
+        box-shadow: none;
+    }
+}
+
 @media screen and (max-width: 968px) {
     .main {
-        padding: 10.5% 0;
+        padding: 0 0 10.5%;
     }
 
     .section h2 {
         font-size: 40px;
+        margin-bottom: 1em;
     }
 }
 
@@ -55,3 +66,186 @@
     margin-top: 50vh;
 }
 
+.project {
+    display: flex;
+    gap: 40px;
+}
+
+.project h5 {
+    margin-bottom: .5em;
+}
+
+.figure {
+    width: 38%;
+    height: fit-content;
+}
+
+.thum {
+    width: 100%;
+    height: 100%;
+}
+
+.detail {
+    width: 62%;
+}
+
+.ex {
+    font-family: "pretendard";
+    font-size: 30px;
+    color: #0B0F19;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.list_li {
+    font-size: 20px;
+    color: #0047ff;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+.badge {
+    font-size: 16px;
+    padding: .5em 1em;
+    background: #0B0F19;
+    border-radius: 100px;
+    color: #fff;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #0B0F19;
+}
+
+.text {
+    font-family: "pretendard";
+    font-size: 18px;
+    word-break: keep-all;
+    color: #222;
+    line-height: 1.4;
+    margin-bottom: 1em;
+}
+
+.view_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    width: 10em;
+    height: 3em;
+    background: #0B0F19;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 2em;
+    transition: color .3s ease, background .3s ease;
+}
+
+.view_button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #0047ff;
+}
+
+@media screen and (max-width: 1600px) {
+    .badges {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .ex {
+        font-size: 24px;
+    }
+
+    .list {
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    .list_li {
+        font-size: 18px;
+    }
+
+    .badges {
+        gap: 8px;
+    }
+
+    .badge {
+        font-size: 14px;
+    }
+
+    .heading {
+        font-size: 22px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .view_button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .project {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .figure {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .detail {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ex {
+        font-size: 20px;
+    }
+
+    .list_li {
+        font-size: 16px;
+    }
+
+    .badges {
+        margin-bottom: 20px;
+    }
+
+    .badge {
+        font-size: 12px;
+    }
+
+    .heading {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .view_button {
+        font-size: 12px;
+    }
+}

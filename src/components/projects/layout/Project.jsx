@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import styles from 'src/assets/styled/projects.module.css';
+import Subject from 'src/shared/components/UI/Subject';
 import Title from 'src/shared/components/UI/Title';
 
-const Project = ({projectId, ref, title, classname}) => {
+const Project = memo(({
+    projectId, 
+    ref, 
+    title, 
+    classname, 
+    img,
+    ex,
+    list,
+    badges,
+    texts,
+    link
+}) => {
 
     return (
         <section
@@ -16,21 +28,60 @@ const Project = ({projectId, ref, title, classname}) => {
                     title={title}
                 />
                 <div className={styles.project}>
-                    <figure className={styles.image}>
-                        <img src="" alt="" />
+                    <figure className={styles.figure}>
+                        <img src={img} alt={title} className={styles.thum} />
                     </figure>
                     <div className={styles.detail}>
-                        <h6 className={styles.title}></h6>
+                        <p className={styles.ex}>{ex}</p>
                         <ul className={styles.list}>
-                            <li className={styles.list_li}></li>
+                            {
+                                list.map((li) => (
+                                    <li 
+                                        key={li}
+                                        className={styles.list_li}
+                                    >
+                                        {li}
+                                    </li>
+                                ))
+                            }
                         </ul>
-                        <p className={styles.text}></p>
-                        <Link to={''}>VIEW MORE</Link>
+                        
+                        <div className={styles.badges}>
+                            {
+                                badges.map((badge) => (
+                                    <p 
+                                        key={badge}
+                                        className={styles.badge}
+                                    >
+                                        {badge}
+                                    </p>
+                                ))
+                            }
+                        </div>
+
+                        <p className={styles.heading}>Feature</p>
+                        {
+                            texts.map((text) => (
+                                <p 
+                                    key={text}
+                                    className={styles.text}
+                                >
+                                    {text}
+                                </p>
+                            ))
+                        }
+
+                        <Link 
+                            className={styles.view_button}
+                            to={link}
+                        >
+                            VIEW MORE
+                        </Link>
                     </div>
                 </div>
             </nav>
         </section>
     );
-};
+});
 
 export default Project;

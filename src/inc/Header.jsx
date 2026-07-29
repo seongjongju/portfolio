@@ -6,6 +6,7 @@ import { depths } from '../shared/data/staticData';
 import { useGsap } from '../context/GsapContext';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import sun from 'src/assets/icon/sun.png';
 
 const Header = () => {
     const location = useLocation();
@@ -67,7 +68,7 @@ const Header = () => {
                         </button>
                         <div className={styles.toggle}>
                             <button className={styles.light}>
-                                <img src="/icon/sun.png" alt="라이트모드" />
+                                <img src={sun} alt="라이트모드" />
                             </button>
                         </div>
                         <button 
