@@ -1,6 +1,8 @@
 import zustandIcon from 'src/assets/icon/zustand.svg';
 import coffeeOrderThum from 'src/assets/images/coffeeOrder-app-thum_0.png';
 import cineAiThum from 'src/assets/images/cine-ai-thum_0.png';
+import marryThum from 'src/assets/images/merry-template-thum_0.png';
+import sermonThum from 'src/assets/images/sermon-thum_0.png';
 
 //gnb
 export const depths = [
@@ -68,7 +70,9 @@ export const projectDatas = [
             "Next.js API Routes와 MongoDB를 연동하여 효율적인 데이터 CRUD REST API 구축",
             "Nicepay 결제 연동 및 웹훅(Webhook) 처리 로직 구현"
         ],
-        link: ""
+        view: "",
+        link: "cine-ai-murex.vercel.app",
+        git: "https://github.com/seongjongju/CoffeeOrder-app"
     },
     {
         id: "project_1",
@@ -84,13 +88,15 @@ export const projectDatas = [
             "Next.js API Routes와 Supabase를 연동하여 효율적인 데이터 CRUD REST API 구축",
             "GEMINI API 연동을 통해 동적 QnA 구축"
         ],
-        link: ""
+        view: "",
+        link: "https://cine-ai-murex.vercel.app",
+        git: "https://github.com/seongjongju/cine_ai"
     },
     {
         id: "project_2",
         title: "모바일 청첩장 템플릿",
         projectName: "Marry-template",
-        img: coffeeOrderThum,
+        img: marryThum,
         ex: "나이스페이먼츠 연동 커피 주문 웹앱",
         list: ["Personal", "Front-end 100%", "Back-end 100%", "UI/UX 100%"],
         badges: ["Next.js", "TypeScript", "Redux ToolKit", "Mongo DB", "JWT", "Nicepay"],
@@ -100,13 +106,15 @@ export const projectDatas = [
             "Next.js API Routes와 MongoDB를 연동하여 효율적인 데이터 CRUD REST API 구축",
             "Nicepay 결제 연동 및 웹훅(Webhook) 처리 로직 구현"
         ],
-        link: ""
+        view: "",
+        link: "https://marry-template.pages.dev/",
+        git: "https://github.com/seongjongju/marry_template"
     },
     {
         id: "project_3",
-        title: "커피 주문 웹앱",
-        projectName: "coffee-order",
-        img: coffeeOrderThum,
+        title: "잔소리 피하기 게임",
+        projectName: "sermon_avoid_game",
+        img: sermonThum,
         ex: "나이스페이먼츠 연동 커피 주문 웹앱",
         list: ["Personal", "Front-end 100%", "Back-end 100%", "UI/UX 100%"],
         badges: ["Next.js", "TypeScript", "Redux ToolKit", "Mongo DB", "JWT", "Nicepay"],
@@ -116,6 +124,8 @@ export const projectDatas = [
             "Next.js API Routes와 MongoDB를 연동하여 효율적인 데이터 CRUD REST API 구축",
             "Nicepay 결제 연동 및 웹훅(Webhook) 처리 로직 구현"
         ],
-        link: ""
+        view: "",
+        link: "https://sermon-avoid-game.vercel.app",
+        git: "https://github.com/seongjongju/sermon_avoid_game"
     },
 ];

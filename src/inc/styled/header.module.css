@@ -1,12 +1,12 @@
 header {
     width: 100%;
-}
-
-header.is_home {
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 10;
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 }
 
 .nav {
@@ -78,7 +78,6 @@ header.is_home {
 .toggle {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
 .toggle button {
@@ -148,5 +147,33 @@ header.is_home {
 
     .gnb {
         display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .nav {
+        height: 60px;
+    }
+
+    .util {
+        gap: 8px;
+    }
+
+    .ham {
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .toggle button {
+        width: 35px;
+    }
+
+    .toggle button img {
+        width: 20px;
+    }
+
+    .top {
+        font-size: 14px;
+        height: 35px;
     }
 }

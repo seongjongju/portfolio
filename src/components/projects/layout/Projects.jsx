@@ -23,7 +23,7 @@ const Projects = () => {
                         <Project 
                             key={project.id}
                             projectId={project.id}
-                            classname={project.id === "project_0" ? "project_0" : "project_1"}
+                            classname={project.id === "project_0" ? styles.project_0 : styles.project_1}
                             title={project.title}
                             ref={
                                 project.id === "project_0" ? projectOneRef :
@@ -36,7 +36,9 @@ const Projects = () => {
                             list={project.list}
                             badges={project.badges}
                             texts={project.texts}
+                            view={project.view}
                             link={project.link}
+                            git={project.git}
                         />
                     )
                 })

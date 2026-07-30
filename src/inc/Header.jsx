@@ -32,7 +32,7 @@ const Header = () => {
 
     return (
         <>
-            <header className={styles.is_home}>
+            <header>
                 <nav className={styles.nav}>                     
                     <ul className={styles.gnb}>
                         {depths.map((depth) => {

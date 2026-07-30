@@ -66,6 +66,11 @@
     opacity: 1;
 }
 
+.gnb footer {
+    background: none;
+    backdrop-filter: none;
+}
+
 @media screen and (max-width: 1500px) {
     .depth {
         font-size: 90px;

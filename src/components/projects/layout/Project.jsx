@@ -14,7 +14,9 @@ const Project = memo(({
     list,
     badges,
     texts,
-    link
+    view,
+    link,
+    git
 }) => {
 
     return (
@@ -71,12 +73,28 @@ const Project = memo(({
                             ))
                         }
 
-                        <Link 
-                            className={styles.view_button}
-                            to={link}
-                        >
-                            VIEW MORE
-                        </Link>
+                        <div className={styles.buttons}>
+                            <Link 
+                                className={styles.view_button}
+                                to={view}
+                            >
+                                VIEW MORE
+                            </Link>
+                            <a 
+                                className={styles.view_button}
+                                href={link}
+                                target='_blank'
+                            >
+                                SITE
+                            </a>
+                            <a 
+                                className={styles.view_button}
+                                href={git}
+                                target='_blank'
+                            >
+                                GIT HUB
+                            </a>
+                        </div>
                     </div>
                 </div>
             </nav>

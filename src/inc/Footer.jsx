@@ -8,7 +8,7 @@ const Footer = () => {
     const pathname = location.pathname;
 
     return (
-        <footer className={`${styles.footer} ${pathname === "/" ? styles.is_home : ""}`}>
+        <footer>
             <nav className={styles.nav}>
                 <p className={styles.copy}>
                     © 2026 DEV-ARCHIVE
