@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import faceOff from 'src/assets/images/face_Off.png';
+import faceOff from 'src/assets/images/face_off.png';
 import faceOn from 'src/assets/images/face_on.png';
 import body from 'src/assets/images/body.png';
 import useGsapAnimation from '../../../hooks/useGsapAnimation';
