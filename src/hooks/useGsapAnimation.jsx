@@ -52,13 +52,15 @@ const useGsapAnimation = () => {
     const projectTwoRef = useRef(null);
     const projectThreeRef = useRef(null);
     const projectfourRef = useRef(null);
+    const projectfiveRef = useRef(null);
 
     useGSAP(() => {
         if (
             !projectOneRef.current ||
             !projectTwoRef.current ||
             !projectThreeRef.current ||
-            !projectfourRef.current
+            !projectfourRef.current ||
+            !projectfiveRef.current
         ) return;
 
         if(window.innerWidth <= 1280) return;
@@ -114,6 +116,19 @@ const useGsapAnimation = () => {
         });
 
         tl4.to({}, {duration: 1});
+
+        const tl5 = gsap.timeline({
+            scrollTrigger: {
+                trigger: projectfiveRef.current,
+                start: 'top top',
+                end: '+=700%',
+                pin: true,
+                pinSpacing: false,
+                scrub: true,
+            }
+        });
+
+        tl5.to({}, {duration: 1});
     }, []);
 
     return {
@@ -122,7 +137,8 @@ const useGsapAnimation = () => {
         projectOneRef,
         projectTwoRef,
         projectThreeRef,
-        projectfourRef
+        projectfourRef,
+        projectfiveRef
     };
 };
 

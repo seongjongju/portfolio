@@ -9,7 +9,7 @@ import { projectDatas } from 'src/shared/data/staticData';
 const Projects = () => {
     const id = 'projects';
     const {sectionRef} = useSectionRef(id);
-    const {projectOneRef, projectTwoRef, projectThreeRef, projectfourRef} = useGsapAnimation();
+    const {projectOneRef, projectTwoRef, projectThreeRef, projectfourRef, projectfiveRef} = useGsapAnimation();
 
     return (
         <main 
@@ -29,7 +29,8 @@ const Projects = () => {
                                 project.id === "project_0" ? projectOneRef :
                                 project.id === "project_1" ? projectTwoRef : 
                                 project.id === "project_2" ? projectThreeRef :
-                                projectfourRef
+                                project.id === "project_3" ? projectfourRef :
+                                projectfiveRef
                             }
                             img={project.img}
                             ex={project.ex}
@@ -38,6 +39,7 @@ const Projects = () => {
                             texts={project.texts}
                             view={project.view}
                             link={project.link}
+                            admin={project.admin}
                             git={project.git}
                         />
                     )

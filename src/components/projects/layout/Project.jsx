@@ -16,6 +16,7 @@ const Project = memo(({
     texts,
     view,
     link,
+    admin,
     git
 }) => {
 
@@ -87,6 +88,18 @@ const Project = memo(({
                             >
                                 SITE
                             </a>
+                            {
+                                admin !== "" &&
+                                (
+                                    <a 
+                                        className={styles.view_button}
+                                        href={admin}
+                                        target='_blank'
+                                    >
+                                        ADMIN
+                                    </a>
+                                )
+                            }
                             <a 
                                 className={styles.view_button}
                                 href={git}
