@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import styles from 'src/assets/styled/projects.module.css';
-import Subject from 'src/shared/components/UI/Subject';
 import Title from 'src/shared/components/UI/Title';
 
 const Project = memo(({

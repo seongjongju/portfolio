@@ -69,7 +69,7 @@ const useGsapAnimation = () => {
             scrollTrigger: {
                 trigger: projectOneRef.current,
                 start: 'top top',
-                end: '+=300%',
+                end: '+=150%',
                 pin: true,
                 pinSpacing: false,
                 scrub: true,
@@ -82,7 +82,7 @@ const useGsapAnimation = () => {
             scrollTrigger: {
                 trigger: projectTwoRef.current,
                 start: 'top top',
-                end: '+=400%',
+                end: '+=150%',
                 pin: true,
                 pinSpacing: false,
                 scrub: true,
@@ -95,7 +95,7 @@ const useGsapAnimation = () => {
             scrollTrigger: {
                 trigger: projectThreeRef.current,
                 start: 'top top',
-                end: '+=500%',
+                end: '+=150%',
                 pin: true,
                 pinSpacing: false,
                 scrub: true,
@@ -108,7 +108,7 @@ const useGsapAnimation = () => {
             scrollTrigger: {
                 trigger: projectfourRef.current,
                 start: 'top top',
-                end: '+=600%',
+                end: '+=150%',
                 pin: true,
                 pinSpacing: false,
                 scrub: true,
@@ -121,9 +121,9 @@ const useGsapAnimation = () => {
             scrollTrigger: {
                 trigger: projectfiveRef.current,
                 start: 'top top',
-                end: '+=700%',
+                end: '+=150%',
                 pin: true,
-                pinSpacing: false,
+                pinSpacing: true,
                 scrub: true,
             }
         });

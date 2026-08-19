@@ -4,6 +4,7 @@ import styles from 'src/assets/styled/projects.module.css';
 import Project from './Project';
 import useGsapAnimation from 'src/hooks/useGsapAnimation';
 import { projectDatas } from 'src/shared/data/staticData';
+import Publishings from './Publishings';
 
 
 const Projects = () => {
@@ -45,6 +46,8 @@ const Projects = () => {
                     )
                 })
             }
+
+            <Publishings />
         </main>
     );
 };

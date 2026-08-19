@@ -72,8 +72,8 @@ export const projectDatas = [
             "Nicepay 결제 연동 및 웹훅(Webhook) 처리 로직 구현"
         ],
         view: "/projects/project_0",
-        link: "cine-ai-murex.vercel.app",
-        admin: "cine-ai-murex.vercel.app",
+        link: "https://jongju-coffee-order-app.vercel.app/",
+        admin: "https://jongju-coffee-order-app.vercel.app/admin/admin_login",
         git: "https://github.com/seongjongju/CoffeeOrder-app"
     },
     {
@@ -148,8 +148,8 @@ export const projectDatas = [
             "Nicepay 결제 연동 및 웹훅(Webhook) 처리 로직 구현"
         ],
         view: "/projects/project_4",
-        link: "https://sermon-avoid-game.vercel.app",
+        link: "https://portfolio-kappa-tan-62.vercel.app/",
         admin: "",
-        git: "https://github.com/seongjongju/sermon_avoid_game"
+        git: "https://github.com/seongjongju/portfolio"
     },
 ];
