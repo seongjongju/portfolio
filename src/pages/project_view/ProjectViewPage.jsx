@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from 'src/assets/styled/project_view.module.css';
 import { motion } from "framer-motion";
 import { useParams } from 'react-router-dom';
 
@@ -12,7 +13,9 @@ const ProjectViewPage = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
         >
-            {id}   
+            <main id={styles.main}>
+                {id}
+            </main>
         </motion.div>
     );
 };

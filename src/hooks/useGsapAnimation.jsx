@@ -7,6 +7,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const startArray = ["top 50%", "top 80%"];
 
+const mm = gsap.matchMedia();
+
 const useGsapAnimation = () => {
     //-------------------------hero
     const heroTextRef = useRef(null); //title, text
@@ -63,72 +65,77 @@ const useGsapAnimation = () => {
             !projectfiveRef.current
         ) return;
 
-        if(window.innerWidth <= 1280) return;
+        mm.add('(min-width: 1600px)', () => {
+            const tl1 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: projectOneRef.current,
+                    start: 'top top',
+                    end: '+=150%',
+                    pin: true,
+                    pinSpacing: false,
+                    scrub: true,
+                }
+            });
+            tl1.to({}, { duration: 1 });
 
-        const tl1 = gsap.timeline({
-            scrollTrigger: {
-                trigger: projectOneRef.current,
-                start: 'top top',
-                end: '+=150%',
-                pin: true,
-                pinSpacing: false,
-                scrub: true,
-            }
+            const tl2 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: projectTwoRef.current,
+                    start: 'top top',
+                    end: '+=150%',
+                    pin: true,
+                    pinSpacing: false,
+                    scrub: true,
+                }
+            });
+            tl2.to({}, { duration: 1 });
+
+            const tl3 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: projectThreeRef.current,
+                    start: 'top top',
+                    end: '+=150%',
+                    pin: true,
+                    pinSpacing: false,
+                    scrub: true,
+                }
+            });
+            tl3.to({}, { duration: 1 });
+
+            const tl4 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: projectfourRef.current,
+                    start: 'top top',
+                    end: '+=150%',
+                    pin: true,
+                    pinSpacing: false,
+                    scrub: true,
+                }
+            });
+            tl4.to({}, { duration: 1 });
+
+            const tl5 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: projectfiveRef.current,
+                    start: 'top top',
+                    end: '+=150%',
+                    pin: true,
+                    pinSpacing: true,
+                    scrub: true,
+                }
+            });
+            tl5.to({}, { duration: 1 });
+
+            return () => {
+                tl1.kill();
+                tl2.kill();
+                tl3.kill();
+                tl4.kill();
+                tl5.kill();
+            };
         });
 
-        tl1.to({}, { duration: 1 });
-
-        const tl2 = gsap.timeline({
-            scrollTrigger: {
-                trigger: projectTwoRef.current,
-                start: 'top top',
-                end: '+=150%',
-                pin: true,
-                pinSpacing: false,
-                scrub: true,
-            }
-        });
-
-        tl2.to({}, {duration: 1});
-
-        const tl3 = gsap.timeline({
-            scrollTrigger: {
-                trigger: projectThreeRef.current,
-                start: 'top top',
-                end: '+=150%',
-                pin: true,
-                pinSpacing: false,
-                scrub: true,
-            }
-        });
-
-        tl3.to({}, {duration: 1});
-
-        const tl4 = gsap.timeline({
-            scrollTrigger: {
-                trigger: projectfourRef.current,
-                start: 'top top',
-                end: '+=150%',
-                pin: true,
-                pinSpacing: false,
-                scrub: true,
-            }
-        });
-
-        tl4.to({}, {duration: 1});
-
-        const tl5 = gsap.timeline({
-            scrollTrigger: {
-                trigger: projectfiveRef.current,
-                start: 'top top',
-                end: '+=150%',
-                pin: true,
-                pinSpacing: true,
-                scrub: true,
-            }
-        });
-
-        tl5.to({}, {duration: 1});
+        return () => mm.revert();
     }, []);
 
     return {

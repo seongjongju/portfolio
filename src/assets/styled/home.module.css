@@ -1,6 +1,6 @@
 .hero {
-    height: 100vh;
-    max-height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
     min-height: 0;
     position: relative;
     overflow: hidden;
@@ -30,19 +30,7 @@
     transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 768px) {
-    .slide {
-        font-size: 150px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .slide {
-        font-size: 130px;
-    }
-}
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1600px) {
     .slide {
         font-size: 100px;
     }

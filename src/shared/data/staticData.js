@@ -69,7 +69,9 @@ export const projectDatas = [
             "인증 & 권한 관리: JWT 기반 사용자 인증(Auth) 로직 및 보안 세션 구현",
             "Redux Toolkit 및 Redux Persist를 활용한 유저 상태 관리 및 로컬스토리지 동기화",
             "Next.js API Routes와 MongoDB를 연동하여 효율적인 데이터 CRUD REST API 구축",
-            "Nicepay 결제 연동 및 웹훅(Webhook) 처리 로직 구현"
+            "Nicepay 결제 연동 및 웹훅(Webhook) 처리 로직 구현",
+            "*Front 테스트 계정 ID: test1, PW: test123!",
+            "*Admin 테스트 계정 ID: admin, PW: 1234",
         ],
         view: "/projects/project_0",
         link: "https://jongju-coffee-order-app.vercel.app/",
@@ -129,7 +131,7 @@ export const projectDatas = [
             "Nicepay 결제 연동 및 웹훅(Webhook) 처리 로직 구현"
         ],
         view: "/projects/project_3",
-        link: "https://sermon-avoid-game.vercel.app",
+        link: "https://seongjongju.itch.io/sermon-avoid-game",
         admin: "",
         git: "https://github.com/seongjongju/sermon_avoid_game"
     },

@@ -115,18 +115,7 @@
     margin-top: -60px;
 }
 
-@media screen and (max-width: 640px) {
-    .face {
-        width: 250px; 
-    }
-
-    .body {
-        width: 270px;
-        margin-top: -50px;
-    }
-}
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1600px) {
     .face {
         width: 200px; 
         left: 10px;
@@ -135,5 +124,16 @@
     .body {
         width: 220px;
         margin-top: -40px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .face {
+        width: 180px; 
+    }
+
+    .body {
+        width: 200px;
+        margin-top: -35px;
     }
 }

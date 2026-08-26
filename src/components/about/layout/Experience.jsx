@@ -24,6 +24,9 @@ const Experience = () => {
                             <li className={styles.list_text}>
                                 기존 사이트 UI 개선 및 레이아웃 유지관리
                             </li>
+                            <li className={styles.list_text}>
+                                레거시 코드 업데이트
+                            </li>
                         </ul>
                     </div>
                 </div>
