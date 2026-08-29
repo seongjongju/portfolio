@@ -13,7 +13,7 @@ header {
     max-width: 1800px;
     margin: 0 auto;
     position: relative;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -142,10 +142,6 @@ header {
 }
 
 @media screen and (max-width: 968px) {
-    .nav {
-        height: 80px;
-    }
-
     .gnb {
         display: none;
     }
@@ -153,7 +149,7 @@ header {
 
 @media screen and (max-width: 640px) {
     .nav {
-        height: 60px;
+        height: 50px;
     }
 
     .util {

@@ -149,9 +149,9 @@ export const projectDatas = [
             "Next.js API Routes와 MongoDB를 연동하여 효율적인 데이터 CRUD REST API 구축",
             "Nicepay 결제 연동 및 웹훅(Webhook) 처리 로직 구현"
         ],
-        view: "/projects/project_4",
-        link: "https://portfolio-kappa-tan-62.vercel.app/",
+        view: "",
+        link: "",
         admin: "",
-        git: "https://github.com/seongjongju/portfolio"
+        git: ""
     },
 ];

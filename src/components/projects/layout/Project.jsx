@@ -74,19 +74,29 @@ const Project = memo(({
                         }
 
                         <div className={styles.buttons}>
-                            <Link 
-                                className={styles.view_button}
-                                to={view}
-                            >
-                                VIEW MORE
-                            </Link>
-                            <a 
-                                className={styles.view_button}
-                                href={link}
-                                target='_blank'
-                            >
-                                SITE
-                            </a>
+                            {
+                                view !== "" &&
+                                (
+                                    <Link 
+                                        className={styles.view_button}
+                                        to={view}
+                                    >
+                                        VIEW MORE
+                                    </Link>
+                                )
+                            }
+                            {
+                                link !== "" &&
+                                (
+                                    <a 
+                                        className={styles.view_button}
+                                        href={link}
+                                        target='_blank'
+                                    >
+                                        SITE
+                                    </a>
+                                )
+                            }
                             {
                                 admin !== "" &&
                                 (
@@ -99,13 +109,18 @@ const Project = memo(({
                                     </a>
                                 )
                             }
-                            <a 
-                                className={styles.view_button}
-                                href={git}
-                                target='_blank'
-                            >
-                                GIT HUB
-                            </a>
+                            {
+                                git !== "" &&
+                                (
+                                    <a 
+                                        className={styles.view_button}
+                                        href={git}
+                                        target='_blank'
+                                    >
+                                        GIT HUB
+                                    </a>
+                                )
+                            }
                         </div>
                     </div>
                 </div>
