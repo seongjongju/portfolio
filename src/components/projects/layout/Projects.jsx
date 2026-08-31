@@ -37,7 +37,7 @@ const Projects = () => {
                             ex={project.ex}
                             list={project.list}
                             badges={project.badges}
-                            texts={project.texts}
+                            
                             view={project.view}
                             link={project.link}
                             admin={project.admin}

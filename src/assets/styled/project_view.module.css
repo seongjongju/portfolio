@@ -3,7 +3,7 @@
 }
 
 .nav {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -11,9 +11,10 @@
 .video_wrap {
     width: 100%;
     aspect-ratio: 16 / 9;
-    border-radius: 30px;
     overflow: hidden;
     margin-bottom: 50px;
+    border: 1px solid #ddd;
+    position: relative;
 
     & video {
         width: 100%;
@@ -22,9 +23,42 @@
     }
 }
 
+.title {
+    font-size: 30px;
+    color: #0B0F19;
+    font-weight: 600;
+    margin-bottom: 1em;
+    line-height: 1.4;
+}
+
+.tagline {
+    font-size: 18px;
+    margin-bottom: 1em;
+    color: #0B0F19;
+    line-height: 1.4;
+}
+
+.role {
+    margin-bottom: 1em;
+    color: #0B0F19;
+    font-weight: 500;
+}
+
+.link_wrap {
+    margin-bottom: 10px;
+
+    & a {
+        color: #0B0F19;
+        transition: all .3s ease;
+
+        &:hover {
+            color: #0047ff;
+        }
+    }
+}
+
 @media screen and (max-width: 640px) {
     .video_wrap {
-        border-radius: 15px;
         margin-bottom: 30px;
     }
 }

@@ -12,11 +12,7 @@ const Project = memo(({
     ex,
     list,
     badges,
-    texts,
     view,
-    link,
-    admin,
-    git
 }) => {
 
     return (
@@ -61,18 +57,6 @@ const Project = memo(({
                             }
                         </div>
 
-                        <p className={styles.heading}>Feature</p>
-                        {
-                            texts.map((text) => (
-                                <p 
-                                    key={text}
-                                    className={styles.text}
-                                >
-                                    {text}
-                                </p>
-                            ))
-                        }
-
                         <div className={styles.buttons}>
                             {
                                 view !== "" &&
@@ -83,42 +67,6 @@ const Project = memo(({
                                     >
                                         VIEW MORE
                                     </Link>
-                                )
-                            }
-                            {
-                                link !== "" &&
-                                (
-                                    <a 
-                                        className={styles.view_button}
-                                        href={link}
-                                        target='_blank'
-                                    >
-                                        SITE
-                                    </a>
-                                )
-                            }
-                            {
-                                admin !== "" &&
-                                (
-                                    <a 
-                                        className={styles.view_button}
-                                        href={admin}
-                                        target='_blank'
-                                    >
-                                        ADMIN
-                                    </a>
-                                )
-                            }
-                            {
-                                git !== "" &&
-                                (
-                                    <a 
-                                        className={styles.view_button}
-                                        href={git}
-                                        target='_blank'
-                                    >
-                                        GIT HUB
-                                    </a>
                                 )
                             }
                         </div>

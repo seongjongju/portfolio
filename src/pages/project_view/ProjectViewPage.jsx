@@ -10,6 +10,7 @@ const ProjectViewPage = () => {
 
     //id가 일치하는 데이터만
     const data = viewData.filter(view => view.id === id)[0];
+    console.log(data)
 
     return (
         <motion.div
@@ -20,18 +21,31 @@ const ProjectViewPage = () => {
         >
             <main id={styles.main}>
                 <nav className={styles.nav}>
-                     <ViewHero
+                    <ViewHero
                         src={data.src}
-                     />
+                    />
 
-                     <h2>{data.title}</h2>
-                     <p>{data.tagline}</p>
-                     <p>{data.role}</p>
-                     <a href="" target='_blank'>URL: {data.serviceUrl}</a>
-                     <a href="" target='_blank'>AdminURL: {data.adminUrl}</a>
-                     <a href="" target='_blank'>GitURL: {data.githubUrl}</a>
-
+                    <h2 className={styles.title}>{data.title}</h2>
+                    <p className={styles.tagline}>{data.tagline}</p>
+                    <p className={styles.role}>{data.role}</p>
                     
+
+                    <div className={styles.link_wrap}>
+                        URL: <a href="" target='_blank' className={styles.link}> {data.serviceUrl}</a>
+                    </div>
+                    {
+                        data.adminUrl && 
+                        (
+                            <div className={styles.link_wrap}>
+                                AdminURL: <a href="" target='_blank' className={styles.link}> {data.adminUrl}</a>
+                            </div>
+                        )
+                    }
+                    <div className={styles.link_wrap}>
+                        GitHub: <a href="" target='_blank' className={styles.link}> {data.githubUrl}</a>
+                    </div>
+
+                    <h3 className={styles.subject}></h3>
                 </nav>
             </main>
         </motion.div>
