@@ -9,6 +9,7 @@
 }
 
 .section {
+    height: 100dvh;
     padding: 100px 0;
     position: relative;
     overflow: auto;
@@ -17,6 +18,7 @@
 .swiper {
     width: 100%;
     height: 100%;
+    position: relative;
 
     & .swiper_slide {
         width: 100%;
@@ -25,8 +27,42 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         overflow: hidden;
+        padding-top: 100px;
+
+        &:global(.swiper-slide-active) .slide {
+            filter: blur(0);
+        }
+    }
+
+    & :global(.navi) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        bottom: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        & :global(.swiper-button-prev),
+        & :global(.swiper-button-next) {
+            position: static;
+            margin: 0 !important;
+        }
+
+        & :global(.swiper-button-prev svg),
+        & :global(.swiper-button-next svg) {
+            display: none;
+        }
+
+        & :global(.navi__counter) {
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
     }
 }
 
@@ -50,6 +86,9 @@
     font-weight: 700;
     color: #0B0F19;
     text-transform: uppercase;
+    filter: blur(10px);
+    padding: 30px 0;
+    transition: filter .5s .3s ease;
 }
 
 .figure {
@@ -58,6 +97,7 @@
     max-width: 400px;
     aspect-ratio: 1/1;
     margin: 0 auto;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
 
     & img {
         width: 100%;

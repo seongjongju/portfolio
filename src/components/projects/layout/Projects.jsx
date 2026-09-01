@@ -5,9 +5,10 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import '@splidejs/react-splide/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade } from 'swiper/modules';
-import 'swiper/css';
+import { EffectFade, Navigation } from 'swiper/modules';
+import "swiper/swiper.css";
 import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
 import useGsapAnimation from 'src/hooks/useGsapAnimation';
 import Title from 'src/shared/components/UI/Title';
 import { projectDatas } from 'src/shared/data/staticData';
@@ -25,23 +26,21 @@ const Projects = () => {
             ref={sectionRef}
         >
             <section className={styles.section}>
-                <nav className={styles.nav}>
-                    <Title 
-                        title="Projects"
-                    />
-                </nav>
-
                 <Swiper
                     className={styles.swiper}
                     slidesPerView={1}
-                    modules={[EffectFade]} 
+                    modules={[EffectFade, Navigation]} 
                     effect="fade"
+                    navigation={{
+                        nextEl: '.navi .swiper-button-next',
+                        prevEl: '.navi .swiper-button-prev'
+                    }}
                 >
                     {
                         projectDatas.map((project) => {
-                            console.log(project)
                             return(
                                 <SwiperSlide
+                                    key={project.id}
                                     className={styles.swiper_slide}
                                 >
                                     <div className={styles.box}>
@@ -83,7 +82,10 @@ const Projects = () => {
                                             </SplideSlide>
                                             {
                                                 project.badges.map((badge) => (
-                                                    <SplideSlide className={styles.slide}>
+                                                    <SplideSlide 
+                                                        key={badge}
+                                                        className={styles.slide}
+                                                    >
                                                         {badge}
                                                     </SplideSlide>
                                                 ))
@@ -100,6 +102,15 @@ const Projects = () => {
                             )
                         })
                     }
+                    <div className='navi'>
+                        <button className='swiper-button-prev'>◀</button>
+                            <div className='navi__counter'>
+                                <span>0</span>
+                                <span>-</span>
+                                <span>0</span>
+                            </div>
+                        <button className='swiper-button-next'>▶</button>
+                    </div>
                 </Swiper>
             </section>
         </main>

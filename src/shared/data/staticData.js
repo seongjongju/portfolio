@@ -121,7 +121,7 @@ export const projectDatas = [
         title: "잔소리 피하기 게임",
         projectName: "sermon_avoid_game",
         img: sermonThum,
-        ex: "",
+        ex: "AI 활용 2D 장애물 피하기 웹 게임",
         list: ["Personal", "Front-end 100%", "UI/UX 100%"],
         badges: ["React", "Vite", "Vercel"],
         texts: [
