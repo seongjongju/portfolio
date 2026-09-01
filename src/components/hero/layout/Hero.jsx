@@ -52,10 +52,31 @@ const Hero = () => {
                 }}
             >
                 <SplideSlide className={styles.slide}>
-                    Frontend Developer
+                    Frontend
                 </SplideSlide>
                 <SplideSlide className={styles.slide}>
-                    Seong Jong Ju
+                    Developer
+                </SplideSlide>
+                <SplideSlide className={styles.slide}>
+                    Creator
+                </SplideSlide>
+                <SplideSlide className={styles.slide}>
+                    Problem Solver
+                </SplideSlide>
+                <SplideSlide className={styles.slide}>
+                    Development
+                </SplideSlide>
+                <SplideSlide className={styles.slide}>
+                    Interaction
+                </SplideSlide>
+                <SplideSlide className={styles.slide}>
+                    Accessibility
+                </SplideSlide>
+                <SplideSlide className={styles.slide}>
+                    Performance
+                </SplideSlide>
+                <SplideSlide className={styles.slide}>
+                    Animation
                 </SplideSlide>
             </Splide>
 

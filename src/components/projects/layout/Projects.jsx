@@ -5,19 +5,26 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import '@splidejs/react-splide/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation } from 'swiper/modules';
+import { EffectFade, Navigation, Autoplay } from 'swiper/modules';
 import "swiper/swiper.css";
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
-import useGsapAnimation from 'src/hooks/useGsapAnimation';
-import Title from 'src/shared/components/UI/Title';
 import { projectDatas } from 'src/shared/data/staticData';
-
 
 const Projects = () => {
     const id = 'projects';
     const {sectionRef} = useSectionRef(id);
-    const {projectOneRef, projectTwoRef, projectThreeRef, projectfourRef, projectfiveRef} = useGsapAnimation();
+    const [total, setTotal] = useState(0);
+    const [current, setCurrent] = useState(1); //현재 슬라이드
+
+    const swiperRef = useRef(null);
+
+    useEffect(() => {
+        if(!swiperRef.current) return;
+        const slideLength = sectionRef.current.querySelectorAll('.swiper-slide').length;
+
+        setTotal(slideLength);
+    }, []);
 
     return (
         <main 
@@ -26,92 +33,108 @@ const Projects = () => {
             ref={sectionRef}
         >
             <section className={styles.section}>
-                <Swiper
-                    className={styles.swiper}
-                    slidesPerView={1}
-                    modules={[EffectFade, Navigation]} 
-                    effect="fade"
-                    navigation={{
-                        nextEl: '.navi .swiper-button-next',
-                        prevEl: '.navi .swiper-button-prev'
-                    }}
-                >
-                    {
-                        projectDatas.map((project) => {
-                            return(
-                                <SwiperSlide
-                                    key={project.id}
-                                    className={styles.swiper_slide}
-                                >
-                                    <div className={styles.box}>
-                                        <Splide
-                                            className={styles.splide}
-                                            extensions={{ AutoScroll }}
-                                            options={{
-                                                type     : 'loop',
-                                                drag     : false,
-                                                focus    : 'center',
-                                                perPage  : 1,
-                                                autoWidth: true,
-                                                gap      : '100px',
-                                                pagination: false,
-                                                arrows   : false,
-                                                autoScroll: {
-                                                    speed       : 1.5,
-                                                    pauseOnHover: false,
-                                                },
-                                                breakpoints: {
-                                                    768: {
-                                                        autoScroll: {
-                                                            speed : 1.2,
+                <div className={styles.swiper_wrap}>
+                    <Swiper
+                        ref={swiperRef}
+                        className={styles.swiper}
+                        slidesPerView={1}
+                        modules={[EffectFade, Navigation, Autoplay]} 
+                        effect="fade"
+                        navigation={{
+                            nextEl: '.navi .swiper-button-next',
+                            prevEl: '.navi .swiper-button-prev'
+                        }}
+                        autoplay={{ 
+                            delay: 3000, 
+                            disableOnInteraction: false 
+                        }}
+                        onSlideChange={(swiper) => setCurrent(swiper.activeIndex + 1)}
+                    >
+                        {
+                            projectDatas.map((project) => {
+                                return(
+                                    <SwiperSlide
+                                        key={project.id}
+                                        className={styles.swiper_slide}
+                                    >
+                                        <div className={styles.box}>
+                                            <Splide
+                                                className={styles.splide}
+                                                extensions={{ AutoScroll }}
+                                                options={{
+                                                    type     : 'loop',
+                                                    drag     : false,
+                                                    focus    : 'center',
+                                                    perPage  : 1,
+                                                    autoWidth: true,
+                                                    gap      : '100px',
+                                                    pagination: false,
+                                                    arrows   : false,
+                                                    autoScroll: {
+                                                        speed       : 1.5,
+                                                        pauseOnHover: false,
+                                                    },
+                                                    breakpoints: {
+                                                        768: {
+                                                            autoScroll: {
+                                                                speed : 1.2,
+                                                            },
+                                                        },
+                                                        600: {
+                                                            gap : '50px',
+                                                        },
+                                                        380: {
+                                                            autoScroll: {
+                                                                speed : 1,
+                                                            },
                                                         },
                                                     },
-                                                    600: {
-                                                        gap : '50px',
-                                                    },
-                                                    380: {
-                                                        autoScroll: {
-                                                            speed : 1,
-                                                        },
-                                                    },
-                                                },
-                                            }}
-                                        >
-                                            <SplideSlide className={styles.slide}>
-                                                {project.projectName}
-                                            </SplideSlide>
-                                            {
-                                                project.badges.map((badge) => (
-                                                    <SplideSlide 
-                                                        key={badge}
-                                                        className={styles.slide}
-                                                    >
-                                                        {badge}
-                                                    </SplideSlide>
-                                                ))
-                                            }
-                                        </Splide>
-                                        <figure className={styles.figure}>
-                                            <img src={project.img} alt={project.projectName} />
-                                        </figure>
-                                    </div>
-                                    
-                                    <p className={styles.project_name}>{project.projectName}</p>
-                                    <p className={styles.ex}>{project.ex}</p>
-                                </SwiperSlide>
-                            )
-                        })
-                    }
+                                                }}
+                                            >
+                                                <SplideSlide className={styles.slide}>
+                                                    {project.projectName}
+                                                </SplideSlide>
+                                                {
+                                                    project.badges.map((badge) => (
+                                                        <SplideSlide 
+                                                            key={badge}
+                                                            className={styles.slide}
+                                                        >
+                                                            {badge}
+                                                        </SplideSlide>
+                                                    ))
+                                                }
+                                            </Splide>
+                                            <figure className={styles.figure}>
+                                                <img src={project.img} alt={project.projectName} />
+                                            </figure>
+                                        </div>
+                                        
+                                        <p className={styles.project_name}>{project.projectName}</p>
+                                        <p className={styles.ex}>{project.ex}</p>
+
+                                        <button className={styles.view}>
+                                            View
+                                            <div className={styles.arrows}>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </button>
+                                    </SwiperSlide>
+                                )
+                            })
+                        }
+                    </Swiper>
                     <div className='navi'>
                         <button className='swiper-button-prev'>◀</button>
                             <div className='navi__counter'>
-                                <span>0</span>
+                                <span className='navi__current'>{current}</span>
                                 <span>-</span>
-                                <span>0</span>
+                                <span className='navi__total'>{total}</span>
                             </div>
                         <button className='swiper-button-next'>▶</button>
                     </div>
-                </Swiper>
+                </div>
             </section>
         </main>
     );
