@@ -60,7 +60,7 @@ export const projectDatas = [
     {
         id: "project_0",
         title: "커피 주문 웹앱",
-        projectName: "coffee-order",
+        projectName: "CoffeeOrderApp",
         img: coffeeOrderThum,
         ex: "나이스페이먼츠 연동 커피 주문 웹앱",
         list: ["Personal", "Front-end 100%", "Back-end 100%", "UI/UX 100%"],

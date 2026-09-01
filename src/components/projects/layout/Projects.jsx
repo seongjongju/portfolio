@@ -1,10 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import useSectionRef from 'src/hooks/useSectionRef';
 import styles from 'src/assets/styled/projects.module.css';
-import Project from './Project';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import '@splidejs/react-splide/css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
 import useGsapAnimation from 'src/hooks/useGsapAnimation';
+import Title from 'src/shared/components/UI/Title';
 import { projectDatas } from 'src/shared/data/staticData';
-import Publishings from './Publishings';
 
 
 const Projects = () => {
@@ -18,36 +24,84 @@ const Projects = () => {
             className={styles.main}
             ref={sectionRef}
         >
-            {
-                projectDatas.map((project) => {
-                    return(
-                        <Project 
-                            key={project.id}
-                            projectId={project.id}
-                            classname={project.id === "project_0" ? styles.project_0 : styles.project_1}
-                            title={project.title}
-                            ref={
-                                project.id === "project_0" ? projectOneRef :
-                                project.id === "project_1" ? projectTwoRef : 
-                                project.id === "project_2" ? projectThreeRef :
-                                project.id === "project_3" ? projectfourRef :
-                                projectfiveRef
-                            }
-                            img={project.img}
-                            ex={project.ex}
-                            list={project.list}
-                            badges={project.badges}
-                            
-                            view={project.view}
-                            link={project.link}
-                            admin={project.admin}
-                            git={project.git}
-                        />
-                    )
-                })
-            }
+            <section className={styles.section}>
+                <nav className={styles.nav}>
+                    <Title 
+                        title="Projects"
+                    />
+                </nav>
 
-            <Publishings />
+                <Swiper
+                    className={styles.swiper}
+                    slidesPerView={1}
+                    modules={[EffectFade]} 
+                    effect="fade"
+                >
+                    {
+                        projectDatas.map((project) => {
+                            console.log(project)
+                            return(
+                                <SwiperSlide
+                                    className={styles.swiper_slide}
+                                >
+                                    <div className={styles.box}>
+                                        <Splide
+                                            className={styles.splide}
+                                            extensions={{ AutoScroll }}
+                                            options={{
+                                                type     : 'loop',
+                                                drag     : false,
+                                                focus    : 'center',
+                                                perPage  : 1,
+                                                autoWidth: true,
+                                                gap      : '100px',
+                                                pagination: false,
+                                                arrows   : false,
+                                                autoScroll: {
+                                                    speed       : 1.5,
+                                                    pauseOnHover: false,
+                                                },
+                                                breakpoints: {
+                                                    768: {
+                                                        autoScroll: {
+                                                            speed : 1.2,
+                                                        },
+                                                    },
+                                                    600: {
+                                                        gap : '50px',
+                                                    },
+                                                    380: {
+                                                        autoScroll: {
+                                                            speed : 1,
+                                                        },
+                                                    },
+                                                },
+                                            }}
+                                        >
+                                            <SplideSlide className={styles.slide}>
+                                                {project.projectName}
+                                            </SplideSlide>
+                                            {
+                                                project.badges.map((badge) => (
+                                                    <SplideSlide className={styles.slide}>
+                                                        {badge}
+                                                    </SplideSlide>
+                                                ))
+                                            }
+                                        </Splide>
+                                        <figure className={styles.figure}>
+                                            <img src={project.img} alt={project.projectName} />
+                                        </figure>
+                                    </div>
+                                    
+                                    <p className={styles.project_name}>{project.projectName}</p>
+                                    <p className={styles.ex}>{project.ex}</p>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                </Swiper>
+            </section>
         </main>
     );
 };
