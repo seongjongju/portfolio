@@ -10,11 +10,12 @@ import "swiper/swiper.css";
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import { projectDatas } from 'src/shared/data/staticData';
+import ProjectPopup from './ProjectPopup';
 
 const Projects = () => {
     const id = 'projects';
     const {sectionRef} = useSectionRef(id);
-    const [total, setTotal] = useState(0);
+    const [total, setTotal] = useState(0); //전체 슬라이드
     const [current, setCurrent] = useState(1); //현재 슬라이드
 
     const swiperRef = useRef(null);
@@ -46,7 +47,8 @@ const Projects = () => {
                         }}
                         autoplay={{ 
                             delay: 3000, 
-                            disableOnInteraction: false 
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true
                         }}
                         onSlideChange={(swiper) => setCurrent(swiper.activeIndex + 1)}
                     >
@@ -136,6 +138,8 @@ const Projects = () => {
                     </div>
                 </div>
             </section>
+
+            <ProjectPopup />
         </main>
     );
 };
