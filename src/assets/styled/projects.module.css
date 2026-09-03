@@ -196,6 +196,38 @@
     }
 }
 
+/*** 상세 팝업 ***/
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #F8F7F4;
+    z-index: 101;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 94%;
+    max-width: 1000px;
+    max-height: 80dvh;
+    overflow: auto;
+    transition: all .4s ease;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #0B0F19;
+        border-radius: 4px;
+    }
+}
+
+.video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-bottom: 30px;
+}
+
 @media screen and (max-width: 1600px) {
     .nav {
         padding: 0 3%;

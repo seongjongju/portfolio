@@ -11,12 +11,16 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import { projectDatas } from 'src/shared/data/staticData';
 import ProjectPopup from './ProjectPopup';
+import { createPortal } from 'react-dom';
+import Dim from 'src/shared/components/UI/Dim';
 
 const Projects = () => {
     const id = 'projects';
     const {sectionRef} = useSectionRef(id);
     const [total, setTotal] = useState(0); //전체 슬라이드
     const [current, setCurrent] = useState(1); //현재 슬라이드
+    const [projectId, setProjectId] = useState(""); //프로젝트 ID
+    const [popupActive, setPopupActive] = useState(false); //팝업 조작 용
 
     const swiperRef = useRef(null);
 
@@ -26,6 +30,18 @@ const Projects = () => {
 
         setTotal(slideLength);
     }, []);
+
+    //팝업에 넘기는 아이디 핸들러
+    const handleClickView = (projectId) => {
+        setProjectId(projectId);
+        setPopupActive(true);
+    };
+
+    //팝업을 닫음
+    const handleClickClose = () => {
+        setProjectId("");
+        setPopupActive(false);
+    };
 
     return (
         <main 
@@ -39,16 +55,11 @@ const Projects = () => {
                         ref={swiperRef}
                         className={styles.swiper}
                         slidesPerView={1}
-                        modules={[EffectFade, Navigation, Autoplay]} 
+                        modules={[EffectFade, Navigation]} 
                         effect="fade"
                         navigation={{
                             nextEl: '.navi .swiper-button-next',
                             prevEl: '.navi .swiper-button-prev'
-                        }}
-                        autoplay={{ 
-                            delay: 3000, 
-                            disableOnInteraction: false,
-                            pauseOnMouseEnter: true
                         }}
                         onSlideChange={(swiper) => setCurrent(swiper.activeIndex + 1)}
                     >
@@ -114,13 +125,26 @@ const Projects = () => {
                                         
                                         <p className={styles.project_name}>{project.projectName}</p>
                                         <p className={styles.ex}>{project.ex}</p>
-
-                                        <button className={styles.view}>
-                                            View
-                                            <div className={styles.arrows}>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
+                                        
+                                        <button 
+                                            style={{
+                                                height: project.projectName === "portfolio" ? "1.33em" : ""
+                                            }}
+                                            className={styles.view}
+                                            onClick={() => handleClickView(project.id)}
+                                        >
+                                            {
+                                                project.projectName !== "portfolio" &&
+                                                (   
+                                                    <>
+                                                    View
+                                                        <div className={styles.arrows}>
+                                                            <span></span>
+                                                            <span></span>
+                                                        </div>
+                                                    </>
+                                                )
+                                            }
                                         </button>
                                     </SwiperSlide>
                                 )
@@ -139,7 +163,24 @@ const Projects = () => {
                 </div>
             </section>
 
-            <ProjectPopup />
+                        
+            {createPortal(
+                (   
+                    <>
+                        <Dim 
+                            closePopup={handleClickClose}
+                            popupActive={popupActive}
+                        />
+                        <ProjectPopup 
+                            projectId={projectId}
+                            popupActive={popupActive}
+                            closePopup={handleClickClose}
+                        />
+                    </>
+                )
+                ,
+                document.body
+            )}            
         </main>
     );
 };
