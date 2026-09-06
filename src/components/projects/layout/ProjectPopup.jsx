@@ -89,7 +89,7 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                     <span>{data?.tagEx}</span>
                 </p>
 
-                <h4 className={styles.heading}>역할</h4>
+                <h4 className={styles.heading}>개발형태</h4>
                 <p className={styles.ex}>{data?.role}</p>
 
                 <h4 className={styles.heading}>URL</h4>
@@ -106,6 +106,15 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                             </p>
                         )
                     }
+                    {
+                        //잔소리피하게게임에서만 노출
+                        data?.itchUrl &&
+                        (
+                            <p className={styles.url_text}>
+                                URL: <a href={data?.itchUrl} target='_blank'>{data?.itchUrl}</a>
+                            </p>
+                        )
+                    }
                     <p className={styles.url_text}>
                         GitHub: <a href={data?.githubUrl} target='_blank'>{data?.githubUrl}</a>
                     </p>
@@ -113,7 +122,7 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                 
                 {
                     //CineAi에서만 노출
-                    projectId === "project_1" &&
+                    data?.constraints !== undefined &&
                     (
                         <>
                             <h4 className={styles.heading}>프로젝트 제약 사항 및 안내</h4>
@@ -136,7 +145,7 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                 }
                 
                 {
-                    ////CoffeeOrderApp에서만 노출
+                    //CoffeeOrderApp에서만 노출
                     data?.projectId === "project_0" &&
                     (
                         <>
@@ -154,7 +163,7 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                 }
             </div>
             {/* 개요 */}
-             
+
             <div className={styles.group}>
                 <h3 className={styles.subject}>TechStack</h3>
                 <h4 className={styles.heading}>Frontend</h4>
@@ -170,34 +179,48 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                         ))
                     }
                 </ul>
-
-                <h4 className={styles.heading}>Backend</h4>
-                <ul className={styles.badges}>
-                    {
-                        data?.techStack?.backend.map((badge) => (
-                            <li
-                                key={badge} 
-                                className={styles.badge}
-                            >
-                                {badge}
-                            </li>
-                        ))
-                    }
-                </ul>
-
-                <h4 className={styles.heading}>CloudServices</h4>
-                <ul className={styles.badges}>
-                    {
-                        data?.techStack?.CloudServices.map((badge) => (
-                            <li
-                                key={badge} 
-                                className={styles.badge}
-                            >
-                                {badge}
-                            </li>
-                        ))
-                    }
-                </ul>
+                
+                {
+                    data?.techStack?.backend !== undefined &&
+                    (
+                        <>
+                            <h4 className={styles.heading}>Backend</h4>
+                            <ul className={styles.badges}>
+                                {
+                                    data?.techStack?.backend.map((badge) => (
+                                        <li
+                                            key={badge} 
+                                            className={styles.badge}
+                                        >
+                                            {badge}
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        </>
+                    )
+                }
+                
+                {
+                    data?.techStack?.CloudServices !== undefined &&
+                    (
+                        <>
+                            <h4 className={styles.heading}>CloudServices</h4>
+                            <ul className={styles.badges}>
+                                {
+                                    data?.techStack?.CloudServices.map((badge) => (
+                                        <li
+                                            key={badge} 
+                                            className={styles.badge}
+                                        >
+                                            {badge}
+                                        </li>
+                                    ))
+                                }
+                            </ul>       
+                        </>
+                    )
+                }
             </div>
             {/* 사용 기술 */}
             
@@ -206,7 +229,7 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                 {
                     //CoffeeOrderApp에서만 노출되는 항목: User, Admin
                     //그 외의 노출되는 항목: Core
-                    projectId !== "project_0" ?
+                    data?.features?.core !== undefined &&
                     (
                         <>
                             <ul className={styles.feat}>
@@ -222,7 +245,11 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                                 }
                             </ul>
                         </>
-                    ) : 
+                    ) 
+                }
+
+                {
+                    data?.features?.user !== undefined &&
                     (
                         <>
                             <h4 className={styles.heading}>User</h4>
@@ -238,7 +265,14 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                                     ))
                                 }
                             </ul>
-
+                        </>
+                    )
+                }
+                
+                {
+                    data?.features?.admin !== undefined &&
+                    (
+                        <>
                             <h4 className={styles.heading}>Admin</h4>
                             <ul className={styles.feat}>
                                 {
@@ -273,34 +307,44 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                 }
             </div>
             {/* 핵심 기술적 의도 및 데이터 구조 고민 */}
-
-            <div className={styles.group}>
-                <h3 className={styles.subject}>트러블슈팅</h3>
-                {
-                    data?.troubleshooting.map((shoot, i) => (
-                        <div 
-                            key={shoot.problem}
-                            className={styles.shoot_item}
-                        >   
-                            <p className={styles.problem}>
-                                {i + 1}. {shoot.problem}
-                            </p>
-                            <p className={styles.shoot_situ}>
-                                <strong>[문제상황]</strong><br />
-                                {shoot.situation}
-                            </p>
-                            <p className={styles.shoot_text}>
-                                <strong>[원인]</strong><br />
-                                {shoot.cause}
-                            </p>
-                            <p className={styles.shoot_text}>
-                                <strong>[해결방법]</strong><br />
-                                {shoot.solution}
-                            </p>
-                        </div>
-                    ))
-                }
-            </div>
+            
+            {
+                data?.troubleshooting !== undefined &&
+                (
+                    <div className={styles.group}>
+                        <h3 className={styles.subject}>트러블슈팅</h3>
+                        {
+                            data?.troubleshooting.map((shoot, i) => (
+                                <div 
+                                    key={shoot.problem}
+                                    className={styles.shoot_item}
+                                >   
+                                    <p className={styles.problem}>
+                                        {i + 1}. {shoot.problem}
+                                    </p>
+                                    <p className={styles.shoot_situ}>
+                                        <strong>[문제상황]</strong><br />
+                                        {shoot.situation}
+                                    </p>
+                                    {
+                                        shoot.cause !== undefined &&
+                                        (
+                                            <p className={styles.shoot_text}>
+                                                <strong>[원인]</strong><br />
+                                                {shoot.cause}
+                                            </p>
+                                        )
+                                    }
+                                    <p className={styles.shoot_text}>
+                                        <strong>[해결방법]</strong><br />
+                                        {shoot.solution}
+                                    </p>
+                                </div>
+                            ))
+                        }
+                    </div>
+                )
+            }
             {/* 트러블슈팅 */}
 
             <div className={styles.group}>
@@ -322,7 +366,7 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                         data?.retrospective?.future.map((futu) => (
                             <p 
                                 style={{
-                                   paddingLeft: "0"
+                                    paddingLeft: "0"
                                 }}
                                 key={futu}
                                 className={styles.shoot_situ}>

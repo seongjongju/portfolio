@@ -154,12 +154,13 @@ export const viewData = [
         src: marryVideo,
         title: "모바일 청첩장 템플릿",
         tagline: "실제 지인 청첩장으로 사용된 모바일 웨딩 인비테이션 (개인정보 보호를 위해 미디어/상세 내용은 더미 데이터로 대체)",
+        tagEx: "실제 지인의 모바일 청첩장 제작 및 배포 경험을 바탕으로, 모바일 환경에 최적화된 UX와 지도/내비게이션 딥링크 기능을 제공하는 React 기반 웹 템플릿입니다.",
         serviceUrl: "https://marry-template.pages.dev/",
         githubUrl: "https://github.com/seongjongju/marry_template",
-        role: "기획부터 배포까지 단독 수행",
+        role: "디자이너 협업 1인 개발",
         techStack: {
             frontend: ["React", "Vite", "gsap", "react-calendar", "react-photoswipe-gallery", "photoswipe", "dayjs", "react-device-detect", "vite-plugin-html"],
-            backend: ["Cloudflare Pages"],
+            CloudServices: ["Cloudflare Pages"]
         },
         features: {
             core: [
@@ -174,22 +175,34 @@ export const viewData = [
         },
         keyDecisions: [
             {
-                title: "Cloudflare Pages 기반 트래픽 대응 인프라",
+                title: "트래픽 및 배포 환경 최적화",
                 description:
-                    "예식 당일 하객 트래픽이 순간적으로 몰리고 대용량 이미지 요청이 집중될 것을 대비해, 대역폭 제한 없는 Cloudflare Pages로 배포해 안정성 확보.",
+                    "Cloudflare Pages 배포를 통해 예식 당일 하객 트래픽 집중 및 대용량 이미지 요청에 대비하여, 대역폭(Bandwidth) 제한 없는 인프라를 구축했습니다.",
             },
             {
-                title: "react-device-detect 기반 OS 분기 처리",
+                title: "크로스 브라우징 및 UX 최적화",
                 description:
-                    "iOS/Android 간 Web Share API 지원 여부와 딥링크 동작 방식이 달라, react-device-detect로 기기를 감지해 공유 로직을 OS별로 분기.",
+                    "OS별(iOS/Android) Web Share API 지원 여부 및 딥링크 동작 방식 차이를 react-device-detect 기반 분기 로직으로 처리했습니다.",
+            },
+            {
+                title: "콘텐츠 보안 (실운영 적용)",
+                description:
+                    "사진 도용 및 개인정보 보호를 위한 우클릭 방지, 개발자 도구 진입 차단 스크립트를 적용했습니다. (현재 검수용 저장소에는 해제 처리됨)",
             },
         ],
         troubleshooting: [
             {
-                problem: "사진 도용 및 개인정보 노출 위험",
-                cause: "청첩장 특성상 신랑·신부 사진과 개인정보가 외부에 그대로 노출되는 구조",
+                problem: "딥링크 연결 시 한글 장소명 인코딩 누락으로 인한 내비게이션 목적지 인식 오류",
+                situation: "모바일 청첩장에서 카카오내비, 네이버 지도 등의 내비게이션 앱으로 연동되는 딥링크 버튼 클릭 시, 위치가 정상적으로 안찍히거나, 아무 동작을 안하는 문제가 발생했습니다.",
+                cause: "딥링크 URL 파라미터로 전달되는 장소명(예: '더 뉴 컨벤션')의 한글 문자열이 UTF-8로 인코딩되지 않은 채 규격에 맞지 않게 전달되어, 외부 내비게이션 앱에서 주소를 올바르게 파싱하지 못했기 때문이었습니다.",
                 solution:
-                    "실운영 환경에 우클릭 방지 및 개발자 도구 진입 차단 스크립트를 적용해 콘텐츠 보안 강화 (현재 코드 검수를 위해 해제된 상태)",
+                    "내비게이션 딥링크 scheme URL을 생성할 때 장소명 파라미터에 encodeURIComponent('더 뉴 컨벤션')를 적용하여 안전한 문자열 포맷으로 변환 후 전달하도록 수정했습니다. 이를 통해 OS 및 내비게이션 앱 종류와 상관없이 정확한 목적지 좌표와 장소명이 연동되도록 개선했습니다.",
+            },
+            {
+                problem: "Vercel/Netlify 무료 티어 대역폭 소모 문제로 인한 Cloudflare Pages 전환",
+                situation: "초기에는 Vercel, Netlify 무료 티어로 배포를 진행했으나, 디자이너에게 수정된 결과물을 수시로 공유하고 지인에게 확인을 받는 과정, 그리고 배포 후 정상 동작 여부를 반복적으로 테스트하는 과정에서 대역폭이 예상보다 빠르게 소진되는 문제가 있었습니다.",
+                solution:
+                    "대역폭 제한이 사실상 없는 Cloudflare Pages로 배포 플랫폼을 전환했습니다. 이를 통해 반복적인 확인·테스트 과정에서도 대역폭 걱정 없이 안정적으로 작업할 수 있도록 개선했습니다.",
             },
         ],
     },

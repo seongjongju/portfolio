@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import useSectionRef from 'src/hooks/useSectionRef';
 import styles from 'src/assets/styled/projects.module.css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
@@ -31,6 +31,17 @@ const Projects = () => {
         setTotal(slideLength);
     }, []);
 
+    //팝업이 열리면 swiper의 autoPlay를 정지 시킴
+    useEffect(() => {
+        if (!swiperRef.current) return;
+
+        if (popupActive) {
+            swiperRef.current.autoplay.stop(); 
+        } else {
+            swiperRef.current.autoplay.start();
+        }
+    }, [popupActive]);
+
     //팝업에 넘기는 아이디 핸들러
     const handleClickView = (projectId) => {
         setProjectId(projectId);
@@ -55,12 +66,18 @@ const Projects = () => {
                         ref={swiperRef}
                         className={styles.swiper}
                         slidesPerView={1}
-                        modules={[EffectFade, Navigation]} 
+                        modules={[EffectFade, Navigation, Autoplay]} 
                         effect="fade"
                         navigation={{
                             nextEl: '.navi .swiper-button-next',
                             prevEl: '.navi .swiper-button-prev'
                         }}
+                        autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: true,
+                        }}
+                        onSwiper={(swiper) => swiperRef.current = swiper}
                         onSlideChange={(swiper) => setCurrent(swiper.activeIndex + 1)}
                     >
                         {
