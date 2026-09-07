@@ -146,7 +146,7 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                 
                 {
                     //CoffeeOrderApp에서만 노출
-                    data?.projectId === "project_0" &&
+                    projectId === "project_0" &&
                     (
                         <>
                             <h4 className={styles.heading}>테스트 계정</h4>
@@ -348,35 +348,70 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
             {/* 트러블슈팅 */}
 
             <div className={styles.group}>
-                <h3 className={styles.subject}>회고 및 향후 개선 과제</h3>
-                <div className={styles.shoot_item}>
-                    <h4 className={styles.heading}>아쉬운 점 및 배운 점</h4>
-                    <p 
-                        style={{
-                            paddingLeft: "0"
-                        }}
-                        className={styles.shoot_situ}>
-                        {data?.retrospective?.regret}
-                    </p>
-                </div>
-
-                <div className={styles.shoot_item}>
-                    <h4 className={styles.heading}>개선 및 확장 예정 사항</h4>
-                    {
-                        data?.retrospective?.future.map((futu) => (
+                <h3 className={styles.subject}>시행착오 및 아쉬운 점</h3>
+                {
+                    data?.retrospective?.regret.map((regr) => (
+                        <div 
+                            key={regr?.sorrow}
+                            className={styles.shoot_item}
+                        >
+                            <h4 className={styles.heading}>{regr?.sorrow}</h4>
                             <p 
                                 style={{
                                     paddingLeft: "0"
                                 }}
-                                key={futu}
                                 className={styles.shoot_situ}>
-                                {futu}
+                                {regr?.cause}
                             </p>
-                        ))
-                    }
-                </div>
+                        </div>
+                    ))
+                }
             </div>
-            {/* 회고 및 향후 개선 과제 */}
+            {/* 시행착오 및 아쉬운 점 */}
+            
+            <div className={styles.group}>
+                <h3 className={styles.subject}>배운 점</h3>
+                {
+                    data?.retrospective?.KeyTakeaways.map((takeaway) => (
+                        <div 
+                            key={takeaway?.take}
+                            className={styles.shoot_item}
+                        >
+                            <h4 className={styles.heading}>{takeaway?.take}</h4>
+                            <p 
+                                style={{
+                                    paddingLeft: "0"
+                                }}
+                                className={styles.shoot_situ}>
+                                {takeaway?.keyAways}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+            {/* 배운 점 */}
+
+            <div className={styles.group}>
+                <h3 className={styles.subject}>개선 및 확장 예정 사항</h3>
+                {
+                    data?.retrospective?.future.map((futu) => (
+                        <div 
+                            key={futu?.title}
+                            className={styles.shoot_item}
+                        >
+                            <h4 className={styles.heading}>{futu?.title}</h4>
+                            <p 
+                                style={{
+                                    paddingLeft: "0"
+                                }}
+                                className={styles.shoot_situ}>
+                                {futu?.text}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+            {/* 개선 및 확장 예정 사항 */}
         </div>
     );
 });
