@@ -390,7 +390,8 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                 }
             </div>
             {/* 배운 점 */}
-
+            
+            {/* 
             <div className={styles.group}>
                 <h3 className={styles.subject}>개선 및 확장 예정 사항</h3>
                 {
@@ -410,7 +411,8 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                         </div>
                     ))
                 }
-            </div>
+            </div> 
+            */}
             {/* 개선 및 확장 예정 사항 */}
         </div>
     );
