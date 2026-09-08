@@ -207,6 +207,27 @@ export const viewData = [
         ],
         troubleshooting: [
             {
+                problem: "외부 Open API(TMDB) 응답 데이터 변동에 따른 런타임 에러",
+                situation: "TMDB API에서 전달받는 영화 데이터의 일부 응답 구조가 변경되거나 값이 누락되면서, 화면이 렌더링않는 현상이 발생했습니다.",
+                cause: "외부 API 응답 데이터 중 특정 필드(국가, 인기도, 연령 등급, 영화 소개 등)가 null 또는 undefined로 전달될 경우에 대한 방어적 코드(예외 처리)가 누락되어 발생한 런타임 오류였습니다.",
+                solution:
+                    "API 응답 데이터를 바인딩하는 모든 영역에 옵셔널 체이닝 및 기본값 설정을 추가하고, 주요 데이터 누락 시 예외 처리 로직을 구축하여 데이터 변동에도 서비스가 안정적으로 작동하도록 개편했습니다.",
+            },
+            {
+                problem: "OAuth 인증 시 브라우저 세션 캐싱으로 인한 재인증 스킵 현상",
+                situation: "사용자가 로그아웃 후 다시 OAuth 로그인을 시도할 때, 계정 선택 화면을 거치지 않고 이전 계정으로 즉시 자동 로그인되는 문제가 발생했습니다.",
+                cause: "OAuth 제공자(Provider)의 인증 세션 쿠키와 브라우저 캐시가 남아 있어, 매번 기존 승인 상태를 재사용하면서 생긴 현상이었습니다.",
+                solution:
+                    "OAuth 로그인 요청 파라미터에 프롬프트 옵션을 강제 지정하여, 로그아웃 후 재진입 시 항상 계정 선택 및 인증 창이 노출되도록 세션 제어를 수정했습니다.",
+            },
+            {
+                problem: "외래키 제약조건으로 인한 Supabase 회원 탈퇴 연쇄 에러",
+                situation: "사용자 회원 탈퇴 요청 시, 탈퇴 처리 요청이 거부되며 에러가 발생하는 현상이 나타났습니다.",
+                cause: "Supabase DB 내 사용자 테이블과 장바구니 테이블 간에 관계가 형성되어 있어, 장바구니에 연결된 자식 데이터(장바구니 항목)를 먼저 제거하지 않고 부모 데이터(회원 정보)를 삭제하려다 발생한 데이터베이스 참조 무결성 에러였습니다.",
+                solution:
+                    "회원 탈퇴 트랜잭션 로직 내에서 해당 사용자의 장바구니 데이터를 먼저 전량 삭제(Cascade Delete 형태)한 뒤, 회원 정보가 안전하게 삭제되도록 순서를 보장했습니다. 아울러 UI상에도 탈퇴 시 모든 이용 데이터가 삭제되며 복구할 수 없다는 안내 팝업을 추가하여 UX적 명확성을 제시했습니다.",
+            },
+            {
                 problem: "찜하기 클릭 시 네트워크 지연으로 UI 반응 없음 + 중복 클릭 에러",
                 situation: "상세페이지에서 찜하기 버튼을 누를 때 네트워크 요청이 처리되는 동안 UI 반응이 없어 답답함을 유발했고, 사용자가 제대로 처리되지 않은 것으로 오인해 버튼을 여러 번 연속 클릭하며 에러가 발생하는 문제가 있었습니다.",
                 cause: "백엔드 응답이 도착한 후에만 UI를 변경하도록 비동기 흐름을 구성했던 점이 원인이었습니다.",
@@ -222,11 +243,25 @@ export const viewData = [
             },
         ],
         retrospective: {
-            regret:
-                "단순히 네트워크 요청이 성공하는 데서 그치지 않고, 요청이 진행 중임을 사용자에게 시각적으로 알려주는 것과 실패 시 적절한 알림 메시지를 전달하는 것이 사용성에 결정적인 영향을 미친다는 점을 체감했습니다.",
-            future: [
-                "현재 제공 중인 영화명 및 장르 검색을 넘어 개봉 날짜, 감독, 출연 배우 등 다양한 조건으로 찾아볼 수 있도록 검색 필터를 확장할 예정입니다.",
-                "향후 웹 서칭 기능이 지원되는 AI 모델 버전으로 업그레이드하여, 기존 제공 줄거리 이외의 외부 최신 영화 정보나 디테일한 비하인드 요소까지 답변받을 수 있도록 고도화할 계획입니다.",
+            regret: [
+                {
+                    sorrow: "외부 API 데이터 변경 가능성에 대한 방어적 프로그래밍 미흡",
+                    cause: "외부 Open API(TMDB)는 제공자의 정책이나 업데이트에 따라 데이터 스키마 및 값이 유연하게 변할 수 있음을 사전에 깊이 고려하지 못했습니다. 프로젝트 초기부터 엄격한 타입 정의와 방어적인 예외 처리 로직을 구축하지 못해, 추후 전체 코드를 전수 조사하며 예외 처리를 보완해야 했던 리소스 낭비가 아쉬움으로 남았습니다. 이를 통해 외부 데이터에 의존하는 시스템일수록 사전 예외 처리 설계가 필수적임을 체득했습니다."
+                },
+            ],  
+            KeyTakeaways: [
+                {
+                    take: "외부 Open API 연동 및 공식 문서 분석 역량 강화",
+                    keyAways: "TMDB API 등 외부 Open API의 공식 문서를 파악하고, 필요한 데이터 엔드포인트를 호출하여 서비스 요구사항에 맞게 가공 및 연동하는 실전 개발 능력을 함양했습니다."
+                },
+                {
+                    take: "낙관적 업데이트(Optimistic Update)를 활용한 사용자 인터랙션 개선",
+                    keyAways: "찜하기 등 사용자의 즉각적인 반응이 중요한 기능에 낙관적 업데이트 기법을 적용했습니다. 서버 응답을 기다리지 않고 UI를 선제적으로 반영함으로써, 사용자에게 한층 더 빠르고 끊김 없는 반응형 인터렉션을 제공하는 법을 배웠습니다."
+                },
+                {
+                    take: "적절한 UI 라이브러리(React Spinners 등) 활용을 통한 로딩 state UX 설계",
+                    keyAways: "비동기 데이터 요청 중 발생하는 대기 시간을 단순 빈 화면이 아닌 스피너 UI로 대체 구현하며, 사용자가 시스템 상태를 직관적으로 인지할 수 있도록 돕는 피드백 제공 형태의 UX 설계 관점을 익혔습니다."
+                },
             ],
         },
         constraints: [
@@ -245,7 +280,7 @@ export const viewData = [
         githubUrl: "https://github.com/seongjongju/marry_template",
         role: "디자이너 협업 1인 개발",
         techStack: {
-            frontend: ["React", "Vite", "gsap", "react-calendar", "react-photoswipe-gallery", "photoswipe", "dayjs", "react-device-detect", "vite-plugin-html"],
+            frontend: ["React", "Vite", "gsap", "react-calendar", "react-photoswipe-gallery", "dayjs", "react-device-detect", "vite-plugin-html"],
             CloudServices: ["Cloudflare Pages"]
         },
         features: {
@@ -291,6 +326,22 @@ export const viewData = [
                     "대역폭 제한이 사실상 없는 Cloudflare Pages로 배포 플랫폼을 전환했습니다. 이를 통해 반복적인 확인·테스트 과정에서도 대역폭 걱정 없이 안정적으로 작업할 수 있도록 개선했습니다.",
             },
         ],
+        retrospective: {
+            KeyTakeaways: [
+                {
+                    take: "GSAP 및 UI 라이브러리를 활용한 모바일 인터랙티브 UX 구현",
+                    keyAways: "GSAP을 활용해 스크롤 애니메이션과 전환 효과를 제어하며, 모바일 화면에 최적화된 인터랙티브 웹을 구축하는 노하우를 습득했습니다. 또한 react-photoswipe-gallery, react-calendar, dayjs등 목적에 부합하는 적절한 라이브러리를 도입·조합하여 모바일 환경에서의 사용자 편의성을 크게 높였습니다."
+                },
+                {
+                    take: "외부 앱 연결(딥링크) 및 설치 여부에 따른 예외 처리 구현",
+                    keyAways: "네이버 지도, T맵, 카카오내비 등 모바일 지도/길안내 앱의 딥링크(Deep Link)를 연결하여, 사용자가 버튼을 눌렀을 때 해당 앱으로 즉시 연결되도록 구현했습니다. 특히 사용자 기기에 앱이 설치되어 있지 않은 예외 상황을 고려하여, 네이버 지도는 모바일 웹 페이지로 이동시키고 T맵과 카카오내비는 앱 스토어 설치 페이지로 유도하도록 각각 적절한 예외 처리(Fallback) 로직을 구축하는 법을 배웠습니다."
+                },
+                {
+                    take: "Cloudflare Pages를 활용한 웹사이트 무료 배포 및 자동화 경험",
+                    keyAways: "만든 웹사이트를 서버 지식이 없어도 간편하게 배포할 수 있는 Cloudflare Pages 서비스의 사용법을 익혔습니다. GitHub에 코드를 올려두면 자동으로 빌드되어 배포되는 편리한 자동화 과정을 경험하고, 모바일 청첩장 링크를 실제 사용자들에게 호스팅하여 전달할 수 있는 환경을 구축해 보았습니다."
+                },
+            ],
+        },
     },
     {
         id: "project_3",
@@ -302,7 +353,7 @@ export const viewData = [
         githubUrl: "https://github.com/seongjongju/sermon_avoid_game",
         role: "요구사항 정의, 결과물 검수, 방향 결정 (코드 작성/디버깅은 AI 협업으로 진행)",
         techStack: {
-            frontend: ["React", "Vite", "SCSS"],
+            frontend: ["React", "Vite", "SCSS", "Chat GPT", "GEMINI"],
         },
         features: {
             core: [
@@ -336,12 +387,28 @@ export const viewData = [
             },
         ],
         retrospective: {
+            KeyTakeaways: [
+                {
+                    take: "GSAP 및 UI 라이브러리를 활용한 모바일 인터랙티브 UX 구현",
+                    keyAways: "GSAP을 활용해 스크롤 애니메이션과 전환 효과를 제어하며, 모바일 화면에 최적화된 인터랙티브 웹을 구축하는 노하우를 습득했습니다. 또한 react-photoswipe-gallery, react-calendar, dayjs등 목적에 부합하는 적절한 라이브러리를 도입·조합하여 모바일 환경에서의 사용자 편의성을 크게 높였습니다."
+                },
+                {
+                    take: "외부 앱 연결(딥링크) 및 설치 여부에 따른 예외 처리 구현",
+                    keyAways: "네이버 지도, T맵, 카카오내비 등 모바일 지도/길안내 앱의 딥링크(Deep Link)를 연결하여, 사용자가 버튼을 눌렀을 때 해당 앱으로 즉시 연결되도록 구현했습니다. 특히 사용자 기기에 앱이 설치되어 있지 않은 예외 상황을 고려하여, 네이버 지도는 모바일 웹 페이지로 이동시키고 T맵과 카카오내비는 앱 스토어 설치 페이지로 유도하도록 각각 적절한 예외 처리(Fallback) 로직을 구축하는 법을 배웠습니다."
+                },
+                {
+                    take: "Cloudflare Pages를 활용한 웹사이트 무료 배포 및 자동화 경험",
+                    keyAways: "만든 웹사이트를 서버 지식이 없어도 간편하게 배포할 수 있는 Cloudflare Pages 서비스의 사용법을 익혔습니다. GitHub에 코드를 올려두면 자동으로 빌드되어 배포되는 편리한 자동화 과정을 경험하고, 모바일 청첩장 링크를 실제 사용자들에게 호스팅하여 전달할 수 있는 환경을 구축해 보았습니다."
+                },
+            ],
+        },
+        /* retrospective: {
             regret: "모바일에서는 동작하지 않고 반응형 대응도 되어있지 않아 PC 환경에서만 플레이 가능",
             future: [
                 "아이템 요소 추가",
                 "최고 점수를 localStorage에 저장해 자신의 기록 확인 가능하게 하기",
             ],
-        },
+        }, */
         credits: ["BGM: \"Children's Happy\" by Kevin MacLeod (incompetech.com), CC BY 4.0"],
     },
 ];

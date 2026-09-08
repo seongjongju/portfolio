@@ -287,6 +287,8 @@
     font-size: 18px;
     color: #0047ff;
     margin-bottom: .6em;
+    word-break: keep-all;
+    line-height: 1.2;
 }
 
 .tagline {

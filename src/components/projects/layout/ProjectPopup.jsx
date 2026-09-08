@@ -347,26 +347,31 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
             }
             {/* 트러블슈팅 */}
 
-            <div className={styles.group}>
-                <h3 className={styles.subject}>시행착오 및 아쉬운 점</h3>
-                {
-                    data?.retrospective?.regret.map((regr) => (
-                        <div 
-                            key={regr?.sorrow}
-                            className={styles.shoot_item}
-                        >
-                            <h4 className={styles.heading}>{regr?.sorrow}</h4>
-                            <p 
-                                style={{
-                                    paddingLeft: "0"
-                                }}
-                                className={styles.shoot_situ}>
-                                {regr?.cause}
-                            </p>
-                        </div>
-                    ))
-                }
-            </div>
+            {
+                data?.retrospective?.regret &&
+                (
+                    <div className={styles.group}>
+                        <h3 className={styles.subject}>시행착오 및 아쉬운 점</h3>
+                        {
+                            data?.retrospective?.regret.map((regr) => (
+                                <div 
+                                    key={regr?.sorrow}
+                                    className={styles.shoot_item}
+                                >
+                                    <h4 className={styles.heading}>{regr?.sorrow}</h4>
+                                    <p 
+                                        style={{
+                                            paddingLeft: "0"
+                                        }}
+                                        className={styles.shoot_situ}>
+                                        {regr?.cause}
+                                    </p>
+                                </div>
+                            ))
+                        }
+                    </div>
+                )
+            }
             {/* 시행착오 및 아쉬운 점 */}
             
             <div className={styles.group}>
