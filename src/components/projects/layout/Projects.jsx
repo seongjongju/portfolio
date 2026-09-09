@@ -13,6 +13,7 @@ import { projectDatas } from 'src/shared/data/staticData';
 import ProjectPopup from './ProjectPopup';
 import { createPortal } from 'react-dom';
 import Dim from 'src/shared/components/UI/Dim';
+import Publishings from './Publishings';
 
 const Projects = () => {
     const id = 'projects';
@@ -179,7 +180,8 @@ const Projects = () => {
                     </div>
                 </div>
             </section>
-
+            
+            <Publishings />
                         
             {createPortal(
                 (   
