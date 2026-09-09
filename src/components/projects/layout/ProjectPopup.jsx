@@ -107,7 +107,7 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                         )
                     }
                     {
-                        //잔소리피하게게임에서만 노출
+                        //잔소리피하기 게임에서만 노출
                         data?.itchUrl &&
                         (
                             <p className={styles.url_text}>
@@ -291,17 +291,59 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                 }
             </div>
             {/* 주요 기능 */}
+            
+            {
+                //잔소리 피하기 게임에서만 노출
+                data?.aiWorkflow !== undefined && 
+                (
+                    <div className={styles.group}>
+                        <h3 className={styles.subject}>작업 방식</h3>
+                        <ul className={styles.feat}>
+                            {
+                                data?.aiWorkflow?.process.map((pro) => (
+                                    <li
+                                        key={pro} 
+                                        className={styles.feat_li}
+                                    >
+                                        {pro}
+                                    </li>      
+                                ))
+                            }
+                        </ul>
+                        <p className={styles.tagline}>{data?.aiWorkflow?.roleSplit}</p>
+                        <h4 className={styles.heading}>실제 작업 프롬프트</h4>
+                        프롬프트 캡쳐본 들어갈 예정
+                    </div>
+                )
+            }
+            {/* 작업 방식 */}
 
             <div className={styles.group}>
                 <h3 className={styles.subject}>핵심 기술적 의도 및 데이터 구조 고민</h3>
                 {
                     data?.keyDecisions.map((decisions) => (
                         <div
-                            key={decisions.title}
+                            key={decisions?.title}
                             className={styles.decisions_item}
                         >
-                            <h5 className={styles.heading}>{decisions.title}</h5>
-                            <p className={styles.ex}>{decisions.description}</p>
+                            <h5 className={styles.heading}>{decisions?.title}</h5>
+                            <p className={styles.ex}>{decisions?.description}</p>
+                            {
+                                decisions?.exImg !== undefined &&
+                                (
+                                    <>
+                                        <p 
+                                            style={{
+                                                padding: "0"
+                                            }}
+                                            className={styles.shoot_situ}
+                                        >
+                                            <strong>실제 알림 예시</strong>
+                                        </p>
+                                        <img src={decisions?.exImg} alt="알림예시" />
+                                    </>
+                                )
+                            }
                         </div>
                     ))
                 }
