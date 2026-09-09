@@ -13,22 +13,22 @@ const About = () => {
     const {sectionRef} = useSectionRef(id);
 
     return (
-        <main 
+        <section 
             id={id}
-            className={styles.main}
+            className={styles.section}
             ref={sectionRef}
         >
             <nav className={styles.nav}>
                 <Title 
                     title="About"
                 />
+                <MyInfo />
+                <CoreStack />
+                <Experience />
+                <TakeClass />
+                <Certifications />
             </nav>
-            <MyInfo />
-            <CoreStack />
-            <Experience />
-            <TakeClass />
-            <Certifications />
-        </main>
+        </section>
     );
 };
 

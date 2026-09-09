@@ -14,9 +14,11 @@ const HomePage = () => {
             transition={{ duration: 0.5 }}
         >
             <Hero />
-            <About />
-            <Projects />
-            <Contact />
+            <main>
+                <About />
+                <Projects />
+                <Contact />
+            </main>
         </motion.div>
     );
 };

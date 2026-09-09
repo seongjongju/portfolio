@@ -100,7 +100,7 @@ export const projectDatas = [
     {
         id: "project_2",
         title: "모바일 청첩장 템플릿",
-        projectName: "Marry-template",
+        projectName: "모바일 청첩장 템플릿",
         img: marryThum,
         ex: "React 기반 반응형 모바일 청첩장 웹 애플리케이션",
         list: ["Personal", "Front-end 100%"],
@@ -119,7 +119,7 @@ export const projectDatas = [
     {
         id: "project_3",
         title: "잔소리 피하기 게임",
-        projectName: "sermon_avoid_game",
+        projectName: "잔소리 피하기 게임",
         img: sermonThum,
         ex: "AI 활용 2D 장애물 피하기 웹 게임",
         list: ["Personal", "Front-end 100%", "UI/UX 100%"],

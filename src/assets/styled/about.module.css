@@ -1,14 +1,6 @@
 /************************ common */
-.main {
-    padding: 100px 0;
-}
-
 .section {
-    margin-bottom: 100px;
-}
-
-.section:last-child {
-    margin-bottom: 0;
+    padding: 100px 0;
 }
 
 .nav {
@@ -16,18 +8,26 @@
     margin: 0 auto;
 }
 
+.group {
+    margin-bottom: 100px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
 @media screen and (max-width: 968px) {
-    .main {
+    .section {
         padding: 10.5% 0;
     }
-
-    .section {
-        margin-bottom: 10.5%;
-    }   
 
     .nav {
         padding: 0 3%;
     }
+
+        .group {
+        margin-bottom: 10.5%;
+    }   
 }
 
 /************************ MyInfo */
@@ -62,7 +62,6 @@
 .info_btns {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
 }
 

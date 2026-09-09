@@ -6,31 +6,29 @@ import Subject from 'src/shared/components/UI/Subject';
 
 const CoreStack = () => {
     return (
-        <section className={styles.section}>
-            <nav className={styles.nav}>
-                <Subject 
-                    subject="CoreStack"
-                />
-                <div className={styles.stack}>
-                    {
-                        stackIcons.map((icon) => (
-                            <figure 
-                                key={icon.id}
-                                className={styles.stack_iconbox}
-                            >
-                                <img 
-                                    height="60" 
-                                    width ="60" 
-                                    src={icon.src}
-                                    className={styles.stack_icon} 
-                                />      
-                                <p className={styles.stack_text}>{icon.text}</p>
-                            </figure> 
-                        ))
-                    }
-                </div>
-            </nav>
-        </section>
+        <div className={styles.group}>
+            <Subject 
+                subject="CoreStack"
+            />
+            <div className={styles.stack}>
+                {
+                    stackIcons.map((icon) => (
+                        <figure 
+                            key={icon.id}
+                            className={styles.stack_iconbox}
+                        >
+                            <img 
+                                height="60" 
+                                width ="60" 
+                                src={icon.src}
+                                className={styles.stack_icon} 
+                            />      
+                            <p className={styles.stack_text}>{icon.text}</p>
+                        </figure> 
+                    ))
+                }
+            </div>
+        </div>
     );
 };
 

@@ -2,6 +2,8 @@ import coffeeOrderVideo from 'src/assets/video/coffeeOrder.mp4';
 import cineAiVideo from 'src/assets/video/cineAI.mp4';
 import marryVideo from 'src/assets/video/marry.mp4';
 import sermonVideo from 'src/assets/video/sermon.mp4';
+import sermonPdf from 'src/assets/download/prompt.pdf';
+import alarmImg from 'src/assets/images/alarm.png'
 
 export const viewData = [
     {
@@ -50,7 +52,7 @@ export const viewData = [
                 title: "Web Notification API 기반의 주문 상태 변화 시뮬레이션",
                 description:
                     "주문 후 수령까지 대기 시간이 짧은 서비스 특성을 고려해 사용자에게 실시간 상태를 알리는 UX가 중요하다고 판단했습니다. 실제 제조 과정이 없는 테스트 환경의 한계를 극복하고자, 비동기 타이머를 활용해 주문 완료 5초 후 수령 안내 알림이 순차적으로 발송되는 상태 변경 흐름을 시뮬레이션했습니다. Notification API 권한 제어와 함께 상태에 따른 알림을 유기적으로 연결하여 실제 서비스와 유사한 사용자 경험을 제공했습니다.",
-                exImg: "알림 이미지 삽입 예정",
+                exImg: alarmImg,
             },
             {
                 title: "단일 주문 / 장바구니 주문 흐름 분기",
@@ -156,24 +158,12 @@ export const viewData = [
                     keyAways: "초기에는 기본적인 상태 관리 Hook으로만 로직을 구성했으나, useMemo, useCallback, React.memo를 도입해 자식 컴포넌트의 불필요한 재렌더링을 방지하는 최적화 기법을 익혔습니다. 또한 Suspense를 결합하여 비동기 데이터 로딩 중 사용자에게 즉각적인 UI 피드백을 제공함으로써, 앱의 전반적인 반응성과 사용성을 향상시키는 방식을 체득했습니다."
                 },
             ],
-            /*
-            future: [
-                {
-                    title: "장바구니 및 옵션 선택 데이터 구조 고도화",
-                    text: "현재 상품 단위로만 등록/관리되는 데이터 구조를 개선하여, 샷 추가, 연하게 등 복잡한 퍼스널 옵션 배열을 수용할 수 있도록 장바구니 데이터 폼 및 선택 로직을 확장할 예정입니다."
-                },
-                {
-                    title: "리텐션을 위한 데이터 모델 및 결제 로직 확장",
-                    text: "사용자 재방문 유도를 위해 구매 건수별 스탬프 적립, 할인 쿠폰 발급, 그리고 결제 시 쿠폰을 선택·적용할 수 있는 백엔드 데이터 모델 확장 및 결제 연동 로직을 추가할 계획입니다."
-                }
-            ],
-            */
         },
     },
     {
         id: "project_1",
         src: cineAiVideo,
-        title: "Cine AI",
+        title: "CineAI",
         tagline: "Gemini 2.5 Flash 기반의 AI 대화형 맞춤형 영화 큐레이션 플랫폼",
         tagEx: "넷플릭스 스타일의 세련된 UI에 Gemini 2.5 Flash 엔진을 탑재하여, 사용자가 원하는 다양한 모드로 영화에 대해 질문하고 정밀한 답변을 받아볼 수 있는 스마트 영화 플랫폼입니다.",
         serviceUrl: "https://cine-ai-murex.vercel.app/",
@@ -372,6 +362,7 @@ export const viewData = [
                 "그래픽 리소스도 동일한 방식으로 ChatGPT와 Gemini 활용",
             ],
             roleSplit: "코드 작성과 디버깅은 AI가 담당, 본인은 요구사항 정의·결과물 검수·방향 결정을 담당",
+            pdf: sermonPdf,
         },
         keyDecisions: [
             {

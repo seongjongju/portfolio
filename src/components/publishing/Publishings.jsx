@@ -5,11 +5,11 @@ import Title from 'src/shared/components/UI/Title';
 const Publishings = () => {
     return (
         <section className={styles.section}>
-            <nav>
+            <nav className={styles.nav}>
                 <Title 
                     title="Publishing"
                 />
-                <p>간단한 설명</p>
+                <p></p>
             </nav>
         </section>
     );

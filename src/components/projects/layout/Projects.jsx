@@ -13,7 +13,6 @@ import { projectDatas } from 'src/shared/data/staticData';
 import ProjectPopup from './ProjectPopup';
 import { createPortal } from 'react-dom';
 import Dim from 'src/shared/components/UI/Dim';
-import Publishings from './Publishings';
 
 const Projects = () => {
     const id = 'projects';
@@ -56,132 +55,128 @@ const Projects = () => {
     };
 
     return (
-        <main 
+        <section 
             id={id} 
-            className={styles.main}
+            className={styles.section}
             ref={sectionRef}
         >
-            <section className={styles.section}>
-                <div className={styles.swiper_wrap}>
-                    <Swiper
-                        ref={swiperRef}
-                        className={styles.swiper}
-                        slidesPerView={1}
-                        modules={[EffectFade, Navigation, Autoplay]} 
-                        effect="fade"
-                        navigation={{
-                            nextEl: '.navi .swiper-button-next',
-                            prevEl: '.navi .swiper-button-prev'
-                        }}
-                        autoplay={{
-                                delay: 3000,
-                                disableOnInteraction: false,
-                                pauseOnMouseEnter: true,
-                        }}
-                        onSwiper={(swiper) => swiperRef.current = swiper}
-                        onSlideChange={(swiper) => setCurrent(swiper.activeIndex + 1)}
-                    >
-                        {
-                            projectDatas.map((project) => {
-                                return(
-                                    <SwiperSlide
-                                        key={project.id}
-                                        className={styles.swiper_slide}
-                                    >
-                                        <div className={styles.box}>
-                                            <Splide
-                                                className={styles.splide}
-                                                extensions={{ AutoScroll }}
-                                                options={{
-                                                    type     : 'loop',
-                                                    drag     : false,
-                                                    focus    : 'center',
-                                                    perPage  : 1,
-                                                    autoWidth: true,
-                                                    gap      : '100px',
-                                                    pagination: false,
-                                                    arrows   : false,
-                                                    autoScroll: {
-                                                        speed       : 1.5,
-                                                        pauseOnHover: false,
-                                                    },
-                                                    breakpoints: {
-                                                        768: {
-                                                            autoScroll: {
-                                                                speed : 1.2,
-                                                            },
-                                                        },
-                                                        600: {
-                                                            gap : '50px',
-                                                        },
-                                                        380: {
-                                                            autoScroll: {
-                                                                speed : 1,
-                                                            },
+            <div className={styles.swiper_wrap}>
+                <Swiper
+                    ref={swiperRef}
+                    className={styles.swiper}
+                    slidesPerView={1}
+                    modules={[EffectFade, Navigation, Autoplay]} 
+                    effect="fade"
+                    navigation={{
+                        nextEl: '.navi .swiper-button-next',
+                        prevEl: '.navi .swiper-button-prev'
+                    }}
+                    autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                    }}
+                    onSwiper={(swiper) => swiperRef.current = swiper}
+                    onSlideChange={(swiper) => setCurrent(swiper.activeIndex + 1)}
+                >
+                    {
+                        projectDatas.map((project) => {
+                            return(
+                                <SwiperSlide
+                                    key={project.id}
+                                    className={styles.swiper_slide}
+                                >
+                                    <div className={styles.box}>
+                                        <Splide
+                                            className={styles.splide}
+                                            extensions={{ AutoScroll }}
+                                            options={{
+                                                type     : 'loop',
+                                                drag     : false,
+                                                focus    : 'center',
+                                                perPage  : 1,
+                                                autoWidth: true,
+                                                gap      : '100px',
+                                                pagination: false,
+                                                arrows   : false,
+                                                autoScroll: {
+                                                    speed       : 1.5,
+                                                    pauseOnHover: false,
+                                                },
+                                                breakpoints: {
+                                                    768: {
+                                                        autoScroll: {
+                                                            speed : 1.2,
                                                         },
                                                     },
-                                                }}
-                                            >
-                                                <SplideSlide className={styles.slide}>
-                                                    {project.projectName}
-                                                </SplideSlide>
-                                                {
-                                                    project.badges.map((badge) => (
-                                                        <SplideSlide 
-                                                            key={badge}
-                                                            className={styles.slide}
-                                                        >
-                                                            {badge}
-                                                        </SplideSlide>
-                                                    ))
-                                                }
-                                            </Splide>
-                                            <figure className={styles.figure}>
-                                                <img src={project.img} alt={project.projectName} />
-                                            </figure>
-                                        </div>
-                                        
-                                        <p className={styles.project_name}>{project.projectName}</p>
-                                        <p className={styles.ex}>{project.ex}</p>
-                                        
-                                        <button 
-                                            style={{
-                                                height: project.projectName === "portfolio" ? "1.33em" : ""
+                                                    600: {
+                                                        gap : '50px',
+                                                    },
+                                                    380: {
+                                                        autoScroll: {
+                                                            speed : 1,
+                                                        },
+                                                    },
+                                                },
                                             }}
-                                            className={styles.view}
-                                            onClick={() => handleClickView(project.id)}
                                         >
+                                            <SplideSlide className={styles.slide}>
+                                                {project.projectName}
+                                            </SplideSlide>
                                             {
-                                                project.projectName !== "portfolio" &&
-                                                (   
-                                                    <>
-                                                    View
-                                                        <div className={styles.arrows}>
-                                                            <span></span>
-                                                            <span></span>
-                                                        </div>
-                                                    </>
-                                                )
+                                                project.badges.map((badge) => (
+                                                    <SplideSlide 
+                                                        key={badge}
+                                                        className={styles.slide}
+                                                    >
+                                                        {badge}
+                                                    </SplideSlide>
+                                                ))
                                             }
-                                        </button>
-                                    </SwiperSlide>
-                                )
-                            })
-                        }
-                    </Swiper>
-                    <div className='navi'>
-                        <button className='swiper-button-prev'>◀</button>
-                            <div className='navi__counter'>
-                                <span className='navi__current'>{current}</span>
-                                <span>-</span>
-                                <span className='navi__total'>{total}</span>
-                            </div>
-                        <button className='swiper-button-next'>▶</button>
-                    </div>
+                                        </Splide>
+                                        <figure className={styles.figure}>
+                                            <img src={project.img} alt={project.projectName} />
+                                        </figure>
+                                    </div>
+                                    
+                                    <p className={styles.project_name}>{project.projectName}</p>
+                                    <p className={styles.ex}>{project.ex}</p>
+                                    
+                                    <button 
+                                        style={{
+                                            height: project.projectName === "portfolio" ? "1.33em" : ""
+                                        }}
+                                        className={styles.view}
+                                        onClick={() => handleClickView(project.id)}
+                                    >
+                                        {
+                                            project.projectName !== "portfolio" &&
+                                            (   
+                                                <>
+                                                View
+                                                    <div className={styles.arrows}>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </>
+                                            )
+                                        }
+                                    </button>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                </Swiper>
+                <div className='navi'>
+                    <button className='swiper-button-prev'>◀</button>
+                        <div className='navi__counter'>
+                            <span className='navi__current'>{current}</span>
+                            <span>-</span>
+                            <span className='navi__total'>{total}</span>
+                        </div>
+                    <button className='swiper-button-next'>▶</button>
                 </div>
-            </section>
-            
-            <Publishings />
+            </div>
                         
             {createPortal(
                 (   
@@ -200,7 +195,7 @@ const Projects = () => {
                 ,
                 document.body
             )}            
-        </main>
+        </section>
     );
 };
 

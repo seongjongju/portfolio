@@ -2,6 +2,7 @@ import React, { memo, useEffect, useMemo, useState } from 'react';
 import styles from 'src/assets/styled/projects.module.css';
 import { useGsap } from 'src/context/GsapContext';
 import { viewData } from 'src/shared/data/viewData';
+import PdfViewer from '../UI/PdfViewer';
 
 const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
     const {isLenis} = useGsap();
@@ -156,7 +157,7 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                             </p>
                             <p className={styles.ex}>
                                 adminID: admin<br />
-                                adminPW: 1234!
+                                adminPW: 1234
                             </p>
                         </>
                     )
@@ -312,7 +313,9 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                         </ul>
                         <p className={styles.tagline}>{data?.aiWorkflow?.roleSplit}</p>
                         <h4 className={styles.heading}>실제 작업 프롬프트</h4>
-                        프롬프트 캡쳐본 들어갈 예정
+                        <PdfViewer 
+                            pdfUrl={data?.aiWorkflow?.pdf}
+                        />
                     </div>
                 )
             }
@@ -340,7 +343,14 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                                         >
                                             <strong>실제 알림 예시</strong>
                                         </p>
-                                        <img src={decisions?.exImg} alt="알림예시" />
+                                        <img 
+                                            style={{
+                                                width: "100%",
+                                                maxWidth: "fit-content"
+                                            }}
+                                            src={decisions?.exImg} 
+                                            alt="알림예시" 
+                                        />
                                     </>
                                 )
                             }
@@ -437,30 +447,6 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                 }
             </div>
             {/* 배운 점 */}
-            
-            {/* 
-            <div className={styles.group}>
-                <h3 className={styles.subject}>개선 및 확장 예정 사항</h3>
-                {
-                    data?.retrospective?.future.map((futu) => (
-                        <div 
-                            key={futu?.title}
-                            className={styles.shoot_item}
-                        >
-                            <h4 className={styles.heading}>{futu?.title}</h4>
-                            <p 
-                                style={{
-                                    paddingLeft: "0"
-                                }}
-                                className={styles.shoot_situ}>
-                                {futu?.text}
-                            </p>
-                        </div>
-                    ))
-                }
-            </div> 
-            */}
-            {/* 개선 및 확장 예정 사항 */}
         </div>
     );
 });
