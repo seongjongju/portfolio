@@ -121,7 +121,7 @@ const Projects = () => {
                                             }}
                                         >
                                             <SplideSlide className={styles.slide}>
-                                                {project.projectName}
+                                                {project.title}
                                             </SplideSlide>
                                             {
                                                 project.badges.map((badge) => (

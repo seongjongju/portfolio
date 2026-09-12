@@ -59,7 +59,7 @@ export const certifications = [
 export const projectDatas = [
     {
         id: "project_0",
-        title: "커피 주문 웹앱",
+        title: "CoffeeOrderApp",
         projectName: "CoffeeOrderApp",
         img: coffeeOrderThum,
         ex: "나이스페이먼츠 연동 커피 주문 웹앱",
@@ -99,7 +99,7 @@ export const projectDatas = [
     },
     {
         id: "project_2",
-        title: "모바일 청첩장 템플릿",
+        title: "marry-template",
         projectName: "모바일 청첩장 템플릿",
         img: marryThum,
         ex: "React 기반 반응형 모바일 청첩장 웹 애플리케이션",
@@ -118,7 +118,7 @@ export const projectDatas = [
     },
     {
         id: "project_3",
-        title: "잔소리 피하기 게임",
+        title: "sermon-avoid-game",
         projectName: "잔소리 피하기 게임",
         img: sermonThum,
         ex: "AI 활용 2D 장애물 피하기 웹 게임",
@@ -137,7 +137,7 @@ export const projectDatas = [
     },
     {
         id: "project_4",
-        title: "포트폴리오",
+        title: "portfolio",
         projectName: "portfolio",
         img: portfolioThum,
         ex: "반응형 포트폴리오 페이지",
