@@ -54,6 +54,17 @@ footer {
     right: 5px;
 }
 
+/*** 다크모드 ***/
+:global(.is-dark) {
+    & footer {
+        background: rgba(11, 15, 25, 0.15);
+    }
+
+    & .link  {
+        color: #f8f7f4;
+    }
+}
+
 @media screen and (max-width: 1800px) {
     .nav {
         padding: 0 3%;

@@ -443,6 +443,112 @@
     height: 500px;
 }
 
+/*** 다크모드 ***/
+:global(.is-dark) {
+    & .swiper_slide {
+        background: #0B0F19;
+    }
+
+    & .figure {
+        box-shadow: 4px 4px 10px rgba(255, 255, 255, .15);
+    }
+
+    & .view {
+        color: #F8F7F4;
+    }
+
+    & .arrows {
+        background: #F8F7F4;
+
+        & span {
+            background: #0B0F19;
+        }
+    }
+
+    & :global(.navi) {
+        & :global(.swiper-button-prev),
+        & :global(.swiper-button-next) {
+            color: #F8F7F4;
+        }
+
+        & :global(.navi__counter) {
+            & span {
+                color: #fff;
+            }
+        }
+    }
+
+    /*** 상세 팝업 ***/
+    & .popup {
+        background: #000;
+
+        &::-webkit-scrollbar {
+            background-color: #333;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #F8F7F4;
+        }
+    }
+
+    & .close_btn {
+        background: #F8F7F4;
+
+        & span {
+            background: #0B0F19;
+        }
+    }
+
+    & .title {
+        color: #F8F7F4;
+    }
+
+    & .subject {
+        color: #eee;
+    }
+
+    & .tagline {
+        & span {
+            color: #ddd;
+        }
+    }
+
+    & .heading {
+        color: #fff;
+    }
+
+    & .ex {
+        color: #ddd;
+    }
+
+    & .badge {
+        color: #0B0F19;
+        background: #F8F7F4;
+    }
+
+    & .feat_li {
+        color: #ddd;
+    }
+
+    & .shoot_situ {
+        color: #ddd !important;
+
+        & strong {
+            color: #fff;
+        }
+    }
+
+    & .shoot_text {
+        color: #ddd !important;
+
+        & strong {
+            color: #fff;
+        }
+    }
+}
+
+
+
 @media screen and (max-width: 1600px) {
     .nav {
         padding: 0 3%;

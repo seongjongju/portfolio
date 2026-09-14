@@ -133,6 +133,37 @@ header {
     color: #0047ff;
 }
 
+/*** 다크모드 ***/
+:global(.is-dark) {
+    & .top {
+        background: #f8f7f4;
+        color: #0B0F19;
+
+        &:hover {
+            background: rgba(255, 255, 255, .7);
+            color: #0047ff;
+        }
+    }
+
+    & .toggle button {
+        background: #f8f7f4;
+
+        &:hover {
+            background: rgba(255, 255, 255, .7);
+        }
+    }
+
+    & .ham {
+        background: #f8f7f4;
+        color: #0B0F19;
+
+        &:hover {
+            background: rgba(255, 255, 255, .7);
+            color: #0047ff;
+        }
+    }
+}
+
 @media screen and (max-width: 1800px) {
     nav {
         padding: 0 3%;

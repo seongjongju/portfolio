@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useDarkMode } from 'src/context/DarkModeContext';
 
 const Dim = ({closePopup, popupActive}) => {
+    const {isDark} = useDarkMode();
     const [style, setStyle] = useState({
         background: "rgba(0, 0, 0, 0)", 
         backdropFilter: "blur(0)",
@@ -17,7 +19,7 @@ const Dim = ({closePopup, popupActive}) => {
             const timerId = setTimeout(() => {
                 setStyle(prev => ({
                     ...prev,
-                    background: "rgba(0, 0, 0, .5)", 
+                    background: isDark ? "rgba(255, 255, 255, .03)" : "rgba(0, 0, 0, .5)", 
                     backdropFilter: "blur(10px)",
                 }));
             }, 100);

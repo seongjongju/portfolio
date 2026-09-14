@@ -7,7 +7,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <>
+    <div id='wrap'>
       {/* router */}
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
@@ -15,7 +15,7 @@ function App() {
         </Routes>
       </AnimatePresence>
       {/* router */}
-    </>
+    </div>
   )
 }
 

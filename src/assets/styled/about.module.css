@@ -99,6 +99,29 @@
     color: #fff;
 }
 
+/*** 다크모드 ***/
+:global(.is-dark) {
+    & .info_btns li:first-child .link {
+        color: #f8f7f4;
+        border: 1px solid #f8f7f4;
+
+        &:hover {
+            background: #f8f7f4;
+            color: #0B0F19;
+        }
+    } 
+
+    & .info_btns li:last-child .link {
+        color: #f8f7f4;
+        border: 1px solid #f8f7f4;
+
+        &:hover {
+            background: #0047ff;
+            border-color: #0047ff;
+        }
+    }
+}
+
 @media screen and (max-width: 1280px) {
     .info_slogan {
         font-size: 22px;
@@ -300,6 +323,21 @@
     margin-bottom: 0;
 }
 
+/*** 다크모드 ***/
+:global(.is-dark) {
+    & .year {
+        color: #fff;
+    }
+
+    & .list_text {
+        color: #f8f7f4;
+
+        &::before {
+            background: #ddd;
+        }
+    }
+}
+
 @media screen and (max-width: 968px) {
     .year {
         font-size: 40px;
@@ -370,6 +408,14 @@
     height: 18px;
     background: #666;
 }
+
+/*** 다크모드 ***/
+:global(.is-dark) {
+    & .line {
+        background: #ddd;
+    }
+}
+
 
 @media screen and (max-width: 1080px) {
     .certifications_text {

@@ -33,6 +33,21 @@
     background: #3B82F6;
 }
 
+/*** 다크모드 ***/
+.is-dark {
+    & .title {
+        color: #f8f7f4;
+    }
+
+    & .subject {
+        color: #f8f7f4;
+    }
+
+    & .subject__ball {
+        background: #f8f7f4;
+    }
+}
+
 @media screen and (max-width: 1280px) {
     .title {
         font-size: 80px;

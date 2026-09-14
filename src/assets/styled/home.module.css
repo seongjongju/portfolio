@@ -31,6 +31,13 @@
     z-index: 1;
 }
 
+/*** 다크모드 ***/
+:global(.is-dark) {
+    & .slide {
+        color: #f8f7f4;
+    }
+}
+
 @media screen and (max-width: 1600px) {
     .slide {
         font-size: 100px;

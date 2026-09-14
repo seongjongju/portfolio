@@ -71,6 +71,21 @@
     backdrop-filter: none;
 }
 
+/*** 다크모드 ***/
+:global(.is-dark) {
+    & .gnb {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    & .depth {
+        color: #f8f7f4;
+    }
+
+    & .close span {
+        background: #fff;
+    }
+}
+
 @media screen and (max-width: 1500px) {
     .depth {
         font-size: 90px;

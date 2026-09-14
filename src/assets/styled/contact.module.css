@@ -115,6 +115,54 @@
     }
 }
 
+/*** 다크모드 ***/
+:global(.is-dark) {
+    & .title {
+        color: #f8f7f4;
+    }
+
+    & .subject {
+        color: #f8f7f4;
+    }
+
+    & .email {
+        color: #ddd;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    & .tel {
+        color: #ddd;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    & .contact_link {
+        color: #fff;
+        border-color: #f8f7f4;
+
+        &:hover .icon_wrap {
+            color: #fff;
+        }
+
+        &:hover .icon {
+            stroke: #fff;
+        }
+    }
+
+    .icon_wrap {
+        color: #ddd;
+    }
+
+    .icon {
+        stroke: #ddd;
+    }
+}
+
 @media screen and (max-width: 1080px) {
     .email {
         font-size: 36px;

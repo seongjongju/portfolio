@@ -7,11 +7,13 @@ import { useGsap } from '../context/GsapContext';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import sun from 'src/assets/icon/sun.png';
+import { useDarkMode } from 'src/context/DarkModeContext';
 
 const Header = () => {
     const location = useLocation();
     const pathname = location.pathname;
     const navigate = useNavigate();
+    const {isDark, setIsDark} = useDarkMode(); //다크모드
     const {activeSection} = useActiveSection();
     const {isLenis} = useGsap(); //gsap
     const [isToggle, setIstoggle] = useState(false); //fullGnb 토글
@@ -29,6 +31,13 @@ const Header = () => {
             offset: 0,
             duration: 1,
         });
+    };
+
+    //다크모드 토글
+    const handleClickDarkModeBtn = (e) => {
+        e.preventDefault();
+
+        setIsDark(prev => !prev);
     };
 
     return (
@@ -76,7 +85,10 @@ const Header = () => {
                             TOP
                         </button>
                         <div className={styles.toggle}>
-                            <button className={styles.light}>
+                            <button 
+                                className={styles.light}
+                                onClick={handleClickDarkModeBtn}
+                            >
                                 <img src={sun} alt="라이트모드" />
                             </button>
                         </div>
