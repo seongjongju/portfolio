@@ -1,10 +1,18 @@
 import React from 'react';
 import styles from 'src/assets/styled/contact.module.css';
 import ContactLink from '../UI/ContactLink';
+import useSectionRef from 'src/hooks/useSectionRef';
+import { footerLinks } from 'src/shared/data/staticData';
 
 const Contact = () => {
+    const id = "contact";
+    const {sectionRef} = useSectionRef(id);
+
     return (
-        <section className={styles.section}>
+        <section 
+            id={id}
+            className={styles.section}
+        >
             <nav className={styles.nav}>
                 <h2 className={styles.title}>
                     LET'S WORK
@@ -17,47 +25,56 @@ const Contact = () => {
                         <a href="mailto:sjj990480@gmail.com" className={styles.email}>
                             sjj990480@gmail.com
                         </a>
+
                         <h5 className={styles.subject}>TEL</h5>
                         <a href='tel:010-8690-3363' className={styles.tel}>010-8690-3363</a>
                     </div>
                     {/* contact */}
                     <div className={styles.links}>
+                        <h5 className={styles.subject}>CONNECT</h5>
                         <ContactLink 
-                            link="#self"
+                            link={footerLinks[0].link}
                             platform="GitHub"
                             icon={
-                                <svg 
-                                    xmlns="http://www.w3.org/2000/svg" 
-                                    fill="none" viewBox="0 0 24 24" 
-                                    strokeWidth={1.5} 
-                                    stroke="#666" 
-                                    className={styles.icon}
-                                >
-                                    <path 
-                                        strokeLinecap="round" 
-                                        strokeLinejoin="round" 
-                                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" 
-                                    />
-                                </svg>
+                                <div className={styles.icon_wrap}>
+                                    EXPLORE
+                                    <svg 
+                                        xmlns="http://www.w3.org/2000/svg" 
+                                        fill="none" 
+                                        viewBox="0 0 24 24" 
+                                        stroke-width="1.5" 
+                                        stroke="#666"  
+                                        className={`${styles.icon} ${styles.explore}`}
+                                    >
+                                        <path 
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                                        />
+                                    </svg>
+                                </div>
                             }
                         />
                         <ContactLink 
-                            link="#self"
+                            link={footerLinks[1].link}
                             platform="Resume"
                             icon={
-                                <svg 
-                                    xmlns="http://www.w3.org/2000/svg" 
-                                    fill="none" viewBox="0 0 24 24" 
-                                    strokeWidth={1.5} 
-                                    stroke="#666" 
-                                    className={styles.icon}
-                                >
-                                    <path 
-                                        strokeLinecap="round" 
-                                        strokeLinejoin="round" 
-                                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" 
-                                    />
-                                </svg>
+                                <div className={styles.icon_wrap}>
+                                    PDF
+                                    <svg 
+                                        xmlns="http://www.w3.org/2000/svg" 
+                                        fill="none" viewBox="0 0 24 24" 
+                                        strokeWidth={1.5} 
+                                        stroke="#666" 
+                                        className={`${styles.icon} ${styles.download}`}
+                                    >
+                                        <path 
+                                            strokeLinecap="round" 
+                                            strokeLinejoin="round" 
+                                            d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" 
+                                        />
+                                    </svg>
+                                </div>
                             }
                         />
                     </div>

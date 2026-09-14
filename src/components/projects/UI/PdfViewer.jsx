@@ -6,7 +6,7 @@ const PdfViewer = ({pdfUrl}) => {
         <div className={styles.viewer}>
             <iframe
                 src={`${pdfUrl}#toolbar=1&navpanes=0`} 
-                width="100%"
+                width="95%"
                 height="100%"
                 title="PDF Preview"
                 style={{ border: 'none' }}

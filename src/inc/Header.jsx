@@ -35,6 +35,7 @@ const Header = () => {
         <>
             <header>
                 <nav className={styles.nav}>    
+                    {/* 
                     {
                         pathname.includes('/projects/') ? 
                         null :
@@ -64,7 +65,8 @@ const Header = () => {
                                 })}
                             </ul>
                         )
-                    }                 
+                    }    
+                     */}             
                     
                     <div className={styles.util}>
                         <button 

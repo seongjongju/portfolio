@@ -1,6 +1,6 @@
 /************************ common */
 .section {
-    padding: 100px 0;
+    padding-top: 100px;
 }
 
 .nav {
@@ -18,14 +18,14 @@
 
 @media screen and (max-width: 968px) {
     .section {
-        padding: 10.5% 0;
+        padding-top: 10.5%;
     }
 
     .nav {
         padding: 0 3%;
     }
 
-        .group {
+    .group {
         margin-bottom: 10.5%;
     }   
 }
@@ -110,10 +110,6 @@
 }
 
 @media screen and (max-width: 968px) {
-    .section {
-        margin-bottom: 10.5%;
-    }   
-
     .info {
         flex-direction: column;
         gap: 30px;

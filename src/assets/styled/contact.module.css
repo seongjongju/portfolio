@@ -8,11 +8,11 @@
 }
 
 .title {
-    font-size: 120px;
+    font-size: clamp(28px, 6.2500vw + 10px, 120px);
     color: #0B0F19;
     font-weight: 800;
     letter-spacing: -2px;
-    margin-bottom: 80px;
+    margin-bottom: .67em;
 
     & span {
         display: block;
@@ -42,10 +42,22 @@
     width: 50%;
 }
 
+.icon_wrap {
+    font-size: 16px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    transition: color .3s ease;
+}
+
 .icon {
-    width: 24px;
+    width: 1.5em;
     aspect-ratio: 1/1;
-    transition: stroke .3s ease;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    transition: all .3s ease;
 }
 
 .email {
@@ -85,8 +97,70 @@
     height: 3em;
     padding: 0 .5em;
     border-bottom: 1px solid #0B0F19;
+    transition: all .3s ease;
+
+    &:hover {
+        padding-left: 1em;
+    }
+    
+    &:hover .icon_wrap {
+        color: #0B0F19;
+    }
 
     &:hover .icon {
         stroke: #0B0F19;
+
+        &.explore {right: -.5em; bottom: .5em;}
+        &.download {bottom: -.5em;}
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .email {
+        font-size: 36px;
+    }
+
+    .tel {
+        font-size: 26px;
+    }
+
+    .contact_link {
+        font-size: 22px;
+    }
+
+    .icon_wrap {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .links {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .email {
+        font-size: clamp(24px, 5.6250vw, 36px);
+    }
+
+    .tel {
+        font-size: clamp(20px, 4.0625vw + 5px, 26px);
+    }
+
+    .contact_link {
+        font-size: 18px;
+    }
+
+    .icon_wrap {
+        font-size: 12px;
     }
 }
