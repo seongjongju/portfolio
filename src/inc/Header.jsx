@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 import styles from './styled/header.module.css';
 import { useActiveSection } from '../context/SectionContext';
 import FullGnb from './FullGnb';
-import { depths } from '../shared/data/staticData';
 import { useGsap } from '../context/GsapContext';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import sun from 'src/assets/icon/sun.png';
+import moon from 'src/assets/icon/moon.png';
 import { useDarkMode } from 'src/context/DarkModeContext';
 
 const Header = () => {
@@ -44,39 +43,6 @@ const Header = () => {
         <>
             <header>
                 <nav className={styles.nav}>    
-                    {/* 
-                    {
-                        pathname.includes('/projects/') ? 
-                        null :
-                        (
-                            <ul className={styles.gnb}>
-                                {depths.map((depth) => {
-                                    return (
-                                        <li key={depth.id}>
-                                            <a
-                                                href={`#${depth.page}`}
-                                                className={`
-                                                    ${styles.depth} 
-                                                    ${activeSection === depth.page ? 
-                                                    styles.is_active : ""
-                                                }`}
-                                                onClick={() => {
-                                                    isLenis.scrollTo(`#${depth.page}`, {
-                                                        offset: 0,
-                                                        duration: 1,
-                                                    });
-                                                }}
-                                            >
-                                                {depth.text}
-                                            </a>
-                                        </li>
-                                    );
-                                })}
-                            </ul>
-                        )
-                    }    
-                     */}             
-                    
                     <div className={styles.util}>
                         <button 
                             className={styles.top}
@@ -89,7 +55,7 @@ const Header = () => {
                                 className={styles.light}
                                 onClick={handleClickDarkModeBtn}
                             >
-                                <img src={sun} alt="라이트모드" />
+                                <img src={isDark ? moon : sun} alt="라이트모드/다크모드" />
                             </button>
                         </div>
                         {
