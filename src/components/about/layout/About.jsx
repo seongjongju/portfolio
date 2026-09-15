@@ -7,10 +7,12 @@ import TakeClass from 'src/components/about/layout/TakeClass';
 import Certifications from 'src/components/about/layout/Certifications';
 import Title from 'src/shared/components/UI/Title';
 import useSectionRef from 'src/hooks/useSectionRef';
+import useGsapAnimation from 'src/hooks/useGsapAnimation';
 
 const About = () => {
     const id = "about";
     const {sectionRef} = useSectionRef(id);
+    const {titleRef} = useGsapAnimation();
 
     return (
         <section 
@@ -20,6 +22,7 @@ const About = () => {
         >
             <nav className={styles.nav}>
                 <Title 
+                    ref={titleRef}
                     title="About"
                 />
                 <MyInfo />

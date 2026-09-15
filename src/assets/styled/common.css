@@ -9,6 +9,11 @@
     line-height: 1.2;
     width: fit-content;
     margin-bottom: .5em;
+    overflow: hidden;
+
+    & span {
+        display: block;
+    }
 }
 
 .subject {

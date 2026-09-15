@@ -10,142 +10,132 @@ const startArray = ["top 50%", "top 80%"];
 const mm = gsap.matchMedia();
 
 const useGsapAnimation = () => {
-    //-------------------------hero
-    const heroTextRef = useRef(null); //title, text
+    //----------------------- 공통 타이틀
+    const titleRef = useRef(null);
 
     useGSAP(() => {
-        if(!heroTextRef.current) return;
-        const heroFace = heroTextRef.current.nextSibling; //캐릭터 얼굴
-        const heroTexts = heroTextRef.current.querySelectorAll('span'); //텍스트
-
-        gsap.fromTo(heroFace,
-            { scale: 0, },
+        if(!titleRef.current) return;
+        
+        gsap.fromTo(titleRef.current,
+            { y: "100%", opacity: 0},
             {
-                scale: 1,
-                duration: 0.3,
-                delay: 0.2,
+                y: 0,
+                opacity: 1,
+                ease: "power1.out",
                 scrollTrigger: {
-                    trigger: heroTextRef.current,
-                    start: startArray[0],
-                    toggleActions: "play none none none",
+                    trigger: titleRef.current,
+                    start: startArray[1],
+                    end: "+=300",
+                    scrub: true,
                 }
             }
         );
-
-        heroTexts.forEach((text, i) => {
-            gsap.fromTo(text,
-                { opacity: 0, y: 30 },
-                {
-                    opacity: 1, y: 0,
-                    duration: 0.1,
-                    delay: i * 0.07,
-                    scrollTrigger: {
-                        trigger: heroTextRef.current,
-                        start: startArray[0],
-                        toggleActions: "play none none none",
-                    }
-                }
-            );
-        });
     }, []);
 
-    //-------------------------projects
-    const projectOneRef = useRef(null);
-    const projectTwoRef = useRef(null);
-    const projectThreeRef = useRef(null);
-    const projectfourRef = useRef(null);
-    const projectfiveRef = useRef(null);
+    const subjectRef = useRef(null);
 
     useGSAP(() => {
-        if (
-            !projectOneRef.current ||
-            !projectTwoRef.current ||
-            !projectThreeRef.current ||
-            !projectfourRef.current ||
-            !projectfiveRef.current
-        ) return;
-
-        mm.add('(min-width: 1600px)', () => {
-            const tl1 = gsap.timeline({
+        if(!subjectRef.current) return;
+        
+        gsap.fromTo(subjectRef.current,
+            { y: "100%", opacity: 0},
+            {
+                y: 0,
+                opacity: 1,
+                ease: "power1.out",
                 scrollTrigger: {
-                    trigger: projectOneRef.current,
-                    start: 'top top',
-                    end: '+=150%',
-                    pin: true,
-                    pinSpacing: false,
+                    trigger: subjectRef.current,
+                    start: startArray[1],
+                    end: "+=300",
                     scrub: true,
                 }
-            });
-            tl1.to({}, { duration: 1 });
-
-            const tl2 = gsap.timeline({
-                scrollTrigger: {
-                    trigger: projectTwoRef.current,
-                    start: 'top top',
-                    end: '+=150%',
-                    pin: true,
-                    pinSpacing: false,
-                    scrub: true,
-                }
-            });
-            tl2.to({}, { duration: 1 });
-
-            const tl3 = gsap.timeline({
-                scrollTrigger: {
-                    trigger: projectThreeRef.current,
-                    start: 'top top',
-                    end: '+=150%',
-                    pin: true,
-                    pinSpacing: false,
-                    scrub: true,
-                }
-            });
-            tl3.to({}, { duration: 1 });
-
-            const tl4 = gsap.timeline({
-                scrollTrigger: {
-                    trigger: projectfourRef.current,
-                    start: 'top top',
-                    end: '+=150%',
-                    pin: true,
-                    pinSpacing: false,
-                    scrub: true,
-                }
-            });
-            tl4.to({}, { duration: 1 });
-
-            const tl5 = gsap.timeline({
-                scrollTrigger: {
-                    trigger: projectfiveRef.current,
-                    start: 'top top',
-                    end: '+=150%',
-                    pin: true,
-                    pinSpacing: true,
-                    scrub: true,
-                }
-            });
-            tl5.to({}, { duration: 1 });
-
-            return () => {
-                tl1.kill();
-                tl2.kill();
-                tl3.kill();
-                tl4.kill();
-                tl5.kill();
-            };
-        });
-
-        return () => mm.revert();
+            }
+        );
     }, []);
 
-    return {
-        heroTextRef,
+    //----------------------- about
+    const aboutRef = useRef(null);
 
-        projectOneRef,
-        projectTwoRef,
-        projectThreeRef,
-        projectfourRef,
-        projectfiveRef
+    useGSAP(() => {
+        if(!aboutRef.current) return;
+        
+        const tl = gsap.timeline({
+            ease: "power1.out",
+            scrollTrigger: {
+                trigger: aboutRef.current,
+                start: startArray[1],
+                end: "+=500",
+                scrub: true,
+            }
+        });
+
+        const texts = aboutRef.current.querySelectorAll('p > span');
+        texts.forEach((text) => {
+            tl.from(text, {y: "100%", opacity: 0})
+        });
+
+        const btnWrap = aboutRef.current.querySelector('ul');
+        tl.from(btnWrap, {y: 30, opacity: 0})
+    }, []);
+
+    //----------------------- contact
+    const contactRef = useRef(null);
+    const liaisonRef = useRef(null);
+    const linksRef = useRef(null);
+
+    useGSAP(() => {
+        if(!contactRef.current || !liaisonRef.current || !linksRef.current) return;
+        
+        const tl = gsap.timeline({
+            ease: "power1.out",
+            scrollTrigger: {
+                trigger: contactRef.current,
+                start: startArray[1],
+                end: "+=300",
+                scrub: true,
+            }
+        });
+
+        const title = contactRef.current.querySelector('h2');
+        tl.from(title, {y: 30, opacity: 0})
+
+        const tl2 = gsap.timeline({
+            ease: "power1.out",
+            scrollTrigger: {
+                trigger: liaisonRef.current,
+                start: startArray[1],
+                toggleActions: "play none none reverse",
+            }
+        });
+        
+        const email = liaisonRef.current.querySelector('.email');
+        const tel = liaisonRef.current.querySelector('.tel');
+        
+        tl2.from(email, {y: 30, opacity: 0, duration: 0.3})
+        tl2.from(tel, {y: 30, opacity: 0, duration: 0.3}, '-=0.1')
+
+        const tl3 = gsap.timeline({
+            ease: "power1.out",
+            scrollTrigger: {
+                trigger: linksRef.current,
+                start: startArray[1],
+                toggleActions: "play none none reverse",
+            }
+        });
+
+        const links = linksRef.current.querySelectorAll('a');
+        tl3.from(links[0], {x: -30, opacity: 0, duration: 0.3})
+        tl3.from(links[1], {x: 30, opacity: 0, duration: 0.3}, '-=0.3')
+    }, []);
+
+
+    return {
+        titleRef,
+        subjectRef,
+        aboutRef,
+        contactRef,
+        liaisonRef,
+        linksRef
     };
 };
 

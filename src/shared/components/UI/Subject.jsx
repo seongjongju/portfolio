@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Subject = ({subject}) => {
+const Subject = ({subject, ref}) => {
     return (
-        <h5 className='subject'>
+        <h5 
+            className='subject'
+            ref={ref}
+        >
             {subject}
             <div className='subject__ball'></div>
         </h5>

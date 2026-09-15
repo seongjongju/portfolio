@@ -12,7 +12,7 @@ import Footer from './inc/Footer';
 import { DarkModeContextProvider } from './context/DarkModeContext.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <BrowserRouter>
       <DarkModeContextProvider>
         <SectionContextProvider>
@@ -24,5 +24,5 @@ createRoot(document.getElementById('root')).render(
         </SectionContextProvider>
       </DarkModeContextProvider>
     </BrowserRouter>
-  </StrictMode>,
+  //</StrictMode>,
 )

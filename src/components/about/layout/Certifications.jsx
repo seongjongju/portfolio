@@ -1,13 +1,17 @@
 import React from 'react';
 import styles from 'src/assets/styled/about.module.css';
+import useGsapAnimation from 'src/hooks/useGsapAnimation';
 import Subject from 'src/shared/components/UI/Subject';
 import { certifications } from 'src/shared/data/staticData';
 
 const Certifications = () => {
+    const {subjectRef} = useGsapAnimation();
+
     return (
         <div className={styles.group}>
             <Subject 
                 subject="Certifications"
+                ref={subjectRef}
             />
 
             <ul className={styles.certifications}>

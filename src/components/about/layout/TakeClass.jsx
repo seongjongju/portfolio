@@ -1,12 +1,16 @@
 import React from 'react';
 import styles from 'src/assets/styled/about.module.css';
+import useGsapAnimation from 'src/hooks/useGsapAnimation';
 import Subject from 'src/shared/components/UI/Subject';
 
 const TakeClass = () => {
+    const {subjectRef} = useGsapAnimation();
+
     return (
         <div className={styles.group}>
             <Subject 
                 subject="Take A Class"
+                ref={subjectRef}
             />
             <div>
                 <h5 className={styles.year}>2025.01 ~ 2025.05</h5>

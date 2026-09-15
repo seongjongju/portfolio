@@ -40,6 +40,11 @@
     letter-spacing: -.2px;
     margin-bottom: 2em;
     word-break: keep-all;
+    overflow: hidden;
+
+    & span {
+        display: block;
+    }
 }
 
 .info_slogan strong {
@@ -53,6 +58,11 @@
     color: #333;
     margin-bottom: 2em;
     word-break: keep-all;
+    overflow: hidden;
+
+    & span {
+        display: block;
+    }
 }
 
 .info_text strong {

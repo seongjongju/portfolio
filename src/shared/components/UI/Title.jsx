@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Title = ({title}) => {
+const Title = ({title, ref}) => {
     return (
         <h2 className='title'>
-            {title}
+            <span ref={ref}>{title}</span>
         </h2>
     );
 };

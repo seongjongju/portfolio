@@ -3,14 +3,16 @@ import styles from 'src/assets/styled/contact.module.css';
 import ContactLink from '../UI/ContactLink';
 import useSectionRef from 'src/hooks/useSectionRef';
 import { footerLinks } from 'src/shared/data/staticData';
+import useGsapAnimation from 'src/hooks/useGsapAnimation';
 
 const Contact = () => {
     const id = "contact";
-    const {sectionRef} = useSectionRef(id);
+    const {contactRef, liaisonRef, linksRef} = useGsapAnimation();
 
     return (
         <section 
             id={id}
+            ref={contactRef}
             className={styles.section}
         >
             <nav className={styles.nav}>
@@ -19,18 +21,18 @@ const Contact = () => {
                     <span>TOGETHER</span>
                 </h2>
 
-                <div className={styles.layout}>
+                <div className={styles.layout} ref={liaisonRef}>
                     <div className={styles.contact}>
                         <h5 className={styles.subject}>EMAIL</h5>
-                        <a href="mailto:sjj990480@gmail.com" className={styles.email}>
+                        <a href="mailto:sjj990480@gmail.com" className={`${styles.email} email`}>
                             sjj990480@gmail.com
                         </a>
 
                         <h5 className={styles.subject}>TEL</h5>
-                        <a href='tel:010-8690-3363' className={styles.tel}>010-8690-3363</a>
+                        <a href='tel:010-8690-3363' className={`${styles.tel} tel`}>010-8690-3363</a>
                     </div>
                     {/* contact */}
-                    <div className={styles.links}>
+                    <div className={`${styles.links} links`} ref={linksRef}>
                         <h5 className={styles.subject}>CONNECT</h5>
                         <ContactLink 
                             link={footerLinks[0].link}
