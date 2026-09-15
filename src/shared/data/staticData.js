@@ -1,4 +1,5 @@
 import zustandIcon from 'src/assets/icon/zustand.svg';
+import zustandIconW from 'src/assets/icon/zustand-w.svg';
 import coffeeOrderThum from 'src/assets/images/coffeeOrder-app-thum_0.png';
 import cineAiThum from 'src/assets/images/cine-ai-thum_0.png';
 import marryThum from 'src/assets/images/merry-template-thum_0.png';
@@ -47,6 +48,37 @@ export const stackIcons = [
     { id: "vercel", src: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/vercel.svg", text: "Vercel" },
     { id: "git", src: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/git.svg", text: "Git" },
     { id: "figma", src: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/figma.svg", text: "Figma" },
+];
+
+//stackIconsWhite
+export const stackIconsWhite = [
+    // 1. Core & Framework
+    { id: "html", src: "https://cdn.simpleicons.org/html5/ffffff", text: "HTML5" },
+    { id: "css", src: "https://cdn.simpleicons.org/css/ffffff", text: "CSS3" },
+    { id: "js", src: "https://cdn.simpleicons.org/javascript/ffffff", text: "JavaScript" },
+    { id: "ts", src: "https://cdn.simpleicons.org/typescript/ffffff", text: "TypeScript" },
+    { id: "react", src: "https://cdn.simpleicons.org/react/ffffff", text: "React" },
+    { id: "next", src: "https://cdn.simpleicons.org/nextdotjs/ffffff", text: "Next.js" },
+    { id: "vite", src: "https://cdn.simpleicons.org/vite/ffffff", text: "Vite" },
+
+    // 2. State & Data Fetching
+    { id: "query", src: "https://cdn.simpleicons.org/reactquery/ffffff", text: "React Query" },
+    { id: "redux", src: "https://cdn.simpleicons.org/redux/ffffff", text: "Redux Toolkit" },
+    { id: "zustand", src: zustandIconW, text: "Zustand" },
+
+    // 3. Styling
+    { id: "tailwind", src: "https://cdn.simpleicons.org/tailwindcss/ffffff", text: "Tailwind CSS" },
+
+    // 4. Backend & DB & Cloud Storage
+    { id: "supabase", src: "https://cdn.simpleicons.org/supabase/ffffff", text: "Supabase" },
+    { id: "cloudinary", src: "https://cdn.simpleicons.org/cloudinary/ffffff", text: "Cloudinary" },
+    { id: "mongodb", src: "https://cdn.simpleicons.org/mongodb/ffffff", text: "MongoDB" },
+
+    // 5. Deployment & Tools
+    { id: "cloudflare", src: "https://cdn.simpleicons.org/cloudflare/ffffff", text: "Cloudflare" },
+    { id: "vercel", src: "https://cdn.simpleicons.org/vercel/ffffff", text: "Vercel" },
+    { id: "git", src: "https://cdn.simpleicons.org/git/ffffff", text: "Git" },
+    { id: "figma", src: "https://cdn.simpleicons.org/figma/ffffff", text: "Figma" },
 ];
 
 //Certifications

@@ -116,8 +116,9 @@
         border: 1px solid #f8f7f4;
 
         &:hover {
-            background: #0047ff;
-            border-color: #0047ff;
+            background: #a6bfff;
+            border-color: #a6bfff;
+            color: #0B0F19;
         }
     }
 }
@@ -248,6 +249,14 @@
     opacity: 1;
     top: 70%;
     left: 80%;
+}
+
+/*** 다크모드 ***/
+:global(.is-dark) {
+    & .stack_text {
+        color: #0B0F19;
+        background: #f8f7f4;
+    }
 }
 
 @media screen and (max-width: 640px) {
