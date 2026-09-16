@@ -128,6 +128,51 @@ const useGsapAnimation = () => {
         tl3.from(links[1], {x: 30, opacity: 0, duration: 0.3}, '-=0.3')
     }, []);
 
+    //----------------------- works
+    const worksRef = useRef(null);
+    const publRef = useRef(null);
+
+    useGSAP(() => {
+        if(worksRef.current) {
+            const tl = gsap.timeline({
+                ease: "power1.out",
+                scrollTrigger: {
+                    trigger: worksRef.current,
+                    start: startArray[1],
+                    end: "+=500",
+                    scrub: true,
+                }
+            });
+
+            const ex = worksRef.current.querySelector('.works-ex > span');
+            tl.from(ex, {y: "100%", opacity: 0})
+        };
+
+        if(publRef.current) {
+            const publishings = publRef.current.querySelectorAll('a');
+            publishings.forEach((publ, i) => {
+                gsap.fromTo(publ,
+                    { 
+                        x: i % 2 !== 0 ? "-30" : "30", 
+                        opacity: 0
+                    },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.3,
+                        ease: "power1.out",
+                        scrollTrigger: {
+                            trigger: publ,
+                            start: startArray[1],
+                            toggleActions: "play none none reverse",
+                        }
+                    }
+                );
+            });
+        }
+    }, []);
+
+
 
     return {
         titleRef,
@@ -135,7 +180,9 @@ const useGsapAnimation = () => {
         aboutRef,
         contactRef,
         liaisonRef,
-        linksRef
+        linksRef,
+        worksRef,
+        publRef
     };
 };
 

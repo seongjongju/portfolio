@@ -5,6 +5,10 @@ import cineAiThum from 'src/assets/images/cine-ai-thum_0.png';
 import marryThum from 'src/assets/images/merry-template-thum_0.png';
 import sermonThum from 'src/assets/images/sermon-thum_0.png';
 import portfolioThum from 'src/assets/images/portfolio-thum_0.png';
+import publThum_0 from 'src/assets/images/works-thum_0.png';
+import publThum_1 from 'src/assets/images/works-thum_1.png';
+import publThum_2 from 'src/assets/images/works-thum_2.png';
+import publThum_3 from 'src/assets/images/works-thum_3.png';
 
 //gnb
 export const depths = [
@@ -186,5 +190,37 @@ export const projectDatas = [
         link: "",
         admin: "",
         git: ""
+    },
+];
+
+//works
+export const publishingData = [
+    {
+        id: "publ_0",
+        img: publThum_0,
+        year: "2026",
+        company: "대성이노켐",
+        link: "https://dsinnochem.com/layout/kor/home.php?go=main",
+    },
+    {
+        id: "publ_1",
+        img: publThum_1,
+        year: "2026",
+        company: "산지GO",
+        link: "https://sanjigo.kr/layout/res/home.php?go=main",
+    },
+    {
+        id: "publ_2",
+        img: publThum_2,
+        year: "2025",
+        company: "노바바이오 메디컬코리아",
+        link: "https://korea-novabiomedical.com/layout/res/home.php?go=main",
+    },
+    {
+        id: "publ_3",
+        img: publThum_3,
+        year: "2025",
+        company: "우동단",
+        link: "https://udondancp.com/layout/res/home.php?go=main",
     },
 ];
