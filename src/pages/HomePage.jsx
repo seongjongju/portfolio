@@ -4,6 +4,7 @@ import Hero from '../components/hero/layout/Hero';
 import About from '../components/about/layout/About';
 import Projects from 'src/components/projects/layout/Projects';
 import Contact from 'src/components/contact/layout/Contact';
+import Works from 'src/components/works/layout/Works';
 
 const HomePage = () => {
     return (
@@ -17,6 +18,7 @@ const HomePage = () => {
             <main>
                 <About />
                 <Projects />
+                <Works />
                 <Contact />
             </main>
         </motion.div>

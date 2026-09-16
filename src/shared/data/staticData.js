@@ -10,7 +10,8 @@ import portfolioThum from 'src/assets/images/portfolio-thum_0.png';
 export const depths = [
     { id: "0", page: "about", text: "ABOUT" },
     { id: "1", page: "projects", text: "PROJECTS" },
-    { id: "2", page: "contact", text: "CONTACT" },
+    { id: "2", page: "works", text: "WORKS" },
+    { id: "3", page: "contact", text: "CONTACT" },
 ];
 
 //footer
