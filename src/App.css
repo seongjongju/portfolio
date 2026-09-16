@@ -13,6 +13,11 @@ body {
         border-radius: 4px;
     }
 
+    &::selection {
+        background-color: #0B0F19;
+        color: #f8f7f4;
+    }
+
     &.is-dark {
         background-color: #0B0F19;
 
@@ -26,6 +31,11 @@ body {
 
         &::-webkit-scrollbar-thumb {
             background-color: #f8f7f4;
+        }
+
+        &::selection {
+            background-color: #f8f7f4;
+            color: #0B0F19;
         }
     }
 }

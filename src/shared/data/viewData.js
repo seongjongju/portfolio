@@ -265,7 +265,7 @@ export const viewData = [
         id: "project_2",
         src: marryVideo,
         title: "모바일 청첩장 템플릿",
-        tagline: "실제 지인 청첩장으로 사용된 모바일 웨딩 인비테이션 (개인정보 보호를 위해 미디어/상세 내용은 더미 데이터로 대체)",
+        tagline: "실제 지인 청첩장으로 사용된 React기반 모바일 청첩장\n(개인정보 보호를 위해 미디어/상세 내용은 더미 데이터로 대체)",
         tagEx: "실제 지인의 모바일 청첩장 제작 및 배포 경험을 바탕으로, 모바일 환경에 최적화된 UX와 지도/내비게이션 딥링크 기능을 제공하는 React 기반 웹 템플릿입니다.",
         serviceUrl: "https://marry-template.pages.dev/",
         githubUrl: "https://github.com/seongjongju/marry_template",

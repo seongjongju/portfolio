@@ -86,7 +86,12 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
             <div className={styles.group}>
                 <h3 className={styles.subject}>개요</h3>
                 <p className={styles.tagline}>
-                    {data?.tagline}<br />
+                    {data?.tagline?.split("\n").map((line, index) => (
+                        <b key={index}>
+                            {line}
+                            <br />
+                        </b>
+                    ))}
                     <span>{data?.tagEx}</span>
                 </p>
 
