@@ -1,16 +1,26 @@
-# React + Vite
+# 성종주 프론트엔드 개발자 포트폴리오
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React와 Vite를 기반으로 제작한 프론트엔드 개발자 포트폴리오입니다.
 
-Currently, two official plugins are available:
+## 배포 링크
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**[포트폴리오 바로가기](https://seongjongju-portfolio.vercel.app/)**
 
-## React Compiler
+## 주요 특징
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 모바일, 태블릿, 데스크톱을 고려한 반응형 웹 디자인
+* 다크 모드 / 라이트 모드 지원
 
-## Expanding the Oxlint configuration
+## 수록 프로젝트
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+| 프로젝트               | 소개                            |
+| ------------------ | ----------------------------- |
+| **CoffeeOrderApp** | 나이스페이먼츠 연동 커피 주문 웹앱           |
+| **CineAI**         | 제미나이 API 연동 OTT 웹 서비스         |
+| **모바일 청첩장 템플릿**    | React 기반 반응형 모바일 청첩장 웹 애플리케이션 |
+| **잔소리 피하기 게임**     | AI를 활용한 2D 장애물 피하기 웹 게임       |
+
+## 기술 스택
+
+* **프론트엔드:** React, Vite, CSS Modules
+* **배포:** Vercel
