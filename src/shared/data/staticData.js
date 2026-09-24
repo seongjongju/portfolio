@@ -22,7 +22,7 @@ export const depths = [
 //footer
 export const footerLinks = [
     {id: "link_0", link: "https://github.com/seongjongju", text: "GITHUB"},
-    {id: "link_1", link: resume, download: "성종주 이력서", text: "DOWNLOAD RESUME"},
+    {id: "link_1", link: resume, download: "성종주 이력서.pdf", text: "DOWNLOAD RESUME"},
 ];
 
 //StackIcon
