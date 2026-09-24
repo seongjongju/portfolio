@@ -2,7 +2,7 @@ import coffeeOrderVideo from 'src/assets/video/coffeeOrder.mp4';
 import cineAiVideo from 'src/assets/video/cineAI.mp4';
 import marryVideo from 'src/assets/video/marry.mp4';
 import sermonVideo from 'src/assets/video/sermon.mp4';
-import sermonPdf from 'src/assets/download/prompt.pdf';
+import sermonPdf from '/download/prompt.pdf';
 import alarmImg from 'src/assets/images/alarm.png'
 
 export const viewData = [
@@ -363,6 +363,7 @@ export const viewData = [
             ],
             roleSplit: "코드 작성과 디버깅은 AI가 담당, 본인은 요구사항 정의·결과물 검수·방향 결정을 담당",
             pdf: sermonPdf,
+            download: "잔소리 피하기 게임 실제 작업 프롬프트.pdf",
         },
         keyDecisions: [
             {

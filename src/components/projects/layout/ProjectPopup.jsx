@@ -320,6 +320,7 @@ const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
                         <h4 className={styles.heading}>실제 작업 프롬프트</h4>
                         <PdfViewer 
                             pdfUrl={data?.aiWorkflow?.pdf}
+                            download={data?.aiWorkflow?.download}
                         />
                     </div>
                 )

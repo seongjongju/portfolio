@@ -4,7 +4,7 @@ import styles from 'src/assets/styled/projects.module.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${ pdfjs.version }/build/pdf.worker.min.mjs`; 
 
-const PdfViewer = ({pdfUrl}) => {
+const PdfViewer = ({pdfUrl, download}) => {
     const [numPages, setNumPages] = useState();
     const [pageNumber, setPageNumber] = useState(1);
     const [scale, setScale] = useState(1.0);
@@ -33,7 +33,7 @@ const PdfViewer = ({pdfUrl}) => {
                     <button onClick={zoomOut}>-</button>
                     <span>{Math.round(scale * 100)}%</span>
                     <button onClick={zoomIn}>+</button>
-                    <a href={pdfUrl} download className={styles.downloadLink}>
+                    <a href={pdfUrl} download={download} className={styles.downloadLink}>
                         다운로드
                     </a>
                 </div>
