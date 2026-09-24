@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from 'src/assets/styled/contact.module.css';
 
-const ContactLink = ({ link, platform, icon }) => {
+const ContactLink = ({ link, platform, icon, download }) => {
     return (
         <>
             {
-                link.includes('download') ? (
+                download ? (
                     <a 
                         className={styles.contact_link}
                         href={link} 
-                        download={link}
+                        download={download}
                     >
                         {platform}
                         {icon}

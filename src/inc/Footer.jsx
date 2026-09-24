@@ -18,12 +18,12 @@ const Footer = () => {
                         footerLinks.map((link) => (
                             <li key={link.id}>
                                 {
-                                    link.link.includes('download') ? 
+                                    link.download ? 
                                     (
                                         <a 
                                             className={styles.link}
                                             href={link.link}
-                                            download={link.link}
+                                            download={link.download}
                                         >
                                             {link.text}
                                         </a>

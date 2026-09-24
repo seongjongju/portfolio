@@ -9,6 +9,7 @@ import publThum_0 from 'src/assets/images/works-thum_0.png';
 import publThum_1 from 'src/assets/images/works-thum_1.png';
 import publThum_2 from 'src/assets/images/works-thum_2.png';
 import publThum_3 from 'src/assets/images/works-thum_3.png';
+import resume from 'src/assets/download/resume.pdf';
 
 //gnb
 export const depths = [
@@ -21,7 +22,7 @@ export const depths = [
 //footer
 export const footerLinks = [
     {id: "link_0", link: "https://github.com/seongjongju", text: "GITHUB"},
-    {id: "link_1", link: "src/assets/download/resume.pdf", text: "DOWNLOAD RESUME"},
+    {id: "link_1", link: resume, download: "성종주 이력서", text: "DOWNLOAD RESUME"},
 ];
 
 //StackIcon

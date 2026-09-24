@@ -59,6 +59,7 @@ const Contact = () => {
                         <ContactLink 
                             link={footerLinks[1].link}
                             platform="Resume"
+                            download={footerLinks[1].download}
                             icon={
                                 <div className={styles.icon_wrap}>
                                     PDF
