@@ -9,7 +9,7 @@ const TakeClass = () => {
     return (
         <div className={styles.group}>
             <Subject 
-                subject="Take A Class"
+                subject="Education"
                 ref={subjectRef}
             />
             <div>

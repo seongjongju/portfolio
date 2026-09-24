@@ -28,7 +28,10 @@ const Experience = () => {
                             기존 사이트 UI 개선 및 레이아웃 유지관리
                         </li>
                         <li className={styles.list_text}>
-                            레거시 코드 업데이트
+                            JavaScript UI 및 GSAP 인터랙션, Swiper/Splide 슬라이드 구현
+                        </li>
+                        <li className={styles.list_text}>
+                            PC 전용 레거시 프로젝트의 반응형 전환 및 기존 코드 구조 수정
                         </li>
                     </ul>
                 </div>
