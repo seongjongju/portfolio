@@ -17,13 +17,27 @@ const Footer = () => {
                     {
                         footerLinks.map((link) => (
                             <li key={link.id}>
-                                <a 
-                                    className={styles.link}
-                                    href={link.link}
-                                    target='_blank'
-                                >
-                                    {link.text}
-                                </a>
+                                {
+                                    link.link.includes('download') ? 
+                                    (
+                                        <a 
+                                            className={styles.link}
+                                            href={link.link}
+                                            download={link.link}
+                                        >
+                                            {link.text}
+                                        </a>
+                                    ) : 
+                                    (
+                                        <a 
+                                            className={styles.link}
+                                            href={link.link}
+                                            target='_blank'
+                                        >
+                                            {link.text}
+                                        </a>
+                                    )
+                                }
                             </li>
                         )) 
                     }

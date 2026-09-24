@@ -21,7 +21,7 @@ export const depths = [
 //footer
 export const footerLinks = [
     {id: "link_0", link: "https://github.com/seongjongju", text: "GITHUB"},
-    {id: "link_1", link: "/download/test.txt", text: "DOWNLOAD RESUME"},
+    {id: "link_1", link: "src/assets/download/resume.pdf", text: "DOWNLOAD RESUME"},
 ];
 
 //StackIcon

@@ -40,23 +40,6 @@ const MyInfo = () => {
                     </span>
                 </p>
             </div>
-        
-            <ul className={styles.info_btns}>
-                {
-                    footerLinks.map((link) => (
-                        <li key={link.id}>
-                            <a 
-                                className={styles.link}
-                                href={link.link}
-                                download={link.link}
-                                target='_blank'
-                            >
-                                {link.text}
-                            </a>
-                        </li>
-                    )) 
-                }
-            </ul>
         </div>
     );
 };

@@ -73,9 +73,6 @@ const useGsapAnimation = () => {
         texts.forEach((text) => {
             tl.from(text, {y: "100%", opacity: 0})
         });
-
-        const btnWrap = aboutRef.current.querySelector('ul');
-        tl.from(btnWrap, {y: 30, opacity: 0})
     }, []);
 
     //----------------------- contact
