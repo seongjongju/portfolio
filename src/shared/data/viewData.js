@@ -294,7 +294,7 @@ export const viewData = [
             {
                 title: "크로스 브라우징 및 UX 최적화",
                 description:
-                    "OS별(iOS/Android) Web Share API 지원 여부 및 딥링크 동작 방식 차이를 react-device-detect 기반 분기 로직으로 처리했습니다.",
+                    "모바일 환경에서 Web Share API와 외부 앱 딥링크의 동작 차이를 고려하고, iOS 등 별도 처리가 필요한 환경은 react-device-detect를 활용해 분기 처리했습니다.",
             },
             {
                 title: "콘텐츠 보안 (실운영 적용)",
