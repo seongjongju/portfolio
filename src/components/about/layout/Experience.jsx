@@ -19,6 +19,9 @@ const Experience = () => {
                     <p className={styles.work}>웹 퍼블리셔</p>
                     <ul className={styles.list}>
                         <li className={styles.list_text}>
+                            공용 인풋 폼 개선 추진 및 마크업 작업
+                        </li>
+                        <li className={styles.list_text}>
                             자사 솔루션 UI 마크업 및 시맨틱 구조화
                         </li>
                         <li className={styles.list_text}>
