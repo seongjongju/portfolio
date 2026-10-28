@@ -206,9 +206,9 @@ export const publishingData = [
     {
         id: "publ_1",
         img: publThum_1,
-        year: "2026",
-        company: "산지GO",
-        link: "https://sanjigo.kr/layout/res/home.php?go=main",
+        year: "2025",
+        company: "본토푸드",
+        link: "https://bontolab.com/",
     },
     {
         id: "publ_2",
