@@ -1,10 +1,10 @@
-import React, { memo, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import styles from 'src/assets/styled/projects.module.css';
 import { useGsap } from 'src/context/GsapContext';
 import { viewData } from 'src/shared/data/viewData';
 import PdfViewer from '../UI/PdfViewer';
 
-const ProjectPopup = memo(({projectId, closePopup, popupActive}) => {
+const ProjectPopup = React.memo(({projectId, closePopup, popupActive}) => {
     const {isLenis} = useGsap();
     const [style, setStyle] = useState({
         opacity: "0",

@@ -206,16 +206,16 @@ export const publishingData = [
     {
         id: "publ_1",
         img: publThum_1,
-        year: "2025",
-        company: "본토푸드",
-        link: "https://bontolab.com/",
+        year: "2026",
+        company: "구립신림청소년독서실",
+        link: "https://sygo1318.or.kr/layout/res/home.php?go=main",
     },
     {
         id: "publ_2",
         img: publThum_2,
         year: "2025",
-        company: "노바바이오 메디컬코리아",
-        link: "https://korea-novabiomedical.com/layout/res/home.php?go=main",
+        company: "본토푸드",
+        link: "https://bontolab.com/",
     },
     {
         id: "publ_3",

@@ -35,10 +35,10 @@ const Works = () => {
                         publishingData?.map((publ) => (
                             <Publishing 
                                 key={publ?.id}
+                                id={publ?.id}
                                 img={publ?.img}
                                 year={publ?.year}
                                 company={publ?.company}
-                                link={publ?.link}
                             />
                         ))
                     }
