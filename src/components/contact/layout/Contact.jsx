@@ -56,7 +56,7 @@ const Contact = () => {
                                 </div>
                             }
                         />
-                        <ContactLink 
+                        {/* <ContactLink 
                             link={footerLinks[1].link}
                             platform="Resume"
                             download={footerLinks[1].download}
@@ -77,7 +77,7 @@ const Contact = () => {
                                     </svg>
                                 </div>
                             }
-                        />
+                        /> */}
                     </div>
                     {/* links */}
                 </div>

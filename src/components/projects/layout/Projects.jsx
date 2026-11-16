@@ -13,6 +13,7 @@ import { projectDatas } from 'src/shared/data/staticData';
 import ProjectPopup from './ProjectPopup';
 import { createPortal } from 'react-dom';
 import Dim from 'src/shared/components/UI/Dim';
+import Title from 'src/shared/components/UI/Title';
 
 const Projects = () => {
     const id = 'projects';
@@ -60,6 +61,11 @@ const Projects = () => {
             className={styles.section}
             ref={sectionRef}
         >
+            <nav className={styles.nav}>
+                <Title 
+                    title="Projects"
+                />
+            </nav>
             <div className={styles.swiper_wrap}>
                 <Swiper
                     ref={swiperRef}
